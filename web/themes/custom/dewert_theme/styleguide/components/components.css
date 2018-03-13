@@ -1,0 +1,14 @@
+/* line 3, sass/components/components/_node.scss */
+.node--unpublished {
+  opacity: .5;
+}
+
+/* line 6, sass/components/components/_node.scss */
+.node--unpublished:before {
+  content: '';
+  display: block;
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 3px;
+  background: repeating-linear-gradient(-45deg, yellow, yellow 10px, #111 10px, #111 20px);
+}

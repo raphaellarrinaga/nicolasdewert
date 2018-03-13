@@ -1,0 +1,58 @@
+dewert_theme.layout.small:
+  label: small
+  mediaQuery: 'all and (min-width: 480px)'
+  weight: 0
+  multipliers:
+    - 1x
+  group: dewert_theme.layout
+dewert_theme.layout.medium:
+  label: medium
+  mediaQuery: 'all and (min-width: 769px)'
+  weight: 1
+  multipliers:
+    - 1x
+  group: dewert_theme.layout
+dewert_theme.layout.big:
+  label: big
+  mediaQuery: 'all and (min-width: 1220px)'
+  weight: 2
+  multipliers:
+    - 1x
+  group: dewert_theme.layout
+dewert_theme.layout.wide:
+  label: wide
+  mediaQuery: 'all and (min-width: 1430px)'
+  weight: 3
+  multipliers:
+    - 1x
+  group: dewert_theme.layout
+
+dewert_theme.image.small:
+  label: small
+  mediaQuery: 'all and (min-width: 480px)'
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+    - 1x
+  group: dewert_theme.image
+dewert_theme.image.medium:
+  label: medium
+  mediaQuery: 'all and (min-width: 769px)'
+  weight: 1
+  multipliers:
+    - 1x
+  group: dewert_theme.image
+dewert_theme.image.big:
+  label: big
+  mediaQuery: 'all and (min-width: 1220px)'
+  weight: 2
+  multipliers:
+    - 1x
+  group: dewert_theme.image
+dewert_theme.image.wide:
+  label: wide
+  mediaQuery: 'all and (min-width: 1440px)'
+  weight: 3
+  multipliers:
+    - 1x
+  group: dewert_theme.image

@@ -1,0 +1,52 @@
+//
+//  Functions
+//
+
+/// Strips the unit from a number.
+///
+/// @argument {number} $value
+///
+/// @return {number (unitless)}
+///
+/// @example scss
+///   $dimension: strip-unit(10em);
+///
+///   // Output
+///   $dimension: 10;
+
+@function strip-unit($value) {
+  @return ($value / ($value * 0 + 1));
+}
+
+// Convert pixels to rem
+// eg. for a relational value of 12px write rem(12)
+// This is a replacement of Bourbon's function
+// Bourbon maintainers deprecated it because because it don't properly
+// indicate the true output as it _but_ it can be used safely in this theme since
+// $rem-base font size is defined on the <html> tag
+// @see _html-elements.scss
+// @see _variables.scss
+// @see https://github.com/thoughtbot/bourbon/issues/691
+
+@function rem($pxval) {
+  @if not unitless($pxval) {
+    $pxval: strip-unit($pxval);
+  }
+
+  $base: $rem-base;
+  @if not unitless($base) {
+    $base: strip-unit($base);
+  }
+
+  @return ($pxval / $base) * 1rem;
+}
+
+// Create vertical rhythm.
+// Can be used to define consistent margin and paddings
+// @see https://alwaystwisted.com/articles/2013-12-30-not-your-average-vertical-rhythm-sass-mixin
+// @example margin-bottom: rhythm(2, $font-size-sm, 1.2);
+
+@function rhythm($lines: 1, $font-size: $base-font-size, $line-height: $base-line-height) {
+  $rhythm: $lines * $font-size * $line-height;
+  @return $rhythm;
+}

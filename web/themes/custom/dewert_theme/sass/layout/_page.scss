@@ -1,0 +1,86 @@
+// @file
+// Global pages layout
+
+.site-container{
+  background-color: $page-color;
+}
+
+// Global header
+.site-header{
+  @include mappy-query(b-medium) {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.site-navigation{
+  @include mappy-query(b-medium) {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+
+.site-logo{
+  padding-top: rem(25);
+}
+
+.main-menu{
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+
+  @include mappy-query(b-medium) {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.main-menu-link{
+  color: $primary-text-color;
+  font-size: rem(18);
+  font-weight: 500;
+  text-decoration: none;
+
+  @include mappy-query(b-medium) {
+    display: block;
+    padding-left: .75em;
+    padding-right: .75em;
+
+    &:before{
+      @include border-bottom-radius(2px);
+      background-color: transparent;
+      content: "";
+      display: block;
+      height: rem(40);
+      width: 2px;
+    }
+
+    &.is-active{
+      color: $brand-primary;
+
+      &:before{
+        background-color: $brand-primary;
+      }
+    }
+
+    &:hover{
+      &:before{
+        background-color: $brand-primary;
+      }
+    }
+  }
+}
+
+// Global main content sections
+.site-main{
+  outline: none;
+}
+
+.site-content-top{}
+
+.site-content{}
+
+.site-content-bottom{}
+
+// Global footer
+.site-footer{}

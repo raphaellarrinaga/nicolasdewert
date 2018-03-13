@@ -1,0 +1,18 @@
+// Feed icon
+
+.feed-icon {
+  padding-left: rem(24px);
+  position: relative;
+
+  &:before{
+    background: url(../../images/core/feed.svg) no-repeat center;
+    content: '';
+    display: inline-block;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    width: 16px;
+    @include transform(translateY(-50%));
+  }
+}

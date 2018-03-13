@@ -1,0 +1,29 @@
+{
+  "name": "dewert_theme",
+  "description": "A Drupal 8 theme.",
+  "version": "0.1.0",
+  "author": "Raphael Larrinaga",
+  "license": "GPL-2.0+",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "autoprefixer": "^7.2.5",
+    "gulp": "^3.9.1",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-glob": "^1.0.8",
+    "mappy-breakpoints": "^0.2.3",
+    "node-bourbon": "^4.2.8",
+    "node-neat": "^2.0.0-beta.0",
+    "node-sass-globbing": "0.0.23",
+    "path": "^0.12.7"
+  },
+  "dependencies": {
+    "@frctl/fractal": "^1.1.7",
+    "@frctl/twig": "^1.0.0-beta.2"
+  }
+}
