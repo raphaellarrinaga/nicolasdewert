@@ -1,0 +1,22 @@
+ndewert.front_controller_index:
+  path: '/ndewert/index'
+  defaults:
+    _controller: '\Drupal\ndewert\Controller\FrontController::index'
+  requirements:
+    _permission: 'access content'
+
+ndewert.expertise_controller_index:
+  path: '/expertise'
+  defaults:
+    _controller: '\Drupal\ndewert\Controller\ExpertiseController::index'
+    _title: 'Expertise'
+  requirements:
+    _permission: 'access content'
+
+ndewert.ossature_bois_controller_index:
+  path: '/ossature-bois'
+  defaults:
+    _controller: '\Drupal\ndewert\Controller\OssatureBoisController::index'
+    _title: "L'Ossature bois"
+  requirements:
+    _permission: 'access content'
