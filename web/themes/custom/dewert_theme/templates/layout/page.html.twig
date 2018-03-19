@@ -79,6 +79,7 @@
   {% if page.footer %}
     {% include "@organisms/site-footer/site-footer.twig" ignore missing with {
       content: page.footer,
+      copyright: "now"|date("Y") ~ "© 2018 © n.dewert sprl" ,
     } %}
   {% endif %}
 </div>

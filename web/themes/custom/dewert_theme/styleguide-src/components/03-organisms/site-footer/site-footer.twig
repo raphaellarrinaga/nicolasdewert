@@ -1,5 +1,6 @@
 <footer class="site-footer" role="contentinfo">
   <div class="l-constrain">
+{#
     <h1 class="site-footer__title">{{ title }}</h1>
     <div class="site-footer__text">{{ text }}</div>
     <ul class="site-footer__contacts">
@@ -13,7 +14,10 @@
         <i class="fa fa-mail"></i> Suivez-nous sur <a href="#">Facebook</a>
       </li>
     </ul>
+#}
+    {{ content }}
+    {% if copyright %}
     <div class="site-footer__copyright">{{ copyright }}</div>
-    {# {{ content }} #}
+    {% endif %}
   </div>
 </footer>
