@@ -54,6 +54,7 @@
         "drupal/honeypot": "^1.27",
         "drupal/inline_entity_form": "^1.0@beta",
         "drupal/metatag": "^1.4",
+        "drupal/paragraphs": "^1.2",
         "drupal/pathauto": "^1.0",
         "drupal/recaptcha": "^2.2",
         "drupal/shield": "^1.2",
