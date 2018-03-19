@@ -1,3 +1,116 @@
+/* line 9, sass/components/components/_accordion.scss */
+.accordion {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 14, sass/components/components/_accordion.scss */
+.accordion > li {
+  margin: 0;
+}
+
+/* line 21, sass/components/components/_accordion.scss */
+.accordion > li:before {
+  content: "\200B";
+  position: absolute;
+}
+
+/* line 30, sass/components/components/_accordion.scss */
+.accordion__heading {
+  border-radius: 6px;
+  color: #111;
+  font-family: "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-weight: 700;
+  padding: 1.25em 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: #f1f1f1 0 7px 8px;
+}
+
+/* line 42, sass/components/components/_accordion.scss */
+.js .accordion__heading {
+  font-size: inherit;
+  margin: -1px 0 0;
+}
+
+/* line 47, sass/components/components/_accordion.scss */
+.js .accordion__trigger {
+  -webkit-appearance: none;
+  background-color: #fefefe;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  color: #4464c2;
+  cursor: pointer;
+  display: block;
+  font-size: inherit;
+  padding: .5em 1em;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  z-index: 2;
+}
+
+/* line 79, sass/components/components/_accordion.scss */
+.js .accordion__trigger:hover, .js .accordion__trigger:focus,
+.js .accordion__trigger:hover,
+.js .accordion__trigger:focus {
+  background-color: #0e3b5e;
+  color: #fff;
+  outline: none;
+}
+
+/* line 86, sass/components/components/_accordion.scss */
+.js .accordion__trigger:focus,
+.js .accordion__trigger:focus {
+  box-shadow: inset 0 0 0 2px #1e82d1;
+}
+
+/* line 94, sass/components/components/_accordion.scss */
+.accordion__trigger[aria-disabled="true"]:hover {
+  background-color: #1b75bc;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+/* line 100, sass/components/components/_accordion.scss */
+.accordion__trigger[aria-disabled="true"]:focus {
+  background-color: #0a2a42;
+}
+
+/* line 107, sass/components/components/_accordion.scss */
+.js .accordion__panel {
+  background-color: #fefefe;
+  border-radius: 6px;
+  max-height: 0vh;
+  overflow: hidden;
+  padding: .05em 1.25em;
+  position: relative;
+  visibility: hidden;
+  z-index: 1;
+  margin-top: -.1em;
+}
+
+/* line 119, sass/components/components/_accordion.scss */
+.js .accordion__panel > :last-child {
+  margin-bottom: 0;
+}
+
+/* line 123, sass/components/components/_accordion.scss */
+.js .accordion__panel[aria-hidden="false"] {
+  max-height: 100vh;
+  overflow: auto;
+  padding: 1.25em;
+  visibility: visible;
+}
+
+/* line 133, sass/components/components/_accordion.scss */
+.accordion__trigger[aria-expanded="true"] {
+  background: #1b75bc;
+  color: #fff;
+}
+
 /* line 3, sass/components/components/_node.scss */
 .node--unpublished {
   opacity: .5;

@@ -1,3 +1,19 @@
-<footer class="site-footer l-constrain" role="contentinfo">
-  {{ content }}
+<footer class="site-footer" role="contentinfo">
+  <div class="l-constrain">
+    <h1 class="site-footer__title">{{ title }}</h1>
+    <div class="site-footer__text">{{ text }}</div>
+    <ul class="site-footer__contacts">
+      <li>
+        <i class="fa fa-mail"></i> Par téléphone au <a href="tel:494084000">0494/084.000</a>
+      </li>
+      <li>
+        <i class="fa fa-mail"></i> Par email à <a href="mailto:n.dewert@gmail.com">n.dewert@gmail.com</a>
+      </li>
+      <li>
+        <i class="fa fa-mail"></i> Suivez-nous sur <a href="#">Facebook</a>
+      </li>
+    </ul>
+    <div class="site-footer__copyright">{{ copyright }}</div>
+    {# {{ content }} #}
+  </div>
 </footer>

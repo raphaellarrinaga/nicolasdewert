@@ -9,7 +9,6 @@ base:
     - core/modernizr
     - dewert_theme/orientationchange
     - dewert_theme/fonts
-
   css:
     base:
       css/base/base.css: {}
@@ -40,6 +39,8 @@ dropdown:
     js/dropdown.js: {}
 
 fonts:
+  js:
+    //use.fontawesome.com/810222a069.js: { type: external }
   css:
     theme:
       '//fonts.googleapis.com/css?family=Nunito:400,400i,700,700i|Playfair+Display': { type: external, minified: true }

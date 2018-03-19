@@ -1,23 +1,36 @@
-exemplecomponent:
-  label: Exemple component
-  description: An exemple component
+accordion:
+  label: Accordion
+  description: An A11Y complient accordion
+  fields:
+    heading:
+      type: render_array
+      label: Header
+      description: The clickable heading
+      preview: The heading
+    panel:
+      type: render_array
+      label: Panel
+      description: The hidden content
+      preview: The panel content
+  theme hook: "accordion"
+
+teaser:
+  label: Teaser
+  description: A basic teaser
   fields:
     title:
-      type: text
+      type: string
       label: Title
-      description: Exemple component title.
-      preview: Component title
-    text:
-      type: text
-      label: Text
-      description: Exemple component text.
-      preview: Component text cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+      description: The title
+      preview: Title
     image:
       type: image
       label: Image
-      description: The actual image.
-      preview:
-        theme: image
-        uri: https://placekitten.com/160/90
-
-  theme hook: "exemple-component"
+      description: A picture
+      preview: '<img src="https://nosrc.io/150x150" alt="" />'
+    place:
+      type: string
+      label: Place
+      description: A location, a city
+      preview: "Liège"
+  theme hook: "teaser"

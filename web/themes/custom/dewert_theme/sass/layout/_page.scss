@@ -83,4 +83,27 @@
 .site-content-bottom{}
 
 // Global footer
-.site-footer{}
+.site-footer{
+  background-color: $brand-primary;
+  box-sizing: border-box;
+  margin: 0 rem(20) rem(20);
+  padding: rhythm(1) 0;
+}
+
+.site-footer__title{}
+
+.site-footer__text{
+  color: $white;
+}
+
+.site-footer__contacts{
+  a{
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.site-footer__copyright{
+  color: $white;
+  font-size: $font-size-md;
+}

@@ -189,3 +189,28 @@
 .site-main {
   outline: none;
 }
+
+/* line 86, sass/layout/_page.scss */
+.site-footer {
+  background-color: #82BE43;
+  box-sizing: border-box;
+  margin: 0 1.25rem 1.25rem;
+  padding: 1.5rem 0;
+}
+
+/* line 95, sass/layout/_page.scss */
+.site-footer__text {
+  color: #fefefe;
+}
+
+/* line 100, sass/layout/_page.scss */
+.site-footer__contacts a {
+  color: #fefefe;
+  text-decoration: none;
+}
+
+/* line 106, sass/layout/_page.scss */
+.site-footer__copyright {
+  color: #fefefe;
+  font-size: 0.833rem;
+}
