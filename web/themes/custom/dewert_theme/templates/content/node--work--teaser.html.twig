@@ -1,0 +1,52 @@
+{#
+/**
+ * @file
+ * Theme override for a node work teaser.
+ *
+ * @see template_preprocess_node()
+#}
+{% set bundle = node.bundle|clean_class %}
+{%
+  set classes = [
+    bundle,
+    view_mode ? bundle ~ '--' ~ view_mode|clean_class,
+    node.isPromoted() ? bundle ~ '--promoted',
+    node.isSticky() ? bundle ~ '--sticky',
+    not node.isPublished() ? bundle ~ '--unpublished',
+  ]
+%}
+{%
+  set title_classes = [
+    'article__title',
+    'article--' ~ view_mode|clean_class ~ '__title',
+  ]
+%}
+<article class="{{ attributes.addClass(classes).class }}"{{ attributes|without('class', 'id') }}>
+  {% block content %}
+    {{ title_prefix }}
+    {% if not page %}
+      <h1{{ title_attributes.addClass(title_classes) }}><a href="{{ url }}" rel="bookmark">{{ label }}</a></h1>
+    {% endif %}
+    {{ title_suffix }}
+
+    {% if display_submitted %}
+      <footer class="{{ bundle ~ '__footer' }}">
+        {{ author_picture }}
+        <div{{ author_attributes.addClass(bundle ~ '__submitted') }}>
+          {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+          {{ metadata }}
+        </div>
+      </footer>
+    {% endif %}
+
+    <div{{ content_attributes.addClass(bundle ~ '__content') }}>
+      {{ content|without('links', 'field_media_image') }}
+    </div>
+
+    {% if content.field_media_image.0 %}
+      {{ content.field_media_image.0 }}
+    {% endif %}
+
+    {{ content.links }}
+  {% endblock %}
+</article>
