@@ -250,6 +250,10 @@
   white-space: nowrap;
   -webkit-font-smoothing: antialiased;
 
+  i{
+    transition: none;
+  }
+
   &:active {
     @include transform(translateY(1px));
   }
@@ -295,4 +299,9 @@
     color: $button-prim-text-color;
     outline: 0;
   }
+
+  &:visited {
+    color: $button-prim-text-color;
+  }
 }
+

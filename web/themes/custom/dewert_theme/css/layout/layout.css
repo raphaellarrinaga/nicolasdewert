@@ -115,24 +115,50 @@
   .site-header {
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
     margin-bottom: 1.5rem;
   }
 }
 
+/* line 18, sass/layout/_page.scss */
+.button.button--header {
+  font-size: 0.833rem;
+  margin-top: 1.562rem;
+}
+
 @media screen and (min-width: 48.062em) {
-  /* line 17, sass/layout/_page.scss */
+  /* line 18, sass/layout/_page.scss */
+  .button.button--header {
+    align-self: center;
+  }
+}
+
+/* line 26, sass/layout/_page.scss */
+.button.button--header span {
+  color: #cee5b5;
+}
+
+@media screen and (min-width: 48.062em) {
+  /* line 31, sass/layout/_page.scss */
   .site-navigation {
     padding-left: 2em;
     padding-right: 2em;
   }
 }
 
-/* line 24, sass/layout/_page.scss */
+/* line 38, sass/layout/_page.scss */
 .site-logo {
   padding-top: 1.562rem;
 }
 
-/* line 28, sass/layout/_page.scss */
+@media screen and (min-width: 48.062em) {
+  /* line 38, sass/layout/_page.scss */
+  .site-logo {
+    align-self: center;
+  }
+}
+
+/* line 47, sass/layout/_page.scss */
 .main-menu {
   list-style: none;
   margin-bottom: 0;
@@ -140,14 +166,14 @@
 }
 
 @media screen and (min-width: 48.062em) {
-  /* line 28, sass/layout/_page.scss */
+  /* line 47, sass/layout/_page.scss */
   .main-menu {
     display: flex;
     align-items: flex-start;
   }
 }
 
-/* line 39, sass/layout/_page.scss */
+/* line 58, sass/layout/_page.scss */
 .main-menu-link {
   color: #333;
   font-size: 1.125rem;
@@ -156,13 +182,13 @@
 }
 
 @media screen and (min-width: 48.062em) {
-  /* line 39, sass/layout/_page.scss */
+  /* line 58, sass/layout/_page.scss */
   .main-menu-link {
     display: block;
     padding-left: .75em;
     padding-right: .75em;
   }
-  /* line 50, sass/layout/_page.scss */
+  /* line 69, sass/layout/_page.scss */
   .main-menu-link:before {
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
@@ -172,26 +198,26 @@
     height: 2.5rem;
     width: 2px;
   }
-  /* line 59, sass/layout/_page.scss */
+  /* line 78, sass/layout/_page.scss */
   .main-menu-link.is-active {
     color: #82BE43;
   }
-  /* line 62, sass/layout/_page.scss */
+  /* line 81, sass/layout/_page.scss */
   .main-menu-link.is-active:before {
     background-color: #82BE43;
   }
-  /* line 68, sass/layout/_page.scss */
+  /* line 87, sass/layout/_page.scss */
   .main-menu-link:hover:before {
     background-color: #82BE43;
   }
 }
 
-/* line 76, sass/layout/_page.scss */
+/* line 95, sass/layout/_page.scss */
 .site-main {
   outline: none;
 }
 
-/* line 87, sass/layout/_page.scss */
+/* line 106, sass/layout/_page.scss */
 .site-footer {
   background-color: #82BE43;
   box-sizing: border-box;
@@ -199,18 +225,18 @@
   padding: 1.5rem 0;
 }
 
-/* line 96, sass/layout/_page.scss */
+/* line 115, sass/layout/_page.scss */
 .site-footer__text {
   color: #fefefe;
 }
 
-/* line 101, sass/layout/_page.scss */
+/* line 120, sass/layout/_page.scss */
 .site-footer__contacts a {
   color: #fefefe;
   text-decoration: none;
 }
 
-/* line 107, sass/layout/_page.scss */
+/* line 126, sass/layout/_page.scss */
 .site-footer__copyright {
   color: #fefefe;
   font-size: 0.833rem;

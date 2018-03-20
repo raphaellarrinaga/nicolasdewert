@@ -45,6 +45,8 @@
   {% if page.header %}
     {% include "@organisms/site-header/site-header.twig" ignore missing with {
       content: page.header,
+      button_text: "Contact"|t ~ " <span>| "~ "Visites"|t ~"</span>",
+      button_url: "#contact",
     } %}
   {% endif %}
 

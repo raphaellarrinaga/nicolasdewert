@@ -13,8 +13,9 @@
  * @todo embed @organisms/site-header/site-header.twig
  */
 #}
-<header class="site-header" role="banner">
-  <div class="l-constrain">
-    {{ content }}
-  </div>
-</header>
+{% include '@organisms/site-header/site-header.twig' with  {
+    content: content,
+    button_text: "Contact <span>| Visites</span>",
+    button_url: "#contact",
+  }
+%}

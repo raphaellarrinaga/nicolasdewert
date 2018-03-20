@@ -50,6 +50,11 @@
 }
 
 /* line 253, sass/abstracts/_mixins.scss */
+.button i {
+  transition: none;
+}
+
+/* line 257, sass/abstracts/_mixins.scss */
 .button:active {
   -webkit-transform: translateY(1px);
   -moz-transform: translateY(1px);
@@ -58,24 +63,24 @@
   transform: translateY(1px);
 }
 
-/* line 257, sass/abstracts/_mixins.scss */
+/* line 261, sass/abstracts/_mixins.scss */
 .button:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
 
-/* line 268, sass/abstracts/_mixins.scss */
+/* line 272, sass/abstracts/_mixins.scss */
 .button:visited {
   color: #515151;
 }
 
-/* line 272, sass/abstracts/_mixins.scss */
+/* line 276, sass/abstracts/_mixins.scss */
 .button:hover {
   background-color: #bcbcbc;
   color: #515151;
 }
 
-/* line 277, sass/abstracts/_mixins.scss */
+/* line 281, sass/abstracts/_mixins.scss */
 .button:focus {
   box-shadow: #a8d27c 0 0 5px;
   color: #515151;
@@ -88,17 +93,22 @@
   color: #fefefe;
 }
 
-/* line 288, sass/abstracts/_mixins.scss */
+/* line 292, sass/abstracts/_mixins.scss */
 .button--primary:hover {
   background-color: #6da138;
   color: #fefefe;
 }
 
-/* line 293, sass/abstracts/_mixins.scss */
+/* line 297, sass/abstracts/_mixins.scss */
 .button--primary:focus {
   box-shadow: #a8d27c 0 0 5px;
   color: #fefefe;
   outline: 0;
+}
+
+/* line 303, sass/abstracts/_mixins.scss */
+.button--primary:visited {
+  color: #fefefe;
 }
 
 /* line 11, sass/components/global/_buttons.scss */

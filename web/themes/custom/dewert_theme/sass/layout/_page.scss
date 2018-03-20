@@ -10,7 +10,21 @@
   @include mappy-query(b-medium) {
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
     margin-bottom: rhythm(1);
+  }
+}
+
+.button.button--header{
+  font-size: $font-size-md;
+  margin-top: rem(25);
+
+  @include mappy-query(b-medium) {
+    align-self: center;
+  }
+
+  span{
+    color: lighten($brand-primary, 30%);
   }
 }
 
@@ -22,7 +36,12 @@
 }
 
 .site-logo{
+  // flex-shrink: 0;
   padding-top: rem(25);
+
+  @include mappy-query(b-medium) {
+    align-self: center;
+  }
 }
 
 .main-menu{
