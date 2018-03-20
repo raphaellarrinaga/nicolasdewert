@@ -1,0 +1,49 @@
+// Hero
+
+.site-hero{
+  position: relative;
+  padding-left: rem(20);
+  padding-right: rem(20);
+}
+
+.site-hero__slogan{
+  @include mappy-query(b-medium) {
+    bottom: rem(100);
+    color: $white;
+    font-size: modular-scale(5);
+    left: rem(20);
+    left: calc((100% - #{$l-medium})/2);
+    // right: 0;
+    margin: auto;
+    max-width: rem(800);
+    position: absolute;
+    z-index: 1;
+  }
+
+  @include mappy-query(b-big) {
+    bottom: rem(120);
+    left: rem(60);
+    left: calc((100% - #{$l-big})/2);
+  }
+
+  @include mappy-query(b-wide) {
+    left: rem(60);
+    left: calc((100% - #{$l-big})/2);
+  }
+
+  strong{
+    display: inline-block;
+    font-weight: normal;
+    position: relative;
+
+    &:after{
+      @include css-content(inline-block, 100%, 2px);
+      background: $brand-primary;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 2px;
+    }
+  }
+}

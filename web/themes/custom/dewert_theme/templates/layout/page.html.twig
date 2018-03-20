@@ -49,14 +49,12 @@
   {% endif %}
 
   <main class="site-main" role="main" tabindex="-1">
-    <div class="l-constrain">
-      {% if page.content_top %}
-      <section class="site-content-top">
-        {{ page.content_top }}
-      </section>
-      {% endif %}
+    {% if page.content_top %}
+      {{ page.content_top }}
+    {% endif %}
 
-      <section class="site-content" id="main-content">
+    <section class="site-content" id="main-content">
+      <div class="l-constrain">
         {% block content %}
           {{ page.content }}
         {% endblock %}
@@ -66,14 +64,14 @@
             {{ page.content_aside }}
           </aside>
         {% endif %}
-      </section>
+      </div>
+    </section>
 
-      {% if page.content_bottom %}
-      <section class="site-content-bottom">
-        {{ page.content_bottom }}
-      </section>
-      {% endif %}
-    </div>
+    {% if page.content_bottom %}
+    <section class="site-content-bottom">
+      {{ page.content_bottom }}
+    </section>
+    {% endif %}
   </main>
 
   {% if page.footer %}

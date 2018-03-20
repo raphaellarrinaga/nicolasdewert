@@ -10,6 +10,7 @@
   @include mappy-query(b-medium) {
     display: flex;
     align-items: flex-start;
+    margin-bottom: rhythm(1);
   }
 }
 
