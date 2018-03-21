@@ -35,6 +35,22 @@ teaser:
       preview: "Liège"
   theme hook: "teaser"
 
+taxonomy_teaser:
+  label: Taxonomy Teaser
+  description: A basic taxonomy teaser
+  fields:
+    title:
+      type: string
+      label: Title
+      description: The title
+      preview: Title
+    image:
+      type: image
+      label: Image
+      description: A picture
+      preview: '<img src="https://nosrc.io/150x150" alt="" />'
+  theme hook: "taxonomy_teaser"
+
 hero:
   label: Hero
   description: The website hero
