@@ -336,30 +336,42 @@
   }
 }
 
-/* line 206, sass/layout/_page.scss */
-.l-flex-wave > * {
+@media screen and (min-width: 48.062em) {
+  /* line 209, sass/layout/_page.scss */
+  .l-flex-wave__rows {
+    display: flex;
+    flex: 1 0 75%;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    margin-left: -0.625rem;
+    margin-right: -0.625rem;
+  }
+}
+
+/* line 219, sass/layout/_page.scss */
+.l-flex-wave__rows > * {
   margin-bottom: 1.5rem;
 }
 
 @media screen and (min-width: 48.062em) {
-  /* line 206, sass/layout/_page.scss */
-  .l-flex-wave > * {
+  /* line 219, sass/layout/_page.scss */
+  .l-flex-wave__rows > * {
     margin-bottom: 0;
-    padding-left: 0.625rem;
-    padding-right: 0.625rem;
     flex-grow: 1;
     flex-basis: 0;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
   }
-  /* line 216, sass/layout/_page.scss */
-  .l-flex-wave > *:nth-child(2) {
+  /* line 229, sass/layout/_page.scss */
+  .l-flex-wave__rows > *:first-child {
     margin-top: 3rem;
   }
-  /* line 219, sass/layout/_page.scss */
-  .l-flex-wave > *:nth-child(3) {
+  /* line 232, sass/layout/_page.scss */
+  .l-flex-wave__rows > *:nth-child(2) {
     margin-top: 4.5rem;
   }
-  /* line 222, sass/layout/_page.scss */
-  .l-flex-wave > *:nth-child(4) {
+  /* line 235, sass/layout/_page.scss */
+  .l-flex-wave__rows > *:nth-child(3) {
     margin-top: 1.5rem;
   }
 }
