@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "71f8dffd3253f6e55f2cd6d09858c801",
+    "content-hash": "08341541acb3df0a3ee84692c6581391",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3278,6 +3278,53 @@
             }
         },
         {
+            "name": "drupal/obfuscate",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/obfuscate",
+                "reference": "30199fb56eb87851eabf90b4c80f39741ff79d72"
+            },
+            "require": {
+                "drupal/core": "*",
+                "propaganistas/email-obfuscator": "~1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1505336043",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "colorfield",
+                    "homepage": "https://www.drupal.org/user/2295486"
+                }
+            ],
+            "description": "Obfuscates email addresses with a Field Formatter of Email field, a text Filter and a Twig extension.",
+            "homepage": "https://www.drupal.org/project/obfuscate",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/obfuscate",
+                "issues": "https://www.drupal.org/project/issues/obfuscate"
+            },
+            "time": "2017-09-13T20:50:57+00:00"
+        },
+        {
             "name": "drupal/paragraphs",
             "version": "1.2.0",
             "source": {
@@ -3691,6 +3738,53 @@
             "homepage": "https://www.drupal.org/project/token",
             "support": {
                 "source": "http://cgit.drupalcode.org/token"
+            }
+        },
+        {
+            "name": "drupal/twig_field_value",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/twig_field_value",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/twig_field_value-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "793d634347eec904617e7bc3b03b75a69fceb928"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1474037939",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Sutharsan",
+                    "homepage": "https://www.drupal.org/user/73854"
+                }
+            ],
+            "description": "Twig filters for value(s) and label.",
+            "homepage": "https://www.drupal.org/project/twig_field_value",
+            "support": {
+                "source": "http://cgit.drupalcode.org/twig_field_value"
             }
         },
         {
@@ -4674,6 +4768,53 @@
                 "random"
             ],
             "time": "2017-09-27T21:40:39+00:00"
+        },
+        {
+            "name": "propaganistas/email-obfuscator",
+            "version": "1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Propaganistas/Email-Obfuscator.git",
+                "reference": "76160733eefb7a73f7277fea4b2d093922e551b5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Propaganistas/Email-Obfuscator/zipball/76160733eefb7a73f7277fea4b2d093922e551b5",
+                "reference": "76160733eefb7a73f7277fea4b2d093922e551b5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Propaganistas\\EmailObfuscator\\": "src/"
+                },
+                "files": [
+                    "src/Obfuscator.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Propaganistas",
+                    "email": "Propaganistas@users.noreply.github.com"
+                }
+            ],
+            "description": "Provides an email obfuscator for use in various platforms.",
+            "keywords": [
+                "antispam",
+                "email",
+                "laravel",
+                "obfuscation",
+                "spam",
+                "twig"
+            ],
+            "time": "2016-12-22T16:34:03+00:00"
         },
         {
             "name": "psr/container",
@@ -9527,6 +9668,7 @@
         "drupal/context": 10,
         "drupal/exif_orientation": 10,
         "drupal/inline_entity_form": 10,
+        "drupal/obfuscate": 20,
         "drupal/styleguide": 15,
         "drupal/ui_patterns": 5,
         "behat/mink-selenium2-driver": 20,

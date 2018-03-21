@@ -108,15 +108,33 @@
   box-sizing: border-box;
   margin: 0 rem(20) rem(20);
   padding: rhythm(1) 0;
+
+  a{
+    color: $white;
+  }
 }
 
-.site-footer__title{}
+.footer-c2a__title{
+  color: $brand-primary-dark;
+  font-size: modular-scale(5);
 
-.site-footer__text{
+  &:after{
+    @include css-content(block, 56px, 2px);
+    background-color: $brand-primary-dark;
+    border-radius: 2px;
+    margin-top: rhythm(1);
+  }
+}
+
+.footer-c2a__text{
   color: $white;
 }
 
-.site-footer__contacts{
+.footer-c2a__contacts{
+  color: $brand-primary-dark;
+  list-style: none;
+  padding-left: 0;
+
   a{
     color: $white;
     text-decoration: none;
