@@ -162,9 +162,10 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-a2921e27a4ced70656e5dbedc1b0b95b-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"site-footer"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"contentinfo"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"site-footer"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"contentinfo"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"contact"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"l-constrain"</span>&gt;</span>
         Footer content
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"site-footer__copyright"</span>&gt;</span>2018 © N.Dewert sprl<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span></pre>
         
@@ -174,9 +175,12 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-a2921e27a4ced70656e5dbedc1b0b95b-panel-view">
     <code class="Code Code--lang-twig">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"site-footer"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"contentinfo"</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"site-footer"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"contentinfo"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"contact"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"l-constrain"</span>&gt;</span>
     </span><span class="hljs-template-variable">{{ content }}</span><span class="xml">
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> copyright %}</span><span class="xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"site-footer__copyright"</span>&gt;</span></span><span class="hljs-template-variable">{{ copyright }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span></span></pre>
     </code>
@@ -188,7 +192,10 @@
         
             
             <pre>{
-  <span class="hljs-attr">"content"</span>: <span class="hljs-string">"Footer content"</span>
+  <span class="hljs-attr">"content"</span>: <span class="hljs-string">"Footer content"</span>,
+  <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Besoin d’un conseil ? &lt;br&gt;Envie de visiter un chantier ?"</span>,
+  <span class="hljs-attr">"text"</span>: <span class="hljs-string">"N’hésitez pas à nous contacter, nous répondons à toutes vos question et nous vous accompagnons volontier pour une visite d’une de nos construction en cours ou achevée."</span>,
+  <span class="hljs-attr">"copyright"</span>: <span class="hljs-string">"2018 © N.Dewert sprl"</span>
 }</pre>
             
         
@@ -481,8 +488,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="exemple-component.html" data-pjax>
-                <span>Exemple Component</span>
+            <a class="Tree-entityLink" href="accordion.html" data-pjax>
+                <span>Accordion</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -501,6 +508,65 @@
             </a>
         </li>
         
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="footer_c2a.html" data-pjax>
+                <span>Footer C 2 A</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="hero.html" data-pjax>
+                <span>Hero</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-navigations">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Navigations</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
     
         
         
@@ -556,6 +622,35 @@
         
     
         
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="teaser.html" data-pjax>
+                <span>Teaser</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
         <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-organisms">
             <h4 class="Tree-collectionLabel" data-role="toggle">
                 <span>Organisms</span>
@@ -565,6 +660,54 @@
             
             
             
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="section-expertise.html" data-pjax>
+                <span>Section Expertise</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="section-ossature.html" data-pjax>
+                <span>Section Ossature</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
     
         
         

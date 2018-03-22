@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Theme override for Section Expertise
+ *
+ */
+#}
+{%
+  set block_class = 'block-' ~ plugin_id|clean_class
+%}
+{%
+  set classes = [
+    block_class,
+  ]
+%}
+<div{{ attributes.addClass(classes)|without('id') }}>
+  {% set link = pattern('section_button', {
+    text: content.field_link.0['#title'],
+    url: content.field_link.0['#url']}) %}
+  {% block content %}
+    {{ pattern('section_expertise', {
+      title: label,
+      image: content.image ? content.image,
+      list: content.body ? content.body,
+      link: link,
+    }) }}
+  {% endblock %}
+</div>

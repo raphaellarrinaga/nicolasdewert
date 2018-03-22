@@ -305,3 +305,11 @@
   }
 }
 
+// Custom border
+
+@mixin title-border($color: $brand-primary, $width: 52px, $height: 6px) {
+  @include css-content(block, $width, $height);
+  background-color: $color;
+  border-radius: $height/2;
+  margin: rhythm(1) auto;
+}

@@ -1,3 +1,66 @@
+section_button:
+  label: Section button
+  description: Section button with icon
+  fields:
+    text:
+      type: string
+      label: Text
+      description: Link text
+      preview: Expertise
+    url:
+      type: string
+      label: Url
+      description: Link url
+      preview: /expertise
+  use: "@atoms/section-button/section-button.twig"
+
+section_expertise:
+  label: Section expertise
+  description: Section expertise
+  fields:
+    title:
+      type: title
+      label: Title
+      description: Title
+      preview: 'The title'
+    image:
+      type: image
+      label: Image
+      description: Image
+      preview: '<img src="https://nosrc.io/150x150" alt="" />'
+    list:
+      type: render_array
+      label: List
+      description: List
+      preview: <ul><li>A list</li><li>Of items</li></ul>
+    link:
+      type: link
+      label: Link
+      description: Link
+      preview: 'The link'
+  use: "@organisms/section-expertise/section-expertise.twig"
+
+section_ossature:
+  label: Section ossature
+  description: Section ossature
+  fields:
+    title:
+      type: title
+      label: Title
+      description: Title
+      preview: 'The title'
+    subtitle:
+      type: subtitle
+      label: Subtitle
+      description: Subtitle
+      preview: 'The subtitle'
+    link:
+      type: link
+      label: Link
+      description: Link
+      preview: 'The link'
+  use: "@organisms/section-ossature/section-ossature.twig"
+
 accordion:
   label: Accordion
   description: An A11Y complient accordion

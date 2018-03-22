@@ -1,3 +1,181 @@
+/* line 9, sass/components/components/_accordion.scss */
+.accordion {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 14, sass/components/components/_accordion.scss */
+.accordion > li {
+  margin: 0;
+}
+
+/* line 21, sass/components/components/_accordion.scss */
+.accordion > li:before {
+  content: "\200B";
+  position: absolute;
+}
+
+/* line 30, sass/components/components/_accordion.scss */
+.accordion__heading {
+  border-radius: 6px;
+  color: #111;
+  font-family: "Nunito", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-weight: 700;
+  padding: 1.25em 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: #f1f1f1 0 7px 8px;
+}
+
+/* line 42, sass/components/components/_accordion.scss */
+.js .accordion__heading {
+  font-size: inherit;
+  margin: -1px 0 0;
+}
+
+/* line 47, sass/components/components/_accordion.scss */
+.js .accordion__trigger {
+  -webkit-appearance: none;
+  background-color: #fefefe;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  color: #4464c2;
+  cursor: pointer;
+  display: block;
+  font-size: inherit;
+  padding: .5em 1em;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  z-index: 2;
+}
+
+/* line 79, sass/components/components/_accordion.scss */
+.js .accordion__trigger:hover, .js .accordion__trigger:focus,
+.js .accordion__trigger:hover,
+.js .accordion__trigger:focus {
+  background-color: #0e3b5e;
+  color: #fff;
+  outline: none;
+}
+
+/* line 86, sass/components/components/_accordion.scss */
+.js .accordion__trigger:focus,
+.js .accordion__trigger:focus {
+  box-shadow: inset 0 0 0 2px #1e82d1;
+}
+
+/* line 94, sass/components/components/_accordion.scss */
+.accordion__trigger[aria-disabled="true"]:hover {
+  background-color: #1b75bc;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+/* line 100, sass/components/components/_accordion.scss */
+.accordion__trigger[aria-disabled="true"]:focus {
+  background-color: #0a2a42;
+}
+
+/* line 107, sass/components/components/_accordion.scss */
+.js .accordion__panel {
+  background-color: #fefefe;
+  border-radius: 6px;
+  max-height: 0vh;
+  overflow: hidden;
+  padding: .05em 1.25em;
+  position: relative;
+  visibility: hidden;
+  z-index: 1;
+  margin-top: -.1em;
+}
+
+/* line 119, sass/components/components/_accordion.scss */
+.js .accordion__panel > :last-child {
+  margin-bottom: 0;
+}
+
+/* line 123, sass/components/components/_accordion.scss */
+.js .accordion__panel[aria-hidden="false"] {
+  max-height: 100vh;
+  overflow: auto;
+  padding: 1.25em;
+  visibility: visible;
+}
+
+/* line 133, sass/components/components/_accordion.scss */
+.accordion__trigger[aria-expanded="true"] {
+  background: #1b75bc;
+  color: #fff;
+}
+
+/* line 3, sass/components/components/_hero.scss */
+.site-hero {
+  position: relative;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+/* line 8, sass/components/components/_hero.scss */
+.site-hero img {
+  width: 100%;
+}
+
+@media screen and (min-width: 48.062em) {
+  /* line 14, sass/components/components/_hero.scss */
+  .site-hero__slogan {
+    bottom: 6.25rem;
+    color: #fefefe;
+    font-size: 2.488rem;
+    left: 1.25rem;
+    left: calc((100% - 90%)/2);
+    margin: auto;
+    max-width: 50rem;
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+@media screen and (min-width: 76.25em) {
+  /* line 14, sass/components/components/_hero.scss */
+  .site-hero__slogan {
+    bottom: 7.5rem;
+    left: 3.75rem;
+    left: calc((100% - 76.25rem)/2);
+  }
+}
+
+@media screen and (min-width: 83.75em) {
+  /* line 14, sass/components/components/_hero.scss */
+  .site-hero__slogan {
+    left: 3.75rem;
+    left: calc((100% - 76.25rem)/2);
+  }
+}
+
+/* line 39, sass/components/components/_hero.scss */
+.site-hero__slogan strong {
+  display: inline-block;
+  font-weight: normal;
+  position: relative;
+}
+
+/* line 44, sass/components/components/_hero.scss */
+.site-hero__slogan strong:after {
+  content: "";
+  display: inline-block;
+  height: 2px;
+  width: 100%;
+  background: #82BE43;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 2px;
+}
+
 /* line 3, sass/components/components/_node.scss */
 .node--unpublished {
   opacity: .5;
@@ -11,4 +189,133 @@
   width: 100%;
   border-radius: 3px;
   background: repeating-linear-gradient(-45deg, yellow, yellow 10px, #111 10px, #111 20px);
+}
+
+/* line 3, sass/components/components/_section-ossature.scss */
+.section-ossature {
+  background-color: #F5F5F5;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+/* line 10, sass/components/components/_section-ossature.scss */
+.section-ossature .button {
+  display: inline-block;
+  margin: 1.5rem auto;
+}
+
+/* line 16, sass/components/components/_section-ossature.scss */
+.section-ossature__title {
+  font-size: 2.488rem;
+  text-align: center;
+}
+
+/* line 20, sass/components/components/_section-ossature.scss */
+.section-ossature__title:after {
+  content: "";
+  display: block;
+  height: 6px;
+  width: 52px;
+  background-color: #82BE43;
+  border-radius: 3px;
+  margin: 1.5rem auto;
+}
+
+/* line 25, sass/components/components/_section-ossature.scss */
+.section-ossature__intro {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* line 30, sass/components/components/_section-ossature.scss */
+.section-ossature__list {
+  list-style: none;
+  padding-left: 0;
+}
+
+@media screen and (min-width: 48.062em) {
+  /* line 30, sass/components/components/_section-ossature.scss */
+  .section-ossature__list {
+    display: flex;
+  }
+  /* line 37, sass/components/components/_section-ossature.scss */
+  .section-ossature__list li {
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+}
+
+/* line 43, sass/components/components/_section-ossature.scss */
+.section-ossature__list li {
+  margin-bottom: 1.5rem;
+}
+
+/* line 48, sass/components/components/_section-ossature.scss */
+.icn-materiaux {
+  background: url("../../images/icons/icn-materiaux.svg") no-repeat left top;
+}
+
+/* line 51, sass/components/components/_section-ossature.scss */
+.icn-competences {
+  background: url("../../images/icons/icn-competences.svg") no-repeat left top;
+}
+
+/* line 54, sass/components/components/_section-ossature.scss */
+.icn-isolation {
+  background: url("../../images/icons/icn-isolation.svg") no-repeat left top;
+}
+
+/* line 57, sass/components/components/_section-ossature.scss */
+.icn-prix {
+  background: url("../../images/icons/icn-prix.svg") no-repeat left top;
+}
+
+/* line 6, sass/components/components/_taxonomy-teaser.scss */
+.taxonomy-teaser__image {
+  position: relative;
+  line-height: 0;
+}
+
+/* line 10, sass/components/components/_taxonomy-teaser.scss */
+.taxonomy-teaser__image:before {
+  content: "";
+  display: block;
+  height: 10px;
+  width: 100%;
+  background: #fefefe;
+  position: absolute;
+  bottom: 0;
+  left: 1.25rem;
+  z-index: 1;
+}
+
+/* line 20, sass/components/components/_taxonomy-teaser.scss */
+.taxonomy-teaser__title {
+  font-size: 1.125rem;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* line 26, sass/components/components/_taxonomy-teaser.scss */
+.taxonomy-teaser__title > span {
+  display: inline-block;
+  margin-left: 2.625rem;
+  position: relative;
+}
+
+/* line 31, sass/components/components/_taxonomy-teaser.scss */
+.taxonomy-teaser__title > span:before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 30px;
+  background: #82BE43;
+  border-radius: 2px;
+  position: absolute;
+  top: 0.625rem;
+  right: 100%;
+  margin-right: 8px;
 }

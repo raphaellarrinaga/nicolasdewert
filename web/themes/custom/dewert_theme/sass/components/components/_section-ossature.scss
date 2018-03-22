@@ -1,0 +1,77 @@
+// Section ossature
+
+.section-ossature{
+  background-color: $brand-tertiary;
+  margin-left: rem(20);
+  margin-right: rem(20);
+  padding-bottom: rhythm(3);
+  padding-top: rhythm(3);
+}
+
+.section-ossature__title{
+  font-size: modular-scale(5);
+  text-align: center;
+  margin-top: 0;
+
+  &:after{
+    @include title-border;
+  }
+}
+
+.section-ossature__intro{
+  font-weight: bold;
+  margin: 0 auto rhythm(2);
+  max-width: rem(640);
+  text-align: center;
+}
+
+.section-ossature__list{
+  list-style: none;
+  padding-left: 0;
+
+  @include mappy-query(b-medium) {
+    display: flex;
+
+    li{
+      flex-grow: 1;
+      flex-shrink: 1;
+    }
+  }
+
+  li{
+    margin-bottom: rhythm(1);
+  }
+
+  p{
+    font-size: $font-size-md;
+  }
+
+  h2{
+    margin-top: rhythm(1);
+  }
+}
+
+.icn-materiaux{
+  background: url("../../images/icons/icn-materiaux.svg") no-repeat left top;
+  height: 47px;
+  width: 47px;
+}
+.icn-competences{
+  background: url("../../images/icons/icn-competences.svg") no-repeat left top;
+  height: 47px;
+  width: 47px;
+}
+.icn-isolation{
+  background: url("../../images/icons/icn-isolation.svg") no-repeat left top;
+  height: 47px;
+  width: 47px;
+}
+.icn-prix{
+  background: url("../../images/icons/icn-prix.svg") no-repeat left top;
+  height: 47px;
+  width: 47px;
+}
+
+.section-ossature__action{
+  text-align: center;
+}

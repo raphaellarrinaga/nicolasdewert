@@ -1,5 +1,5 @@
 /* line 7, sass/styleguide.scss */
-.main-content {
+.site-content {
   padding-bottom: 1.5rem;
   padding-top: 1.5rem;
 }
@@ -14,12 +14,12 @@
 
 /* line 24, sass/styleguide.scss */
 .brand-color-primary {
-  background-color: green;
+  background-color: #82BE43;
 }
 
 /* line 24, sass/styleguide.scss */
 .brand-color-secondary {
-  background-color: blue;
+  background-color: #2F3231;
 }
 
 /* line 29, sass/styleguide.scss */

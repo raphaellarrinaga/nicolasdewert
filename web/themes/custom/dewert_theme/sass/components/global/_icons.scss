@@ -4,3 +4,7 @@
   display: inline-block;
   vertical-align: middle;
 }
+
+[class*="icn-"]{
+  @extend %icn;
+}
