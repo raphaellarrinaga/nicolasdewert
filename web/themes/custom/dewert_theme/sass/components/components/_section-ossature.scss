@@ -11,7 +11,8 @@
 .section-ossature__title{
   font-size: modular-scale(5);
   text-align: center;
-  margin-top: 0;
+  margin: 0 auto rhythm(1);
+  max-width: $l-big;
 
   &:after{
     @include title-border;
@@ -31,15 +32,19 @@
 
   @include mappy-query(b-medium) {
     display: flex;
-
-    li{
-      flex-grow: 1;
-      flex-shrink: 1;
-    }
+    margin-left: -rem(10);
+    margin-right: -rem(10);
   }
 
   li{
     margin-bottom: rhythm(1);
+
+    @include mappy-query(b-medium) {
+      flex-grow: 1;
+      flex-shrink: 1;
+      margin-left: rem(10);
+      margin-right: rem(10);
+    }
   }
 
   p{

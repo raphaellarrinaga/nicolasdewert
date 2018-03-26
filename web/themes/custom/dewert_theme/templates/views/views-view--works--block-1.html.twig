@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme override for the works types frontpage block
+ * Theme override for the realisations teasing view block
  *
  * Available variables:
  * - attributes: Remaining HTML attributes for the element.
@@ -33,6 +33,8 @@
 {%
   set classes = [
     dom_id ? 'js-view-dom-id-' ~ dom_id,
+    'reals-teasing',
+    'l-constrain'
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
@@ -40,25 +42,26 @@
   {{ title }}
   {{ title_suffix }}
 
-  {% if header %}
-    <header>
-      {{ header }}
-    </header>
-  {% endif %}
-
-  <h1>1</h1>
-
   {{ exposed }}
   {{ attachment_before }}
 
-  <h1>2</h1>
-  {{ rows }}
-  <h1>3</h1>
+  <div class="left">
+    {{ rows }}
+  </div>
+  <div class="right">
+    {% if header %}
+      <h1 class="reals-teasing__title">{{ header|render|striptags }}</h1>
+    {% endif %}
+    {{ pattern('section_button', {
+      text: more['#title'],
+      url: more['#url']})
+    }}
+  </div>
+
   {{ empty }}
   {{ pager }}
 
   {{ attachment_after }}
-  {{ more }}
 
   {% if footer %}
     <footer>

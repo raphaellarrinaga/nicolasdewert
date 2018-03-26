@@ -1,0 +1,21 @@
+// Work / réalisations
+
+.work{}
+
+.work--teaser{
+  .work__title{
+    font-size: $font-size-xl;
+
+    a{
+      color: $primary-text-color;
+      text-decoration: none;
+    }
+  }
+
+  .work__content{
+    @include mappy-query(b-big) {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+  }
+}
