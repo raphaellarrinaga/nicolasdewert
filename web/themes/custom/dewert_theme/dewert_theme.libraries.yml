@@ -11,6 +11,11 @@ base:
     - dewert_theme/fonts
   css:
     base:
+      https://use.fontawesome.com/releases/v5.0.8/css/all.css: {
+        type: external,
+        attributes: {
+          integrity: "sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1", crossorigin: "anonymous" }
+        }
       css/base/base.css: {}
     layout:
       css/layout/layout.css: {}
@@ -37,12 +42,3 @@ dropdown:
   version: 1.x
   js:
     js/dropdown.js: {}
-
-# Fontawesome : its still possible to use 3 different packs of font Solid/Regular/Brands
-# @see https://fontawesome.com/get-started/web-fonts-with-css
-fonts:
-  css:
-    theme:
-      '//fonts.googleapis.com/css?family=Nunito:400,400i,700,700i|Playfair+Display': { type: external, minified: true }
-      'https://use.fontawesome.com/releases/v5.0.8/css/solid.css' : { integrity: 'sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk', crossorigin: 'anonymous' }
-      'https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css' : { integrity: 'sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P', crossorigin: 'anonymous' }

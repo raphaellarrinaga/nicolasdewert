@@ -1,15 +1,21 @@
 <section class="section-expertise">
+  {% if image %}
+  <div class="section-expertise__figure">
   {{ image }}
-  <h1 class="section-expertise__title">{{ title }}</h1>
-  {{ list }}
-{#   <ul class="section-expertise__list">
-    <li>Nos matériaux sont sélectionnés de manière à répondre aux impératifs écologiques et orientés développement durable.</li>
-    <li>Nous sélectionnons des matériaux de construction de haute qualité et valorisons le savoir-faire des professionels de la région.</li>
-    <li>Nous sommes une équipe professionnelle attentive aux attentes et besoins des clients.</li>
-    <li>Nous accompagnons nos clients du démarrage tout au long du projet et entretenons des bonnes relations avec les différents interlocuteurs (architectes, ingénieurs, les différents corps de métier etc...)</li>
-    <li>Nous sommes présents sur chaque chantier de manière à être le plus réactif possible.</li>
-    <li>Nous nous déplaçons dans toute la Belgique !</li>
-    <li>Envie de nous faire part de votre projet? N’hésitez plus et contactez-nous !</li>
-  </ul> #}
-  {{ link }}
+  </div>
+  {% endif %}
+  <div class="section-expertise__content">
+    <h1 class="section-expertise__title">{{ title }}</h1>
+    {{ list }}
+    <ul class="section-expertise__list">
+      <li><i class="fa fa-check"></i> Nos matériaux sont sélectionnés de manière à répondre aux impératifs écologiques et orientés développement durable.</li>
+      <li><i class="fa fa-check"></i> Nous sélectionnons des matériaux de construction de haute qualité et valorisons le savoir-faire des professionels de la région.</li>
+      <li><i class="fa fa-check"></i> Nous sommes une équipe professionnelle attentive aux attentes et besoins des clients.</li>
+      <li><i class="fa fa-check"></i> Nous accompagnons nos clients du démarrage tout au long du projet et entretenons des bonnes relations avec les différents interlocuteurs (architectes, ingénieurs, les différents corps de métier etc...)</li>
+      <li><i class="fa fa-check"></i> Nous sommes présents sur chaque chantier de manière à être le plus réactif possible.</li>
+      <li><i class="fa fa-check"></i> Nous nous déplaçons dans toute la Belgique !</li>
+      <li><i class="fa fa-check"></i> Envie de nous faire part de votre projet? N’hésitez plus et contactez-nous !</li>
+    </ul>
+    <a href="{{ button_url }}" class="button button--primary"><i class="fa fa-arrow-alt-circle-right"></i> {{ button_text }}</a>
+  </div>
 </section>

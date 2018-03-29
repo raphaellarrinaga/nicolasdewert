@@ -1,1 +1,46 @@
 // Section expertise
+
+.section-expertise{
+  @include mappy-query(b-medium) {
+    display: flex;
+    align-items: center;
+    flex-direction: space-between;
+  }
+}
+
+.section-expertise__title{
+  &:after{
+    @include title-border;
+    margin-left: 0;
+  }
+}
+
+.section-expertise__content{
+  @include mappy-query(b-medium) {
+    flex: 1 0 0;
+  }
+}
+
+.section-expertise__figure{
+  @include mappy-query(b-medium) {
+    margin-right: rhythm(2);
+  }
+}
+
+.section-expertise__list{
+  list-style: none;
+  padding-left: 0;
+
+  li{
+    margin-bottom: rhythm(1);
+    position: relative;
+    padding-left: rem(32);
+
+    i{
+      color: $brand-primary;
+      left: 0;
+      position: absolute;
+      top: rem(3);
+    }
+  }
+}
