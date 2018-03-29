@@ -6,7 +6,11 @@
   {% endif %}
   <div class="section-expertise__content">
     <h1 class="section-expertise__title">{{ title }}</h1>
+    {% if list %}
+    <div class="section-expertise__list-wrapper">
     {{ list }}
+    </div>
+    {% else %}
     <ul class="section-expertise__list">
       <li><i class="fa fa-check"></i> Nos matériaux sont sélectionnés de manière à répondre aux impératifs écologiques et orientés développement durable.</li>
       <li><i class="fa fa-check"></i> Nous sélectionnons des matériaux de construction de haute qualité et valorisons le savoir-faire des professionels de la région.</li>
@@ -16,6 +20,7 @@
       <li><i class="fa fa-check"></i> Nous nous déplaçons dans toute la Belgique !</li>
       <li><i class="fa fa-check"></i> Envie de nous faire part de votre projet? N’hésitez plus et contactez-nous !</li>
     </ul>
-    <a href="{{ button_url }}" class="button button--primary"><i class="fa fa-arrow-alt-circle-right"></i> {{ button_text }}</a>
+    {% endif %}
+    {{ link }}
   </div>
 </section>

@@ -20,7 +20,7 @@
   {% block content %}
     {{ pattern('section_expertise', {
       title: label,
-      image: content.image ? content.image,
+      image: content.field_media_image ? content.field_media_image,
       list: content.body ? content.body,
       link: link,
     }) }}
