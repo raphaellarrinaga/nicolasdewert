@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Block Nos compétences (expertise).
+ *
+ */
+#}
+{%
+  set classes = [
+    'section-skills',
+    'spaced',
+    'bg-gray',
+  ]
+%}
+<div{{ attributes.addClass(classes)|without('id') }}>
+  <div class="l-constrain">
+  {{ title_prefix }}
+  {% if label %}
+    <h1 {{ title_attributes.addClass('section-skills__title', 'section-title') }}>{{ label }}</h1>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+  </div>
+</div>

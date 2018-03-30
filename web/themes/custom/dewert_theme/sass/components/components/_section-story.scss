@@ -1,0 +1,11 @@
+// Section Story
+// Une histoire de famille
+
+// .section-story{}
+
+.section-story__content{
+  @include mappy-query(b-big) {
+    padding-left: 40%;
+    width: 60%;
+  }
+}

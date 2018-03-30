@@ -6,6 +6,17 @@
  */
 
 /**
+ * Implements HOOK_preprocess_page_title().
+ */
+function dewert_theme_preprocess_page_title(&$variables) {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+
+  if(null != $route_name && $route_name == "ndewert.expertise_controller_index") {
+    $variables['title_attributes']['class'][] = "visually-hidden";
+  }
+}
+
+/**
  * Implements HOOK_preprocess_page().
  */
 /*

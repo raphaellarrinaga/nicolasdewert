@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Block Notre mission & notre philosophie
+ *
+ */
+#}
+{%
+  set classes = [
+    'section-mission',
+    'l-constrain',
+    'spaced',
+  ]
+%}
+<div{{ attributes.addClass(classes)|without('id') }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h1 {{ title_attributes.addClass('section-mission__title', 'section-title') }}>{{ label }}</h1>
+  {% endif %}
+  {{ title_suffix }}
+  <div class="l-f-grid">
+    <div class="l-f-grid__column">
+    {{ content.field_section_text.0 }}
+    </div>
+    <div class="l-f-grid__column">
+    {{ content.field_section_text.1 }}
+    </div>
+  </div>
+</div>

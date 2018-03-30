@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Block Histoire de famille
+ */
+#}
+{%
+  set classes = [
+    'section-story',
+    'spaced',
+  ]
+%}
+<section{{ attributes.addClass(classes)|without('id') }}>
+  <div class="section-story__content">
+  {{ title_prefix }}
+  {% if label %}
+    <h1 {{ title_attributes.addClass('section-story__title') }}>{{ label }}</h1>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+  </div>
+</section>

@@ -78,3 +78,33 @@
     }
   }
 }
+
+// Custom reusable flex grid
+//
+
+.l-f-grid {
+  @include mappy-query(b-small) {
+    display: flex;
+    margin-left: - rem(20);
+    margin-right: - rem(20);
+  }
+}
+
+.l-f-grid__column {
+  @include mappy-query(b-small) {
+    flex: 1;
+    padding-left: rem(20);
+    padding-right: rem(20);
+  }
+
+  .l-f-grid--cols-2 & {
+    @include mappy-query(b-small) {
+      width: (1/2) * 100%;
+    }
+  }
+  .l-f-grid--cols-3 & {
+    @include mappy-query(b-small) {
+      width: (1/3) * 100%;
+    }
+  }
+}
