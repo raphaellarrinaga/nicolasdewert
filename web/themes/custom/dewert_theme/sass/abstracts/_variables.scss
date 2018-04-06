@@ -2,13 +2,6 @@
 //  Variables
 //
 
-// Workaround to hide bourbon deprecation warnings
-// @todo remove it when bourbon-node updates to 5.0.0
-// @see https://github.com/lacroixdesign/node-bourbon/issues/37
-// @see https://www.npmjs.com/package/bourbon
-// @see https://www.npmjs.com/package/node-bourbon
-$output-bourbon-deprecation-warnings: false;
-
 // Colors
 //
 
@@ -58,26 +51,30 @@ $tabs-border-color: #cacaca;
 
 // Fonts
 //
-$base-font-family: 'Nunito', $helvetica;
-$header-font-family: 'Playfair Display', $georgia;
-$monospace-font-family: $monospace;
+$base-font-family: 'Nunito', $font-stack-helvetica;
+$header-font-family: 'Playfair Display', $font-stack-georgia;
+$monospace-font-family: $font-stack-consolas;
 
 // Define the global base font size
-// Since $base-font-size is defined on the <html> tag,
+// Since $px-base-font-size is defined on the <html> tag,
 // it will affect the way browsers and theme helpers calculate rem values
+// @see _html-elements.scss
 //
-$rem-base: 16px !default;
-$base-font-size: rem($rem-base);
+$px-base-font-size: 18px !default;
+$px-base-font-size-mobile: 16px !default;
 $base-line-height: 1.5;
 $heading-line-height: 1.3;
 
 // Modular scale font-sizes
 // Use Bourbon helper or set custom values
-// @see http://bourbon.io/docs/#modular-scale
-// @see http://www.modularscale.com/
+// @see https://bourbon.io/docs/#modular-scale
+// @see https://www.modularscale.com/
 //
-$modular-scale-ratio: $minor-third;
-$modular-scale-base: 1rem; // Bourbon rely on the font-size defined on the html tag
+// $modular-scale-ratio: $minor-third;
+// $modular-scale-ratio: $major-second;
+$modular-scale-ratio: $perfect-fourth;
+// Bourbon rely on the font-size defined on the html tag
+$modular-scale-base: 1rem;
 $font-size-xxl: modular-scale(3);
 $font-size-xl: modular-scale(2);
 $font-size-lg: modular-scale(1);

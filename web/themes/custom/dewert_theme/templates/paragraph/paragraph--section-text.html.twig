@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Override to display a paragraph section text
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'section-text',
+  ]
+%}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      {% if content.field_title.0 %}
+      <h2 class="section-text__title">{{ content.field_title|render|striptags|raw }}</h2>
+      {% endif %}
+      {{ content.field_text }}
+      {% if content.field_link.0 %}
+      {{ pattern('section_button', {
+        text: content.field_link.0['#title'],
+        url: content.field_link.0['#url']}) }}
+      {% endif %}
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

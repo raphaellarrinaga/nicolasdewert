@@ -4,7 +4,7 @@
 // .section-story{}
 
 .section-story__content{
-  @include mappy-query(b-big) {
+  @include mappy-query(b-medium) {
     padding-left: 40%;
     width: 60%;
   }

@@ -2,28 +2,19 @@
 //  Functions
 //
 
-/// Strips the unit from a number.
-///
-/// @argument {number} $value
-///
-/// @return {number (unitless)}
-///
-/// @example scss
-///   $dimension: strip-unit(10em);
-///
-///   // Output
-///   $dimension: 10;
+// Strips the unit from a number.
+//
 
 @function strip-unit($value) {
   @return ($value / ($value * 0 + 1));
 }
 
 // Convert pixels to rem
-// eg. for a relational value of 12px write rem(12)
-// This is a replacement of Bourbon's function
-// Bourbon maintainers deprecated it because because it don't properly
-// indicate the true output as it _but_ it can be used safely in this theme since
-// $rem-base font size is defined on the <html> tag
+// Rem values are based on the px value defined on the html tag
+// and that value is defined in $px-base-font-size
+// /!\ you cannot rely on this value if html font size changes
+// By default, $px-base-font-size-mobile is defined to decrease
+// all rem sizes on small screens
 // @see _html-elements.scss
 // @see _variables.scss
 // @see https://github.com/thoughtbot/bourbon/issues/691
@@ -33,7 +24,7 @@
     $pxval: strip-unit($pxval);
   }
 
-  $base: $rem-base;
+  $base: $px-base-font-size;
   @if not unitless($base) {
     $base: strip-unit($base);
   }
@@ -46,7 +37,6 @@
 // @see https://alwaystwisted.com/articles/2013-12-30-not-your-average-vertical-rhythm-sass-mixin
 // @example margin-bottom: rhythm(2, $font-size-sm, 1.2);
 
-@function rhythm($lines: 1, $font-size: $base-font-size, $line-height: $base-line-height) {
-  $rhythm: $lines * $font-size * $line-height;
-  @return $rhythm;
+@function rhythm($lines: 1, $font-size: 1rem, $line-height: $base-line-height) {
+  @return $lines * $font-size * $line-height;
 }

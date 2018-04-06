@@ -225,14 +225,13 @@
   background: $background;
   border: $border;
   box-shadow: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 // Buttons helper
 // Define simple button styles
-@mixin button($font-size: $base-font-size) {
-  @include appearance(none);
+@mixin button($font-size: 1rem) {
+  appearance: none;
   border-radius: 40px;
   border: none;
   cursor: pointer;
@@ -255,7 +254,7 @@
   }
 
   &:active {
-    @include transform(translateY(1px));
+    transform: translateY(1px);
   }
 
   &:disabled {
@@ -264,7 +263,7 @@
   }
 }
 
-@mixin button--default($font-size: $base-font-size) {
+@mixin button--default($font-size: 1rem) {
   @include button($font-size);
   background-color: $button-bg-color;
   color: $button-text-color;
@@ -302,6 +301,27 @@
 
   &:visited {
     color: $button-prim-text-color;
+  }
+}
+
+@mixin button--reverse($font-size: $font-size-md) {
+  color: $brand-primary;
+  background-color: $white;
+
+  &:hover{
+    box-shadow: inset $brand-primary 0 0 0 2px;
+    background-color: $white;
+    // color: $button-prim-text-color;
+  }
+
+  &:focus {
+    // box-shadow: lighten($link-color, 15%) 0 0 5px;
+    // color: $button-prim-text-color;
+    outline: 0;
+  }
+
+  &:visited {
+  color: $brand-primary;
   }
 }
 

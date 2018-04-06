@@ -26,5 +26,13 @@ module.exports = {
           "tag": "a",
         }
       },
+      {
+        "name": "Reverse small",
+        "context": {
+          "class": "button button--reverse button--small",
+          "text": "Reverse small",
+          "tag": "a",
+        }
+      },
     ]
 };

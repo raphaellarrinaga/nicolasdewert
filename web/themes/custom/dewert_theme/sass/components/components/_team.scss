@@ -1,0 +1,136 @@
+// Team members block (view)
+
+.team{
+  margin-bottom: rhythm(2);
+  margin-top: rhythm(2);
+
+  @include mappy-query(b-medium) {
+    display: flex;
+  }
+
+  .left{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rhythm(1);
+
+    @include mappy-query(b-medium) {
+      display: block;
+      flex: 1;
+      margin-bottom: 0;
+      padding-right: rhythm(2);
+      width: 40%;
+    }
+  }
+
+  .right{
+    position: relative;
+
+    @include mappy-query(b-medium) {
+      width: 60%;
+    }
+  }
+}
+
+.team-member__figure{
+  display: inline-block;
+  line-height: 0;
+  margin: 0;
+  position: relative;
+  flex: 0 1 48%;
+
+  @include mappy-query(b-medium) {
+    float: right;
+  }
+
+  &:hover{
+    cursor: pointer;
+  }
+
+  &:first-child{
+    @include mappy-query(b-medium) {
+      margin-right: rem(20);
+    }
+  }
+
+  &:last-child{
+    @include mappy-query(b-medium) {
+      margin-top: - rem(20);
+    }
+  }
+
+  &:before{
+    @include css-content(block, 100%, 100%);
+    background: $brand-primary;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    // transform: translateX(-10px) translateY(-10px);
+    transform: translateX(-3px) translateY(-3px);
+    transition: all 450ms cubic-bezier(0.07, 0.8, 0.28, 1.67);
+  }
+
+  img{
+    position: relative;
+    z-index: 1;
+  }
+
+  opacity: .9;
+  position: relative;
+  &.is-active{
+    opacity: 1;
+    transform: none;
+    z-index: 1;
+
+    &:before{
+      transform: translateX(-10px) translateY(-10px);
+    }
+  }
+}
+
+.team-member{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &.is-active{
+    transform: translateX(-10px) translateY(-10px);
+    z-index: 1;
+  }
+}
+
+.team-member__head,
+.team-member__body{
+  opacity: 0;
+  transform: rotate(-5deg) translateY(-30px) translateX(-30px);
+  transform-origin: top left;
+  transition: all 500ms cubic-bezier(0.07, 0.8, 0.28, 1.67);
+
+  .is-active &{
+    display: block;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.team-member__head{
+  .button{
+    margin-left: 1em;
+    vertical-align: text-bottom;
+  }
+}
+
+.team-member__title{
+  display: inline-block;
+  margin-bottom: 0;
+  margin-top: rhythm(1);
+
+  @include mappy-query(b-medium) {
+    margin-top: 0;
+  }
+}
+
+.team-member__body{
+  max-width: rem(600);
+  transition-delay: 200ms;
+}

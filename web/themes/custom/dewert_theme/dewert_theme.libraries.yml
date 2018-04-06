@@ -42,3 +42,8 @@ dropdown:
   version: 1.x
   js:
     js/dropdown.js: {}
+
+team:
+  version: 1.x
+  js:
+    js/team.js: {}

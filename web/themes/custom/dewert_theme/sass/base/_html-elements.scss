@@ -4,23 +4,26 @@
 
 *, *:before, *:after {
   // Universal transitions
-  @include transition-property(
+  transition-property:
     background-color,
     border-color,
     box-shadow,
     color,
     opacity,
     text-shadow,
-    transform
-  );
-  @include transition-duration(0.2s);
-  @include transition-timing-function(linear);
+    transform;
+  transition-duration: .2s;
+  transition-timing-function: linear;
 }
 
 // Affect global rem unit calculation
 html{
-  font-size: $base-font-size;
+  font-size: $px-base-font-size-mobile;
   line-height: $base-line-height;
+
+  @include mappy-query(b-small) {
+    font-size: $px-base-font-size;
+  }
 }
 
 body{
@@ -35,7 +38,6 @@ body{
 //
 
 %hN {
-  @include hyphens(none);
   color: $heading-text-color;
   font-family: $header-font-family;
   line-height: $heading-line-height;
@@ -196,7 +198,7 @@ input[type="image"] {
 // input[type="range"] {}
 // input[type="reset"] {}
 input[type="search"] {
-  @include appearance(none);
+  appearance: none;
   max-width: 100%;
 }
 // input[type="submit"] {}

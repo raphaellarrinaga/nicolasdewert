@@ -1,0 +1,49 @@
+{#
+/**
+ * @file
+ * Custom implementation to display the user view.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ *
+ * @ingroup themeable
+ */
+#}
+{{ attach_library('dewert_theme/team') }}
+{% set item_first = rows[0].content['#view'].style_plugin.render_tokens[0] %}
+{% set item_second = rows[1].content['#view'].style_plugin.render_tokens[1] %}
+<div class="team l-constrain">
+  <div class="left">
+    <figure class="team-member__figure is-active" data-member="first">
+      {{ item_first['{{ user_picture }}'] }}
+    </figure>
+    <figure class="team-member__figure" data-member="second">
+      {{ item_second['{{ user_picture }}'] }}
+    </figure>
+  </div>
+
+  <div class="right">
+    <div class="team-member is-active" data-member="first">
+      <div class="team-member__head">
+        <h2 class="team-member__title">{{ item_first['{{ name }}'] }}</h2>
+        {{ item_first['{{ field_linkedin }}'] }}
+      </div>
+      <div class="team-member__body">{{ item_first['{{ field_description }}'] }}</div>
+    </div>
+    <div class="team-member" data-member="second">
+      <div class="team-member__head">
+        <h2 class="team-member__title">{{ item_second['{{ name }}'] }}</h2>
+        {{ item_second['{{ field_linkedin }}'] }}
+      </div>
+      <div class="team-member__body">{{ item_second['{{ field_description }}'] }}</div>
+    </div>
+  </div>
+</div>

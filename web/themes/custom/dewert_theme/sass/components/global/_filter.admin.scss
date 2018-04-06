@@ -11,7 +11,7 @@
   border: 1px solid $border-color;
   margin: 0;
   overflow: hidden;
-  padding: rhythm(1/2) $base-font-size;
+  padding: rhythm(1/2) 1rem;
 
   .form-item {
     margin: 0;
@@ -38,7 +38,7 @@
   }
   a {
     position: relative;
-    margin: 0 $base-font-size 0 0;
+    margin: 0 1rem 0 0;
 
     &:after {
       background: transparent url(../../images/core/help.png);
@@ -46,7 +46,7 @@
       display: block;
       height: 16px;
       position: absolute;
-      right: - $base-font-size;
+      right: - 1rem;
       top: 0;
       width: 16px;
     }

@@ -15,7 +15,7 @@
   @include mappy-query(b-medium) {
     bottom: rem(100);
     color: $white;
-    font-size: modular-scale(6);
+    font-size: modular-scale(4);
     left: rem(20);
     left: calc((100% - #{$l-medium})/2);
     // right: 0;

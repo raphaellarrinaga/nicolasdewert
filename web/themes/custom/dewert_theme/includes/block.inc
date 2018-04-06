@@ -53,28 +53,31 @@ function dewert_theme_preprocess_block(&$variables) {
 
   // Target derivative ID
   // Useful for custom blocks placed with context module
-  // $plugin_id = $variables['derivative_plugin_id'];
-  // switch ($plugin_id) {
-  //   case 'ac658fb3-4c73-49ba-945c-6bac0fd43fa0':
-  //     // Section Expertise
-  //     // $elements['content']['field_intro']
-  //     // $elements['content']['field_link']
-  //     // $elements['content']['body']
-  //     // $variables['label'];
-  //     $variables['content'] = setPattern(
-  //       $variables['label'],
-  //       $elements['content']['field_intro']
-  //     );
-  //     break;
-  //   case '37032c38-5533-47e8-aedc-941d7e97659f':
-  //     // Section Ossature bois
-  //     break;
-  //   case 'works-block_1':
-  //     // Works
-  //     break;
-  //  default:
-  //     break;
-  // }
+  $plugin_id = $variables['derivative_plugin_id'];
+  switch ($plugin_id) {
+    // case 'ac658fb3-4c73-49ba-945c-6bac0fd43fa0':
+    //   // Section Expertise
+    //   // $elements['content']['field_intro']
+    //   // $elements['content']['field_link']
+    //   // $elements['content']['body']
+    //   // $variables['label'];
+    //   $variables['content'] = setPattern(
+    //     $variables['label'],
+    //     $elements['content']['field_intro']
+    //   );
+    //   break;
+    // case '37032c38-5533-47e8-aedc-941d7e97659f':
+    //   // Section Ossature bois
+    //   break;
+    // case 'works-block_1':
+    //   // Works
+    //   break;
+    case '10808380-e0b0-4f4e-86dc-0168461221bf':
+      $variables['title_attributes']['class'][] = 'section-title';
+      break;
+   default:
+      break;
+  }
 
   // Add class for a specific block
   // $block_id = $variables['elements']['#id'];

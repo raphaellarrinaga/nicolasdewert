@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ * Custom implementation to display a page with 2 cols.
+ */
+#}
+
+<div class="site-container">
+  {% if page.header %}
+    {% include "@organisms/site-header/site-header.twig" ignore missing with {
+      content: page.header,
+      button_text: "Contact"|t ~ " <span>| "~ "Visites"|t ~"</span>",
+      button_url: "#contact",
+    } %}
+  {% endif %}
+
+  <main class="site-main" role="main" tabindex="-1">
+    {{ page.content_top }}
+
+    <section class="site-content bg-gray" id="main-content">
+      <div class="l-constrain layout-2cols">
+        <div class="layout-2cols__sidebar-first">
+        {% block content %}
+          {{ page.content }}
+        {% endblock %}
+        </div>
+
+        {% if page.content_aside %}
+        <div class="layout-2cols__sidebar-second">
+          {{ page.content_aside }}
+        </div>
+        {% endif %}
+      </div>
+    </section>
+
+    {{ page.content_bottom }}
+  </main>
+
+  {% if page.footer %}
+    {% include "@organisms/site-footer/site-footer.twig" ignore missing with {
+      content: page.footer,
+      copyright: "now"|date("Y") ~ " © n.dewert sprl" ,
+    } %}
+  {% endif %}
+</div>

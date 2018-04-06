@@ -19,7 +19,7 @@
   background-color: $white;
   border: 0;
   margin: 0;
-  padding: rhythm(1) $base-font-size 1px;
+  padding: rhythm(1) 1rem 1px;
 
   & > summary {
     display: none;
@@ -35,7 +35,7 @@
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
     display: block;
-    padding: rhythm(1/2) $base-font-size;
+    padding: rhythm(1/2) 1rem;
     text-decoration: none;
 
     &:focus,

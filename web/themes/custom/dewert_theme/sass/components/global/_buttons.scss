@@ -11,3 +11,12 @@
 .button--wide{
   width: 100%;
 }
+
+.button--small{
+  font-size: $font-size-md;
+  padding: .75em 1em;
+}
+
+.button--reverse{
+  @include button--reverse;
+}

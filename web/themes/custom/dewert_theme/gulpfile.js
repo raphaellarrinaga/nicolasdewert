@@ -2,8 +2,7 @@
 
 const gulp = require('gulp');
 const sass = require('gulp-sass');
-const bourbon = require('node-bourbon').includePaths;
-// neat requires bourbon it should include it under the hood
+const bourbon = require('bourbon');
 const neat = require("node-neat").includePaths;
 const livereload = require('gulp-livereload');
 const postcss = require('gulp-postcss');
@@ -94,7 +93,7 @@ gulp.task('sass', function () {
       outputStyle: 'expanded',
       precision: 3,
       includePaths: [].concat(
-        bourbon,
+        bourbon.includePaths,
         neat,
         'node_modules/mappy-breakpoints'
       )
@@ -116,7 +115,7 @@ gulp.task('sass:build', function () {
       outputStyle: 'compressed',
       precision: 3,
       includePaths: [].concat(
-        bourbon,
+        bourbon.includePaths,
         neat,
         'node_modules/mappy-breakpoints'
       )

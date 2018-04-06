@@ -23,7 +23,7 @@
 .password-strength__indicator{
   height: 100%;
   width: 0;
-  @include transition(all 250ms);
+  transition: all 250ms;
 
   &.is-weak{
     background: red;

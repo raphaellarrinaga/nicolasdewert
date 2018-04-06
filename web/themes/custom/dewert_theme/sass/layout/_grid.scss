@@ -83,7 +83,7 @@
 //
 
 .l-f-grid {
-  @include mappy-query(b-small) {
+  @include mappy-query(b-medium) {
     display: flex;
     margin-left: - rem(20);
     margin-right: - rem(20);
@@ -91,19 +91,19 @@
 }
 
 .l-f-grid__column {
-  @include mappy-query(b-small) {
+  @include mappy-query(b-medium) {
     flex: 1;
     padding-left: rem(20);
     padding-right: rem(20);
   }
 
   .l-f-grid--cols-2 & {
-    @include mappy-query(b-small) {
+    @include mappy-query(b-medium) {
       width: (1/2) * 100%;
     }
   }
   .l-f-grid--cols-3 & {
-    @include mappy-query(b-small) {
+    @include mappy-query(b-medium) {
       width: (1/3) * 100%;
     }
   }
