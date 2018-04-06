@@ -13,15 +13,17 @@
 
       // Set wrapper height depending on the text it's inside
       // @todo make it resizeable when screen size change
-      var member_body_height = 0;
-      var team_height = $('.team').height();
+      // var team_height = $('.team').height();
 
+      var member_body_height = 0;
       $('.team-member__body', context).once('team').each(function () {
         if($(this).height() > member_body_height){
           member_body_height = $(this).height() + 50;
         }
+
+        console.log(member_body_height);
+        $('.team').find('.right').css('min-height', member_body_height);
       });
-      $('.team').css('min-height', team_height + member_body_height);
 
       // Change text when clicking on the avatar
       $(context).find('.team-member__figure').bind("click", function() {
