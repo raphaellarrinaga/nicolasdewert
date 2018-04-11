@@ -54,6 +54,7 @@ function dewert_theme_preprocess_block(&$variables) {
   // Target derivative ID
   // Useful for custom blocks placed with context module
   $plugin_id = $variables['derivative_plugin_id'];
+  // dump($plugin_id);
   switch ($plugin_id) {
     // case 'ac658fb3-4c73-49ba-945c-6bac0fd43fa0':
     //   // Section Expertise
@@ -73,6 +74,9 @@ function dewert_theme_preprocess_block(&$variables) {
     //   // Works
     //   break;
     case '10808380-e0b0-4f4e-86dc-0168461221bf':
+      $variables['attributes']['class'][] = 'section-price';
+      $variables['attributes']['class'][] = 'spaced';
+      $variables['attributes']['class'][] = 'l-constrain';
       $variables['title_attributes']['class'][] = 'section-title';
       break;
    default:

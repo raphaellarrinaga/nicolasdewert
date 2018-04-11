@@ -1,0 +1,23 @@
+// Section price (ossature bois)
+
+.section-price{
+  // background: url("../../images/bg/bg-section-price.png") no-repeat right top;
+  // background-size: 36% auto;
+
+  // @include mappy-query(b-medium) {
+  //   display: flex;
+  // }
+
+  // &:after{
+  //   @include css-content(block, 100%, 50%);
+  //   background: url("../../images/bg/bg-section-price.png") no-repeat right top;
+  //   background-size: cover;
+  //   flex: 1 1 0;
+  // }
+
+  .site-section__body{
+    @include mappy-query(b-medium) {
+      width: 70%;
+    }
+  }
+}

@@ -123,15 +123,19 @@
 
   .left{
     @include mappy-query(b-medium) {
-      flex: 1 1 60%;
+      flex: 1 1 50%;
       margin-right: rhythm(3);
       max-width: rem(720);
+    }
+
+    @include mappy-query(b-big) {
+      flex: 1 1 60%;
     }
   }
 
   .right{
     @include mappy-query(b-medium) {
-      margin-top: rhythm(2);
+      margin-top: rhythm(3/2);
     }
   }
 }
@@ -151,7 +155,6 @@
 .footer-c2a__text{
   color: $white;
   font-weight: 600;
-  font-size: $font-size-lg;
 }
 
 .footer-c2a__contacts{
@@ -170,10 +173,6 @@
   margin-bottom: rhythm(1);
   padding-left: rem(40);
   position: relative;
-
-  @include mappy-query(b-medium) {
-    font-size: $font-size-lg;
-  }
 
   i{
     display: inline-block;

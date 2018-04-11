@@ -230,7 +230,7 @@
 
 // Buttons helper
 // Define simple button styles
-@mixin button($font-size: 1rem) {
+@mixin button($font-size: rem(16)) {
   appearance: none;
   border-radius: 40px;
   border: none;
@@ -263,7 +263,7 @@
   }
 }
 
-@mixin button--default($font-size: 1rem) {
+@mixin button--default($font-size: rem(16)) {
   @include button($font-size);
   background-color: $button-bg-color;
   color: $button-text-color;

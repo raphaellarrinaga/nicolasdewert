@@ -32,18 +32,25 @@
 
   @include mappy-query(b-medium) {
     display: flex;
+    flex-wrap: wrap;
     margin-left: -rem(10);
     margin-right: -rem(10);
   }
 
   li{
+    box-sizing: border-box;
     margin-bottom: rhythm(1);
 
     @include mappy-query(b-medium) {
-      flex-grow: 1;
-      flex-shrink: 1;
-      margin-left: rem(10);
-      margin-right: rem(10);
+      flex: 0 1 50%;
+      // flex-grow: 1;
+      // flex-shrink: 1;
+      padding-left: rem(10);
+      padding-right: rem(10);
+    }
+
+    @include mappy-bp(1000px) {
+      flex-basis: 25%;
     }
   }
 

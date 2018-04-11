@@ -51,10 +51,10 @@
   {% endif %}
 
   <main class="site-main" role="main" tabindex="-1">
-    {{ page.content_top }}
-
     <section class="site-content" id="main-content">
       <div class="l-constrain">
+        {{ page.content_top }}
+
         {% block content %}
           {{ page.content }}
         {% endblock %}
