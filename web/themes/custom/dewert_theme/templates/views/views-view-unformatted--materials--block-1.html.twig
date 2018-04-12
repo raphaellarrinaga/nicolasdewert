@@ -19,15 +19,16 @@
 #}
 
 <div class="materials">
-  <ul class="tab-list tab-list--initial is-visible">
+  <div class="materials-summary">
     {% for row in rows %}
-      <li class="tab-item">
-        <a class="tab-link" href="#section-{{ loop.index }}" data-title="{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ title }}']|render|striptags|trim|raw }}">
+      <div class="materials-summary__item">
+        <a class="materials-summary__link is-visible" href="#section-{{ loop.index }}" data-title="{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ title }}']|render|striptags|trim|raw }}">
+        <span class="materials-summary__image">{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_image }}'] }}</span>
+        <span class="materials-summary__title">{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ title }}']|render|striptags|trim|raw }}</span>
         </a>
-        {{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_image }}'] }}
-      </li>
+      </div>
     {% endfor %}
-  </ul>
+  </div>
 
   <div class="materials__tabs">
     <ul class="tab-list">
@@ -39,10 +40,11 @@
         </li>
       {% endfor %}
     </ul>
+    <h3 class="tab-title"></h3>
 
     {% for row in rows %}
     <div id="section-{{ loop.index }}" class="tab-panel">
-      {{ row.content }}
+      {{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ body }}'] }}
     </div>
     {% endfor %}
   </div>

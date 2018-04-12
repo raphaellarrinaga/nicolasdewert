@@ -11,22 +11,54 @@
   Drupal.behaviors.materials = {
     attach: function (context, settings) {
 
-      // $('.team-member__body', context).once('team').each(function () {
-      // });
+      var currentTitle = "heh";
+      var tabTitle = $('.tab-title');
 
-      $(context).find('.tab-list--initial .tab-link').bind("click", function(e) {
-        $('.materials__tabs').addClass('is-visible');
-        $('.tab-list--initial').removeClass('is-visible');
+      $(".materials").css(
+        "min-height", $(context).find('.materials-summary').height() );
+
+      $(context).find('.materials-summary__link').bind("click", function(e) {
+        e.preventDefault();
+
+        var $section_target = $(this).attr('href');
+        $('.materials-summary__link').toggleClass('is-visible');
+
+        // @todo change hash
+        // @todo prevent scrolling
+        // window.location.hash = $section_target;
+
+        currentTitle = $(this).data('title');
+        tabTitle.text(currentTitle);
+
+        setTimeout(function() {
+          $('.materials-summary').remove();
+        }, 900);
+
+        setTimeout(function() {
+          $('.tab-item').addClass('is-visible');
+          $('.tab-title').addClass('is-visible');
+          $($section_target).addClass('is-active');
+        }, 1000);
+
       });
 
+      function showTitle(){
+        tabTitle.text($(this).data('title'));
+      }
+
+      function hideTitle(){
+        tabTitle.text(currentTitle);
+      }
+
+      $(context).find('.tab-link').mouseenter( showTitle ).mouseleave( hideTitle );
+
       $(context).find('.tab-link').bind("click", function(e) {
-        // preventscrolling
-        // update hash
         e.preventDefault();
         var $section_target = $(this).attr('href');
         $('.tab-panel').removeClass('is-active');
         $($section_target).addClass('is-active');
-        // return false;
+        currentTitle = $(this).data('title');
+        tabTitle.text($(this).data('title'));
       });
 
     }
