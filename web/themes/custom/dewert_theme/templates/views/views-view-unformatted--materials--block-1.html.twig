@@ -23,7 +23,7 @@
     {% for row in rows %}
       <div class="materials-summary__item">
         <a class="materials-summary__link is-visible" href="#section-{{ loop.index }}" data-title="{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ title }}']|render|striptags|trim|raw }}">
-        <span class="materials-summary__image">{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_image }}'] }}</span>
+        <span class="materials-summary__image">{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_media_image }}'] }}</span>
         <span class="materials-summary__title">{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ title }}']|render|striptags|trim|raw }}</span>
         </a>
       </div>
