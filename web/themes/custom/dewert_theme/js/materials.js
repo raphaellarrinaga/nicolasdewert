@@ -38,6 +38,7 @@
           $('.tab-item').addClass('is-visible');
           $('.tab-title').addClass('is-visible');
           $($section_target).addClass('is-active');
+          $('[href="'+ $section_target +'"]').closest('.tab-item').addClass('is-active');
         }, 1000);
 
       });
@@ -55,6 +56,8 @@
       $(context).find('.tab-link').bind("click", function(e) {
         e.preventDefault();
         var $section_target = $(this).attr('href');
+        $('.tab-item').removeClass('is-active');
+        $(this).closest('.tab-item').addClass('is-active');
         $('.tab-panel').removeClass('is-active');
         $($section_target).addClass('is-active');
         currentTitle = $(this).data('title');
