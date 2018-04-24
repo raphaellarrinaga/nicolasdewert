@@ -18,12 +18,13 @@
 
 /* line 32, sass/components/components/_accordion.scss */
 .accordion__heading {
+  background-color: #fefefe;
   border-radius: 6px;
   color: #111;
   font-family: "Nunito", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-weight: 700;
+  position: relative;
   text-decoration: none;
-  text-transform: uppercase;
+  z-index: 2;
   box-shadow: #f1f1f1 0 7px 8px;
 }
 
@@ -36,72 +37,115 @@
 /* line 49, sass/components/components/_accordion.scss */
 .js .accordion__trigger {
   -webkit-appearance: none;
-  background-color: #fefefe;
   border: none;
-  border-radius: 0;
+  border-radius: 6px;
   box-shadow: none;
-  color: #cacaca;
+  color: #333;
   cursor: pointer;
   display: block;
-  font-size: inherit;
-  padding: .5em 1em;
-  position: relative;
+  font-size: 0.8em;
+  letter-spacing: .01em;
+  font-weight: 700;
+  padding: 1.25em 3em 1.25em 1em;
   text-align: left;
+  text-transform: uppercase;
   width: 100%;
-  z-index: 2;
 }
 
-/* line 81, sass/components/components/_accordion.scss */
-.js .accordion__trigger:hover, .js .accordion__trigger:focus,
-.js .accordion__trigger:hover,
-.js .accordion__trigger:focus {
+/* line 65, sass/components/components/_accordion.scss */
+.js .accordion__trigger:hover {
   background-color: #fefefe;
-  color: #cacaca;
+  color: #82BE43;
   outline: none;
 }
 
-/* line 96, sass/components/components/_accordion.scss */
+/* line 70, sass/components/components/_accordion.scss */
+.js .accordion__trigger:hover:after {
+  color: #82BE43;
+}
+
+/* line 75, sass/components/components/_accordion.scss */
+.js .accordion__trigger:focus {
+  outline: none;
+}
+
+/* line 84, sass/components/components/_accordion.scss */
+.js .accordion__trigger:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f35b";
+  color: #333;
+  font-size: 26px;
+  right: 1em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* line 111, sass/components/components/_accordion.scss */
 .accordion__trigger[aria-disabled="true"]:hover {
   background-color: #fefefe;
-  color: #cacaca;
+  color: #82BE43;
   cursor: not-allowed;
 }
 
-/* line 102, sass/components/components/_accordion.scss */
+/* line 117, sass/components/components/_accordion.scss */
 .accordion__trigger[aria-disabled="true"]:focus {
   background-color: #0a2a42;
 }
 
-/* line 109, sass/components/components/_accordion.scss */
+/* line 122, sass/components/components/_accordion.scss */
+.accordion__trigger[aria-expanded="true"] {
+  background: #fefefe;
+  color: #82BE43;
+}
+
+/* line 126, sass/components/components/_accordion.scss */
+.accordion__trigger[aria-expanded="true"]:after {
+  color: #82BE43;
+  transform: translateY(-50%);
+}
+
+/* line 135, sass/components/components/_accordion.scss */
 .js .accordion__panel {
   background-color: #fefefe;
   border-radius: 6px;
+  font-size: 0.8em;
   max-height: 0vh;
   overflow: hidden;
-  padding: .05em 1.25em;
   position: relative;
   visibility: hidden;
   z-index: 1;
   margin-top: -.1em;
 }
 
-/* line 121, sass/components/components/_accordion.scss */
+/* line 147, sass/components/components/_accordion.scss */
+.js .accordion__panel ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* line 152, sass/components/components/_accordion.scss */
+.js .accordion__panel li {
+  padding: 0.5rem 1rem;
+}
+
+/* line 155, sass/components/components/_accordion.scss */
+.js .accordion__panel li:not(:last-child) {
+  border-bottom: 1px solid #F5F5F5;
+}
+
+/* line 160, sass/components/components/_accordion.scss */
 .js .accordion__panel > :last-child {
   margin-bottom: 0;
 }
 
-/* line 125, sass/components/components/_accordion.scss */
+/* line 164, sass/components/components/_accordion.scss */
 .js .accordion__panel[aria-hidden="false"] {
   max-height: 100vh;
   overflow: auto;
-  padding: 1.25em;
+  padding: 1.25em 0;
   visibility: visible;
-}
-
-/* line 135, sass/components/components/_accordion.scss */
-.accordion__trigger[aria-expanded="true"] {
-  background: #fefefe;
-  color: #fff;
 }
 
 /* line 3, sass/components/components/_hero.scss */
@@ -182,6 +226,28 @@
   width: 100%;
   border-radius: 3px;
   background: repeating-linear-gradient(-45deg, yellow, yellow 10px, #111 10px, #111 20px);
+}
+
+/* line 3, sass/components/components/_page-intro.scss */
+.page-intro {
+  margin-left: 1.111rem;
+  margin-right: 1.111rem;
+}
+
+@media screen and (min-width: 48.062em) {
+  /* line 11, sass/components/components/_page-intro.scss */
+  .page-intro__text {
+    margin-left: auto;
+    margin-right: auto;
+    width: 83.333%;
+  }
+}
+
+@media screen and (min-width: 83.75em) {
+  /* line 11, sass/components/components/_page-intro.scss */
+  .page-intro__text {
+    width: 66.667%;
+  }
 }
 
 /* line 3, sass/components/components/_reals-teasing.scss */

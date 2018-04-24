@@ -1,0 +1,21 @@
+// Page intro block
+
+.page-intro{
+  margin-left: rem(20);
+  margin-right: rem(20);
+}
+
+// .page-intro__title{}
+// .page-intro__image{}
+
+.page-intro__text{
+  @include mappy-query(b-medium) {
+    margin-left: auto;
+    margin-right: auto;
+    width: (5/6) * 100%;
+  }
+
+  @include mappy-query(b-wide) {
+    width: (2/3) * 100%;
+  }
+}

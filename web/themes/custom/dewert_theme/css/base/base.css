@@ -835,3 +835,20 @@ ul ul {
   margin: 0 1.111rem 1.111rem;
   padding: 1.5rem 0;
 }
+
+/* line 84, sass/base/_helper-classes.scss */
+.page__title {
+  text-align: center;
+}
+
+/* line 87, sass/base/_helper-classes.scss */
+.page__title:after {
+  content: "";
+  display: block;
+  height: 6px;
+  width: 52px;
+  background-color: #82BE43;
+  border-radius: 3px;
+  margin: 1.5rem auto;
+  margin: 1.5rem auto;
+}

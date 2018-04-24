@@ -164,3 +164,24 @@ footer_c2a:
       description: A link
       preview: '<a href="https://fr-fr.facebook.com/public/Nicolas-Dewert">Facebook</a>'
   theme hook: "footer_c2a"
+
+page_intro:
+  label: Page intro
+  description: Page intro
+  fields:
+    title:
+      type: string
+      label: Title
+      description: The title
+      preview: "Avec l’ossature bois, nous vous proposons une alternative écologique abordable et efficace"
+    text:
+      type: string
+      label: Text
+      description: A summary
+      preview: "L’ossature bois existe depuis très longtemps. Il s’agit d’une technique de construction très répandue dans le monde."
+    image:
+      type: image
+      label: Image
+      description: A picture
+      preview: '<img src="https://nosrc.io/1500x670" alt="" />'
+  theme hook: "page_intro"
