@@ -203,6 +203,7 @@
   &.is-active{
     // display: block;
     transform: none;
+    overflow: visible;
     max-height: 200rem;
     opacity: 1;
     visibility: visible;

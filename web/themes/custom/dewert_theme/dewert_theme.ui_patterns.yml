@@ -76,6 +76,10 @@ accordion:
       description: The hidden content
       preview: The panel content
   theme hook: "accordion"
+  libraries:
+    - accordion_library:
+       js:
+         js/aria.accordion.min.js: {}
 
 teaser:
   label: Teaser

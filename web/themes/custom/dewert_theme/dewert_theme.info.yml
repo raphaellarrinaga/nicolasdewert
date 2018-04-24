@@ -31,6 +31,7 @@ libraries-override:
 
 regions:
   header: 'Site Header'
+  title: 'Title'
   content_top: 'Content top'
   content: 'Content'
   content_aside: 'Content aside'

@@ -2,13 +2,15 @@
 // @source https://scottaohara.github.io/accessible_accordions/
 // @todo move with component
 
-$color-active: #1b75bc;
-$color-default: #4464c2;
+$color-active: $white;
+$color-default: #cacaca;
+$text-color-active: #cacaca;
+$text-color-default: #cacaca;
 
 // Accordion container element
 .accordion {
   list-style: none;
-  margin: 0;
+  margin: 0 0 rhythm(2/3);
   padding: 0;
 
   > li {
@@ -32,7 +34,7 @@ $color-default: #4464c2;
   color: $black;
   font-family: $base-font-family;
   font-weight: 700;
-  padding: 1.25em 1em;
+  // padding: 1.25em 1em;
   text-decoration: none;
   text-transform: uppercase;
   box-shadow: darken($white, 5%) 0 7px 8px;
@@ -50,7 +52,7 @@ $color-default: #4464c2;
     border: none;
     border-radius: 0;
     box-shadow: none;
-    color: $color-default;
+    color: $text-color-default;
     cursor: pointer;
     display: block;
     font-size: inherit;
@@ -78,14 +80,14 @@ $color-default: #4464c2;
   .accordion__trigger {
     &:hover,
     &:focus{
-      background-color: #0e3b5e;
-      color: #fff;
+      background-color: $color-active;
+      color: $text-color-active;
       outline: none;
     }
 
-    &:focus{
-      box-shadow: inset 0 0 0 2px #1e82d1;
-    }
+    // &:focus{
+    //   box-shadow: inset 0 0 0 2px $color-default;
+    // }
   }
 }
 
@@ -93,7 +95,7 @@ $color-default: #4464c2;
   &[aria-disabled="true"]{
     &:hover{
       background-color: $color-active;
-      color: #fff;
+      color: $text-color-active;
       cursor: not-allowed;
     }
 

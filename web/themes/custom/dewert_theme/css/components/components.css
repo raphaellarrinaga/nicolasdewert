@@ -1,47 +1,46 @@
-/* line 9, sass/components/components/_accordion.scss */
+/* line 11, sass/components/components/_accordion.scss */
 .accordion {
   list-style: none;
-  margin: 0;
+  margin: 0 0 1rem;
   padding: 0;
 }
 
-/* line 14, sass/components/components/_accordion.scss */
+/* line 16, sass/components/components/_accordion.scss */
 .accordion > li {
   margin: 0;
 }
 
-/* line 21, sass/components/components/_accordion.scss */
+/* line 23, sass/components/components/_accordion.scss */
 .accordion > li:before {
   content: "\200B";
   position: absolute;
 }
 
-/* line 30, sass/components/components/_accordion.scss */
+/* line 32, sass/components/components/_accordion.scss */
 .accordion__heading {
   border-radius: 6px;
   color: #111;
   font-family: "Nunito", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 700;
-  padding: 1.25em 1em;
   text-decoration: none;
   text-transform: uppercase;
   box-shadow: #f1f1f1 0 7px 8px;
 }
 
-/* line 42, sass/components/components/_accordion.scss */
+/* line 44, sass/components/components/_accordion.scss */
 .js .accordion__heading {
   font-size: inherit;
   margin: -1px 0 0;
 }
 
-/* line 47, sass/components/components/_accordion.scss */
+/* line 49, sass/components/components/_accordion.scss */
 .js .accordion__trigger {
   -webkit-appearance: none;
   background-color: #fefefe;
   border: none;
   border-radius: 0;
   box-shadow: none;
-  color: #4464c2;
+  color: #cacaca;
   cursor: pointer;
   display: block;
   font-size: inherit;
@@ -52,34 +51,28 @@
   z-index: 2;
 }
 
-/* line 79, sass/components/components/_accordion.scss */
+/* line 81, sass/components/components/_accordion.scss */
 .js .accordion__trigger:hover, .js .accordion__trigger:focus,
 .js .accordion__trigger:hover,
 .js .accordion__trigger:focus {
-  background-color: #0e3b5e;
-  color: #fff;
+  background-color: #fefefe;
+  color: #cacaca;
   outline: none;
 }
 
-/* line 86, sass/components/components/_accordion.scss */
-.js .accordion__trigger:focus,
-.js .accordion__trigger:focus {
-  box-shadow: inset 0 0 0 2px #1e82d1;
-}
-
-/* line 94, sass/components/components/_accordion.scss */
+/* line 96, sass/components/components/_accordion.scss */
 .accordion__trigger[aria-disabled="true"]:hover {
-  background-color: #1b75bc;
-  color: #fff;
+  background-color: #fefefe;
+  color: #cacaca;
   cursor: not-allowed;
 }
 
-/* line 100, sass/components/components/_accordion.scss */
+/* line 102, sass/components/components/_accordion.scss */
 .accordion__trigger[aria-disabled="true"]:focus {
   background-color: #0a2a42;
 }
 
-/* line 107, sass/components/components/_accordion.scss */
+/* line 109, sass/components/components/_accordion.scss */
 .js .accordion__panel {
   background-color: #fefefe;
   border-radius: 6px;
@@ -92,12 +85,12 @@
   margin-top: -.1em;
 }
 
-/* line 119, sass/components/components/_accordion.scss */
+/* line 121, sass/components/components/_accordion.scss */
 .js .accordion__panel > :last-child {
   margin-bottom: 0;
 }
 
-/* line 123, sass/components/components/_accordion.scss */
+/* line 125, sass/components/components/_accordion.scss */
 .js .accordion__panel[aria-hidden="false"] {
   max-height: 100vh;
   overflow: auto;
@@ -105,9 +98,9 @@
   visibility: visible;
 }
 
-/* line 133, sass/components/components/_accordion.scss */
+/* line 135, sass/components/components/_accordion.scss */
 .accordion__trigger[aria-expanded="true"] {
-  background: #1b75bc;
+  background: #fefefe;
   color: #fff;
 }
 
@@ -529,70 +522,71 @@
 /* line 203, sass/components/components/_section-materials.scss */
 .tab-panel.is-active {
   transform: none;
+  overflow: visible;
   max-height: 200rem;
   opacity: 1;
   visibility: visible;
 }
 
-/* line 214, sass/components/components/_section-materials.scss */
+/* line 215, sass/components/components/_section-materials.scss */
 .tab-panel .align-right {
   float: none;
 }
 
 @media screen and (min-width: 30em) {
-  /* line 214, sass/components/components/_section-materials.scss */
+  /* line 215, sass/components/components/_section-materials.scss */
   .tab-panel .align-right {
     float: right;
     margin: 0 -3rem 1rem 1rem;
   }
 }
 
-/* line 223, sass/components/components/_section-materials.scss */
+/* line 224, sass/components/components/_section-materials.scss */
 .tab-panel .align-left {
   float: none;
 }
 
 @media screen and (min-width: 30em) {
-  /* line 223, sass/components/components/_section-materials.scss */
+  /* line 224, sass/components/components/_section-materials.scss */
   .tab-panel .align-left {
     float: left;
     margin: 0 1rem 1rem -3rem;
   }
 }
 
-/* line 238, sass/components/components/_section-materials.scss */
+/* line 239, sass/components/components/_section-materials.scss */
 [role="presentation"] {
   display: block;
 }
 
-/* line 242, sass/components/components/_section-materials.scss */
+/* line 243, sass/components/components/_section-materials.scss */
 [role="presentation"][data-tab-active] {
   background: #036800;
   -webkit-transition: all 100ms cubic-bezier(0.42, 0, 1, 1);
   transition: all 100ms cubic-bezier(0.42, 0, 1, 1);
 }
 
-/* line 252, sass/components/components/_section-materials.scss */
+/* line 253, sass/components/components/_section-materials.scss */
 [role="tab"]:focus {
   outline: 0;
 }
 
-/* line 267, sass/components/components/_section-materials.scss */
+/* line 268, sass/components/components/_section-materials.scss */
 [role="tabpanel"][aria-hidden="true"] {
   display: none;
 }
 
-/* line 271, sass/components/components/_section-materials.scss */
+/* line 272, sass/components/components/_section-materials.scss */
 [role="tabpanel"]:focus {
   outline: 0;
 }
 
 @media screen and (min-width: 800px) {
-  /* line 277, sass/components/components/_section-materials.scss */
+  /* line 278, sass/components/components/_section-materials.scss */
   [role="presentation"] {
     display: inline-block;
   }
-  /* line 281, sass/components/components/_section-materials.scss */
+  /* line 282, sass/components/components/_section-materials.scss */
   [role="presentation"][data-tab-active] [role="tab"]:after {
     content: '';
     display: inline-block;
