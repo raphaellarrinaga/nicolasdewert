@@ -1,1 +1,30 @@
-.site-content {padding-bottom: 1.5rem;padding-top: 1.5rem;}.l-grid__column {border: 1px solid #111;text-align: center;padding-bottom: 10px;padding-top: 10px;}.brand-color-primary {background-color: #82BE43;}.brand-color-secondary {background-color: #2F3231;}.brand-color {width: 20px;height: 20px;display: inline-block;}
+/* line 7, sass/styleguide.scss */
+.site-content {
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+/* line 12, sass/styleguide.scss */
+.l-grid__column {
+  border: 1px solid #111;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+/* line 24, sass/styleguide.scss */
+.brand-color-primary {
+  background-color: #82BE43;
+}
+
+/* line 24, sass/styleguide.scss */
+.brand-color-secondary {
+  background-color: #2F3231;
+}
+
+/* line 29, sass/styleguide.scss */
+.brand-color {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}

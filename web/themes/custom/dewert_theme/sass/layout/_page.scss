@@ -9,15 +9,15 @@
 .site-header{
   @include mappy-query(b-medium) {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
-    margin-bottom: rhythm(1);
+    padding-bottom: rhythm(1);
+    padding-top: rhythm(1);
   }
 }
 
 .button.button--header{
   font-size: rem(14);
-  margin-top: rem(25);
 
   @include mappy-query(b-medium) {
     align-self: center;
@@ -37,7 +37,6 @@
 
 .site-logo{
   // flex-shrink: 0;
-  padding-top: rem(25);
 
   @include mappy-query(b-medium) {
     align-self: center;
@@ -66,26 +65,29 @@
     padding-left: .75em;
     padding-right: .75em;
 
-    &:before{
-      @include border-bottom-radius(2px);
-      background-color: transparent;
+    &:after{
+      background-color: $brand-primary;
+      border-radius: 2px;
+      // background-color: transparent;
       content: "";
       display: block;
-      height: rem(40);
-      width: 2px;
+      height: 3px;
+      margin: 4px auto 0;
+      width: 0;
+      transition: all 180ms ease-in;
     }
 
     &.is-active{
       color: $brand-primary;
 
-      &:before{
-        background-color: $brand-primary;
+      &:after{
+        width: 70%;
       }
     }
 
     &:hover{
-      &:before{
-        background-color: $brand-primary;
+      &:after{
+        width: 70%;
       }
     }
   }
