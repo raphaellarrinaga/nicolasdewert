@@ -83,10 +83,23 @@
       &:after{
         width: 70%;
       }
+
+      &:hover{
+        color: $brand-primary;
+        transform: none;
+
+        &:after{
+          transform: none;
+        }
+      }
     }
 
     &:hover{
+      color: $primary-text-color;
+      transform: translateY(-3px);
+
       &:after{
+        transform: translateY(3px);
         width: 70%;
       }
     }
