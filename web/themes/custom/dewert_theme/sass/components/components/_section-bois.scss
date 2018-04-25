@@ -2,6 +2,8 @@
 
 .section-bois{
   .section-text__title{
+    margin-top: rhythm(1);
+
     &:after{
       @include title-border(small);
       margin-left: 0;
@@ -40,6 +42,6 @@
 
 .bois__media-image{
   @include mappy-query(b-medium) {
-    margin-top: - rhythm(6);
+    margin-top: - rhythm(3);
   }
 }
