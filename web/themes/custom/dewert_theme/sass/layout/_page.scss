@@ -3,10 +3,16 @@
 
 .site-container{
   background-color: $page-color;
+  // For a sticky footer
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 // Global header
 .site-header{
+  width: 100%;
+
   @include mappy-query(b-medium) {
     display: flex;
     align-items: center;
@@ -59,6 +65,7 @@
   font-size: rem(18);
   font-weight: 500;
   text-decoration: none;
+  text-align: center;
 
   @include mappy-query(b-medium) {
     display: block;
@@ -108,6 +115,7 @@
 
 // Global main content sections
 .site-main{
+  flex: 1; // Sticky footer
   outline: none;
 }
 

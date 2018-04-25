@@ -155,13 +155,23 @@
   padding-right: 1.111rem;
 }
 
-/* line 8, sass/components/components/_hero.scss */
+@media screen and (min-width: 76.25em) {
+  /* line 3, sass/components/components/_hero.scss */
+  .site-hero {
+    display: flex;
+    align-items: flex-end;
+    max-height: 90vh;
+    overflow: hidden;
+  }
+}
+
+/* line 15, sass/components/components/_hero.scss */
 .site-hero img {
   width: 100%;
 }
 
 @media screen and (min-width: 48.062em) {
-  /* line 14, sass/components/components/_hero.scss */
+  /* line 21, sass/components/components/_hero.scss */
   .site-hero__slogan {
     bottom: 5.556rem;
     color: #fefefe;
@@ -176,7 +186,7 @@
 }
 
 @media screen and (min-width: 76.25em) {
-  /* line 14, sass/components/components/_hero.scss */
+  /* line 21, sass/components/components/_hero.scss */
   .site-hero__slogan {
     bottom: 6.667rem;
     left: 3.333rem;
@@ -187,21 +197,23 @@
 }
 
 @media screen and (min-width: 83.75em) {
-  /* line 14, sass/components/components/_hero.scss */
+  /* line 21, sass/components/components/_hero.scss */
   .site-hero__slogan {
+    font-size: 3.815em;
     left: 3.333rem;
     left: calc((100% - 64.444rem)/2);
+    max-width: 64.444rem;
   }
 }
 
-/* line 44, sass/components/components/_hero.scss */
+/* line 52, sass/components/components/_hero.scss */
 .site-hero__slogan strong {
   display: inline-block;
   font-weight: normal;
   position: relative;
 }
 
-/* line 49, sass/components/components/_hero.scss */
+/* line 57, sass/components/components/_hero.scss */
 .site-hero__slogan strong:after {
   content: "";
   display: inline-block;
@@ -236,8 +248,13 @@
   margin-right: 1.111rem;
 }
 
+/* line 10, sass/components/components/_page-intro.scss */
+.page-intro__image img {
+  width: 100%;
+}
+
 @media screen and (min-width: 48.062em) {
-  /* line 11, sass/components/components/_page-intro.scss */
+  /* line 15, sass/components/components/_page-intro.scss */
   .page-intro__text {
     margin-left: auto;
     margin-right: auto;
@@ -246,7 +263,7 @@
 }
 
 @media screen and (min-width: 83.75em) {
-  /* line 11, sass/components/components/_page-intro.scss */
+  /* line 15, sass/components/components/_page-intro.scss */
   .page-intro__text {
     width: 66.667%;
   }

@@ -5,6 +5,13 @@
   padding-left: rem(20);
   padding-right: rem(20);
 
+  @include mappy-query(b-big) {
+    display: flex;
+    align-items: flex-end;
+    max-height: 90vh;
+    overflow: hidden;
+  }
+
   img{
     // @todo set picture tag
     width: 100%;
@@ -28,7 +35,6 @@
   }
 
   @include mappy-query(b-big) {
-    // background: green;
     bottom: rem(120);
     left: rem(60);
     left: calc((100% - #{$l-big})/2);
@@ -37,8 +43,10 @@
   }
 
   @include mappy-query(b-wide) {
+    font-size: modular-scale(6);
     left: rem(60);
     left: calc((100% - #{$l-big})/2);
+    max-width: $l-big;
   }
 
   strong{

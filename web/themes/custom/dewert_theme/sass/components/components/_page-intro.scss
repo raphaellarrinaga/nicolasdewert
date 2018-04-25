@@ -6,7 +6,11 @@
 }
 
 // .page-intro__title{}
-// .page-intro__image{}
+.page-intro__image{
+  img{
+    width: 100%;
+  }
+}
 
 .page-intro__text{
   @include mappy-query(b-medium) {
