@@ -43,9 +43,12 @@
   }
 
   @include mappy-query(b-wide) {
-    font-size: modular-scale(6);
     left: rem(60);
     left: calc((100% - #{$l-big})/2);
+  }
+
+  @include mappy-bp(1600px) {
+    font-size: modular-scale(6);
     max-width: $l-big;
   }
 

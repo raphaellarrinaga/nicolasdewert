@@ -52,6 +52,7 @@
 
   <main class="site-main" role="main" tabindex="-1">
     <section class="site-content" id="main-content">
+      {% if page.title or page.content_top or page.content or page.content_aside %}
       <div class="l-constrain">
         {{ page.title }}
         {{ page.content_top }}
@@ -66,9 +67,9 @@
           </aside>
         {% endif %}
       </div>
+      {% endif %}
+      {{ page.content_bottom }}
     </section>
-
-    {{ page.content_bottom }}
   </main>
 
   {% if page.footer %}

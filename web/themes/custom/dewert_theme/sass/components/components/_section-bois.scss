@@ -1,0 +1,45 @@
+// Section bois (ossature bois)
+
+.section-bois{
+  .section-text__title{
+    &:after{
+      @include title-border(small);
+      margin-left: 0;
+    }
+  }
+}
+
+.section-bois__content{
+  @include mappy-query(b-medium) {
+    display: flex;
+    flex-wrap: wrap;
+    width: (5/6) * 100%;
+  }
+}
+
+.section-bois__main{
+  @include mappy-query(b-medium) {
+    box-sizing: border-box;
+    flex: 1 0 (7/12) * 100%;
+    padding-right: (1/12) * 100%;
+  }
+}
+
+.section-bois__aside{
+  @include mappy-query(b-medium) {
+    flex: 1 0 (1/3) * 100%;
+  }
+}
+
+.section-bois__bottom{
+  @include mappy-query(b-medium) {
+    margin-top: rhythm(1);
+    flex: 1 0 100%;
+  }
+}
+
+.bois__media-image{
+  @include mappy-query(b-medium) {
+    margin-top: - rhythm(6);
+  }
+}

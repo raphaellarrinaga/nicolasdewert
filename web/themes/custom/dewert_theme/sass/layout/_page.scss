@@ -23,7 +23,7 @@
 }
 
 .button.button--header{
-  font-size: rem(14);
+  font-size: rem(13);
 
   @include mappy-query(b-medium) {
     align-self: center;
@@ -82,6 +82,10 @@
       margin: 4px auto 0;
       width: 0;
       transition: all 180ms ease-in;
+    }
+
+    &:visited{
+      color: $primary-text-color;
     }
 
     &.is-active{
