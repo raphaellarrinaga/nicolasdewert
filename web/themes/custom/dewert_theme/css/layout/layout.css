@@ -18,7 +18,7 @@
 @media screen and (min-width: 76.25em) {
   /* line 7, sass/layout/_grid.scss */
   .l-constrain {
-    max-width: 67.778rem;
+    max-width: 64.444rem;
   }
 }
 
@@ -265,7 +265,7 @@
   background-color: #82BE43;
   box-sizing: border-box;
   margin: 0 1.111rem 1.111rem;
-  padding: 1.5rem 0;
+  padding: 1.5rem 1.111rem;
 }
 
 /* line 125, sass/layout/_page.scss */
@@ -379,7 +379,15 @@
 }
 
 @media screen and (min-width: 48.062em) {
-  /* line 221, sass/layout/_page.scss */
+  /* line 219, sass/layout/_page.scss */
+  .l-flex-wave__header {
+    padding-left: 0.556rem;
+    padding-right: 0.556rem;
+  }
+}
+
+@media screen and (min-width: 48.062em) {
+  /* line 226, sass/layout/_page.scss */
   .l-flex-wave__rows {
     display: flex;
     flex: 1 0 75%;
@@ -390,13 +398,13 @@
   }
 }
 
-/* line 231, sass/layout/_page.scss */
+/* line 236, sass/layout/_page.scss */
 .l-flex-wave__rows > * {
   margin-bottom: 1.5rem;
 }
 
 @media screen and (min-width: 48.062em) {
-  /* line 231, sass/layout/_page.scss */
+  /* line 236, sass/layout/_page.scss */
   .l-flex-wave__rows > * {
     margin-bottom: 0;
     flex-grow: 1;
@@ -404,15 +412,15 @@
     padding-left: 0.556rem;
     padding-right: 0.556rem;
   }
-  /* line 241, sass/layout/_page.scss */
+  /* line 246, sass/layout/_page.scss */
   .l-flex-wave__rows > *:first-child {
     margin-top: 3rem;
   }
-  /* line 244, sass/layout/_page.scss */
+  /* line 249, sass/layout/_page.scss */
   .l-flex-wave__rows > *:nth-child(2) {
     margin-top: 4.5rem;
   }
-  /* line 247, sass/layout/_page.scss */
+  /* line 252, sass/layout/_page.scss */
   .l-flex-wave__rows > *:nth-child(3) {
     margin-top: 1.5rem;
   }

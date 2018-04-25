@@ -169,7 +169,7 @@
     left: 1.111rem;
     left: calc((100% - 90%)/2);
     margin: auto;
-    max-width: 46.222rem;
+    max-width: 42rem;
     position: absolute;
     z-index: 1;
   }
@@ -180,7 +180,9 @@
   .site-hero__slogan {
     bottom: 6.667rem;
     left: 3.333rem;
-    left: calc((100% - 67.778rem)/2);
+    left: calc((100% - 64.444rem)/2);
+    font-size: 3.052em;
+    max-width: 56rem;
   }
 }
 
@@ -188,18 +190,18 @@
   /* line 14, sass/components/components/_hero.scss */
   .site-hero__slogan {
     left: 3.333rem;
-    left: calc((100% - 67.778rem)/2);
+    left: calc((100% - 64.444rem)/2);
   }
 }
 
-/* line 39, sass/components/components/_hero.scss */
+/* line 44, sass/components/components/_hero.scss */
 .site-hero__slogan strong {
   display: inline-block;
   font-weight: normal;
   position: relative;
 }
 
-/* line 44, sass/components/components/_hero.scss */
+/* line 49, sass/components/components/_hero.scss */
 .site-hero__slogan strong:after {
   content: "";
   display: inline-block;
@@ -676,17 +678,19 @@
   margin-right: 1.111rem;
   padding-bottom: 4.5rem;
   padding-top: 4.5rem;
+  padding-left: 1.111rem;
+  padding-right: 1.111rem;
 }
 
-/* line 11, sass/components/components/_section-ossature.scss */
+/* line 13, sass/components/components/_section-ossature.scss */
 .section-ossature__title {
   font-size: 1.953em;
   text-align: center;
   margin: 0 auto 1.5rem;
-  max-width: 67.778rem;
+  max-width: 64.444rem;
 }
 
-/* line 17, sass/components/components/_section-ossature.scss */
+/* line 19, sass/components/components/_section-ossature.scss */
 .section-ossature__title:after {
   content: "";
   display: block;
@@ -697,7 +701,7 @@
   margin: 1.5rem auto;
 }
 
-/* line 22, sass/components/components/_section-ossature.scss */
+/* line 24, sass/components/components/_section-ossature.scss */
 .section-ossature__intro {
   font-weight: bold;
   margin: 0 auto 3rem;
@@ -705,14 +709,14 @@
   text-align: center;
 }
 
-/* line 29, sass/components/components/_section-ossature.scss */
+/* line 31, sass/components/components/_section-ossature.scss */
 .section-ossature__list {
   list-style: none;
   padding-left: 0;
 }
 
 @media screen and (min-width: 48.062em) {
-  /* line 29, sass/components/components/_section-ossature.scss */
+  /* line 31, sass/components/components/_section-ossature.scss */
   .section-ossature__list {
     display: flex;
     flex-wrap: wrap;
@@ -721,14 +725,14 @@
   }
 }
 
-/* line 40, sass/components/components/_section-ossature.scss */
+/* line 42, sass/components/components/_section-ossature.scss */
 .section-ossature__list li {
   box-sizing: border-box;
   margin-bottom: 1.5rem;
 }
 
 @media screen and (min-width: 48.062em) {
-  /* line 40, sass/components/components/_section-ossature.scss */
+  /* line 42, sass/components/components/_section-ossature.scss */
   .section-ossature__list li {
     flex: 0 1 50%;
     padding-left: 0.556rem;
@@ -737,51 +741,51 @@
 }
 
 @media all and (min-width: 62.5em) {
-  /* line 40, sass/components/components/_section-ossature.scss */
+  /* line 42, sass/components/components/_section-ossature.scss */
   .section-ossature__list li {
     flex-basis: 25%;
   }
 }
 
-/* line 57, sass/components/components/_section-ossature.scss */
+/* line 59, sass/components/components/_section-ossature.scss */
 .section-ossature__list p {
   font-size: 0.8em;
 }
 
-/* line 61, sass/components/components/_section-ossature.scss */
+/* line 63, sass/components/components/_section-ossature.scss */
 .section-ossature__list h2 {
   margin-top: 1.5rem;
 }
 
-/* line 66, sass/components/components/_section-ossature.scss */
+/* line 68, sass/components/components/_section-ossature.scss */
 .icn-materiaux {
   background: url("../../images/icons/icn-materiaux.svg") no-repeat left top;
   height: 47px;
   width: 47px;
 }
 
-/* line 71, sass/components/components/_section-ossature.scss */
+/* line 73, sass/components/components/_section-ossature.scss */
 .icn-competences {
   background: url("../../images/icons/icn-competences.svg") no-repeat left top;
   height: 47px;
   width: 47px;
 }
 
-/* line 76, sass/components/components/_section-ossature.scss */
+/* line 78, sass/components/components/_section-ossature.scss */
 .icn-isolation {
   background: url("../../images/icons/icn-isolation.svg") no-repeat left top;
   height: 47px;
   width: 47px;
 }
 
-/* line 81, sass/components/components/_section-ossature.scss */
+/* line 83, sass/components/components/_section-ossature.scss */
 .icn-prix {
   background: url("../../images/icons/icn-prix.svg") no-repeat left top;
   height: 47px;
   width: 47px;
 }
 
-/* line 87, sass/components/components/_section-ossature.scss */
+/* line 89, sass/components/components/_section-ossature.scss */
 .section-ossature__action {
   text-align: center;
 }
@@ -833,14 +837,21 @@
   z-index: 2;
 }
 
-/* line 26, sass/components/components/_taxonomy-teaser.scss */
+@media screen and (min-width: 76.25em) {
+  /* line 20, sass/components/components/_taxonomy-teaser.scss */
+  .taxonomy-teaser__title {
+    font-size: 1.25em;
+  }
+}
+
+/* line 30, sass/components/components/_taxonomy-teaser.scss */
 .taxonomy-teaser__title > span {
   display: inline-block;
   margin-left: 2.333rem;
   position: relative;
 }
 
-/* line 31, sass/components/components/_taxonomy-teaser.scss */
+/* line 35, sass/components/components/_taxonomy-teaser.scss */
 .taxonomy-teaser__title > span:before {
   content: "";
   display: block;

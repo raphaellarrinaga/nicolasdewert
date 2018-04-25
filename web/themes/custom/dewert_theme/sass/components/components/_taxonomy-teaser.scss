@@ -23,6 +23,10 @@
   position: relative;
   z-index: 2;
 
+  @include mappy-query(b-big) {
+    font-size: $font-size-lg;
+  }
+
   > span{
     display: inline-block;
     margin-left: rem(42);

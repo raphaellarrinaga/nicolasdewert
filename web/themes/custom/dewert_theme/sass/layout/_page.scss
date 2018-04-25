@@ -120,7 +120,7 @@
   background-color: $brand-primary;
   box-sizing: border-box;
   margin: 0 rem(20) rem(20);
-  padding: rhythm(1) 0;
+  padding: rhythm(1) rem(20);
 
   a{
     color: $white;
@@ -216,7 +216,12 @@
   }
 }
 
-.l-flex-wave__header{}
+.l-flex-wave__header{
+  @include mappy-query(b-medium) {
+    padding-left: rem(10);
+    padding-right: rem(10);
+  }
+}
 
 .l-flex-wave__rows{
   @include mappy-query(b-medium) {
