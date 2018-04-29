@@ -19,3 +19,23 @@
     }
   }
 }
+
+.work__image{
+  a{
+    display: block;
+    overflow: hidden;
+
+    &:hover{
+      transform: translateY(-5px);
+
+      img{
+        transform-origin: center;
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  img{
+    display: block;
+  }
+}

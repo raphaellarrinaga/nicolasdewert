@@ -9,3 +9,19 @@
     width: 60%;
   }
 }
+
+[class*="section-story__image_"]{
+  display: inline-block;
+  height: 100px;
+  width: 124px;
+}
+
+.section-story__image_01{
+  background: url("../../images/bg/bg-story-intro_01.jpg") no-repeat left top;
+}
+.section-story__image_02{
+  background: url("../../images/bg/bg-story-intro_02.jpg") no-repeat left top;
+}
+.section-story__image_03{
+  background: url("../../images/bg/bg-story-intro_03.jpg") no-repeat left top;
+}
