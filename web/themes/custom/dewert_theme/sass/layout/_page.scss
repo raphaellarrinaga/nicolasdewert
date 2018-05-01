@@ -11,12 +11,18 @@
 
 // Global header
 .site-header{
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: rhythm(1/3);
+  padding-top: rhythm(1/3);
   width: 100%;
 
   @include mappy-query(b-medium) {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
+    flex-wrap: nowrap;
     padding-bottom: rhythm(1);
     padding-top: rhythm(1);
   }
@@ -31,38 +37,68 @@
 
   span{
     color: lighten($brand-primary, 30%);
+    display: none;
+
+    @include mappy-query(b-big) {
+      display: inline;
+    }
   }
 }
 
 .site-navigation{
+  // left: 0;
+  // right: 0;
+  // top: 60px;
+  // background: yellow;
+  // position: absolute;
+
   @include mappy-query(b-medium) {
     padding-left: 2em;
     padding-right: 2em;
+    position: relative;
+  }
+
+  .nav-toggle{
+    // position: absolute;
+    // right: 0;
+    // top: 0;
   }
 }
 
 .site-logo{
-  // flex-shrink: 0;
+  flex-shrink: 1;
+  margin-right: auto;
+  max-width: rem(140);
 
   @include mappy-query(b-medium) {
     align-self: center;
+    margin-right: initial;
   }
+
+  @include mappy-query(b-big) {
+    max-width: none;
+  }
+
 }
 
 .main-menu{
   list-style: none;
   margin-bottom: 0;
   padding-left: 0;
+  position: absolute;
+  left: rem(20);
+  right: rem(20);
 
   @include mappy-query(b-medium) {
     display: flex;
     align-items: flex-start;
+    position: relative;
   }
 }
 
 .main-menu-link{
   color: $primary-text-color;
-  font-size: rem(18);
+  font-size: rem(16);
   font-weight: 500;
   text-decoration: none;
   text-align: center;
@@ -115,6 +151,10 @@
       }
     }
   }
+
+  @include mappy-bp(940px) {
+    font-size: rem(18);
+  }
 }
 
 // Global main content sections
@@ -132,7 +172,11 @@
   background-color: $brand-primary;
   box-sizing: border-box;
   margin: 0 rem(20) rem(20);
-  padding: rhythm(1) rem(20);
+  padding: rhythm(1) 0;
+
+  @include mappy-query(b-medium) {
+    padding: rhythm(1) rem(20);
+  }
 
   a{
     color: $white;

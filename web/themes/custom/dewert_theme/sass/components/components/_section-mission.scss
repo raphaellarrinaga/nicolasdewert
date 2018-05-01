@@ -1,0 +1,35 @@
+// Section Mission (expertise)
+// Notre mission & notre philosophie
+
+// .section-mission{}
+
+.section-mission__images{
+  @include mappy-query(b-medium) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+
+  img{
+    @include mappy-query(b-medium) {
+      box-sizing: border-box;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      // flex: 1 0 25%;
+      // height: auto;
+      // max-width: 100%;
+    }
+
+    &:first-child{
+      margin-top: rhythm(3);
+    }
+    &:nth-child(2){
+      margin-top: rhythm(1);
+    }
+    &:nth-child(3){
+      margin-top: rhythm(4);
+    }
+  }
+}

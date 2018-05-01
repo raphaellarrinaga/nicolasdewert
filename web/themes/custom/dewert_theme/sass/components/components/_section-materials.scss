@@ -30,11 +30,12 @@
   display: flex;
   flex-wrap: wrap;
 
-  // @include mappy-query(b-small) {
-  // }
-
   @include mappy-query(b-medium) {
-    margin-top: rem(60);
+    margin: rem(60) 2rem 0;
+  }
+
+  @include mappy-query(b-big) {
+    margin: rem(60) 0 0;
   }
 }
 
@@ -44,15 +45,15 @@
   margin-bottom: rhythm(3);
   text-align: center;
 
-  @include mappy-query(b-small) {
-  }
-
   @include mappy-query(b-medium) {
     flex-basis: 33.33%;
-    margin-top: - rem(20);
     margin-bottom: 0;
     padding-bottom: rem(40);
     text-align: left;
+  }
+
+  @include mappy-query(b-big) {
+    margin-top: - rem(20);
   }
 
   .materials-summary__link{

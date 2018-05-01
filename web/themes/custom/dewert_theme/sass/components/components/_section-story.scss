@@ -5,23 +5,35 @@
 
 .section-story__content{
   @include mappy-query(b-medium) {
-    padding-left: 40%;
-    width: 60%;
+    padding-left: (5/12)*100%;
+    position: relative;
+    width: (6/12)*100%;
   }
 }
 
-[class*="section-story__image_"]{
-  display: inline-block;
-  height: 100px;
-  width: 124px;
-}
+.section-story__images{
+  @include mappy-query(b-medium) {
+    position: absolute;
+    right: (7/12)*100%;
+    // right: calc((7/12)*100% + 1.5rem);
+    top: rhythm(2);
+    width: (5/12)*100%;
+  }
 
-.section-story__image_01{
-  background: url("../../images/bg/bg-story-intro_01.jpg") no-repeat left top;
-}
-.section-story__image_02{
-  background: url("../../images/bg/bg-story-intro_02.jpg") no-repeat left top;
-}
-.section-story__image_03{
-  background: url("../../images/bg/bg-story-intro_03.jpg") no-repeat left top;
+  img{
+    display: block;
+    float: right;
+    margin: 0 rem(8);
+    // height: 200px;
+    // width: 124px;
+    // width: 33.3%;
+    @include mappy-query(b-medium) {
+      &:nth-child(2n){
+        margin-top: 4rem;
+      }
+      &:first-child{
+        margin-top: 2rem;
+      }
+    }
+  }
 }
