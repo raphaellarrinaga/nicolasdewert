@@ -9,6 +9,7 @@ $l-medium: 90%;
 $l-big: rem(1160);
 // $l-wide: rem(1330);
 $l-wide: rem(1278); // = (12*(18*5))+(11*18)
+// $l-wide: rem(1040); // = (12*(18*5))+(11*18)
 
 // Values for default media queries breakpoints (mobile first)
 // They are used in mappy-bp $breakpoints map and shouldn't really be used across stylesheets

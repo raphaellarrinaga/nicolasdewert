@@ -1,0 +1,43 @@
+// Section skills (expertise)
+
+// .section-skills{}
+
+.section-skills__content{
+  p{
+    margin-top: 0;
+  }
+
+  @include mappy-query(b-medium) {
+    float: left;
+    width: (1/2) * 100%;
+  }
+}
+
+.section-skills__figure{
+  display: inline-block;
+
+  @include mappy-query(b-medium) {
+    margin: 0 - rem(20) 0 0;
+    float: right;
+    width: (5/12) * 100%;
+  }
+
+  legend{
+    position: relative;
+    text-align: right;
+    z-index: 1;
+
+    a{
+      background-color: $brand-tertiary;
+      color: $primary-text-color;
+      display: inline-block;
+      font-size: $font-size-md;
+      margin-top: -20px;
+      text-decoration: none;
+    }
+  }
+
+  @include mappy-query(b-medium) {
+
+  }
+}
