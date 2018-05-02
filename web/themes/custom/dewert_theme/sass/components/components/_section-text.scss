@@ -1,5 +1,7 @@
 // Paragraph section text
 
 .section-text__title{
-  margin-top: 0;
+  @include mappy-query(b-medium) {
+    margin-top: 0;
+  }
 }

@@ -187,37 +187,130 @@ $submenu-text-color: $white;
 
 .nav-toggle{
   border: none;
-  background: transparent;
+  border-radius: 50%;
   cursor: pointer;
+  display: inline-block;
   outline: none;
+  position: relative;
+  z-index: 101;
+  vertical-align: text-top;
+
+  // Quickfix relative position of navigation with contextual links
+  // @todo review
+  // .site-navigation.contextual-region &{
+  //   top: -30px;
+  //   right: 0;
+  // }
 
   @include mappy-query(b-medium) {
+  // @include mappy-bp(rem(1004)) {
     display: none;
   }
 }
 
 .collapsible-box {
+  max-height: 200rem;
   overflow: hidden;
   opacity: 1;
-  max-height: 80em;
   visibility: visible;
   transition: visibility 0s ease, max-height 300ms ease, opacity 300ms ease;
   transition-delay: 0s;
 
   @include mappy-query(b-medium) {
+  // @include mappy-bp(rem(1004)) {
     overflow: visible;
   }
 }
 
 .collapsible-box[aria-hidden='true'] {
-  max-height: 0;
+  // max-height: 0;
   opacity: 0;
   visibility: hidden;
   transition-delay: 300ms, 0s, 0s;
 
   @include mappy-query(b-medium) {
-    max-height: inherit;
+  // @include mappy-bp(rem(1004)) {
+    // max-height: inherit;
     opacity: 1;
     visibility: visible;
+  }
+}
+
+// Hamburger link
+
+.c-hamburger {
+  appearance: none;
+  border-radius: none;
+  font-size: 0;
+  height: 23px;
+  height: 34px;
+  margin: 0 .35rem;
+  overflow: hidden;
+  padding: 0;
+  text-indent: -9999px;
+  width: 24px;
+  width: 34px;
+  position: relative;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 2px $brand-primary;
+
+  span{
+    background: $brand-primary;
+    border-radius: 3px;
+    display: block;
+    height: 2px;
+    left: 8px;
+    position: absolute;
+    right: 8px;
+    top: 16px;
+
+    &:after,
+    &:before{
+      background-color: $brand-primary;
+      border-radius: 3px;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      transition-duration: .10s,.10s;
+      transition-delay: .10s,0s;
+    }
+
+    &:before{
+      top: -6px;
+      transition-property: top,transform;
+    }
+
+    &:after{
+      bottom: -6px;
+      transition-property: bottom,transform;
+    }
+  }
+
+  &[aria-expanded="true"],
+  &.is-active{
+    span{
+      background: 0 0;
+
+      &:after,
+      &:before{
+        -webkit-transition-delay: 0s,80ms;
+        transition-delay: 0s,80ms;
+      }
+      &:before{
+        top: 0;
+        transform: rotate(45deg);
+      }
+      &:after{
+        bottom: 0;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &:focus {
+    outline: 0;
   }
 }

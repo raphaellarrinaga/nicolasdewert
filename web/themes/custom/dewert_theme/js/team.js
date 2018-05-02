@@ -21,7 +21,6 @@
           member_body_height = $(this).height() + 50;
         }
 
-        console.log(member_body_height);
         $('.team').find('.right').css('min-height', member_body_height);
       });
 

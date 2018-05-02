@@ -29,7 +29,14 @@
 }
 
 .button.button--header{
+  position: relative;
+  padding: 1em;
   font-size: rem(13);
+  z-index: 101;
+
+  @include mappy-query(b-small) {
+    padding: 1em 2em;
+  }
 
   @include mappy-query(b-medium) {
     align-self: center;
@@ -39,29 +46,9 @@
     color: lighten($brand-primary, 30%);
     display: none;
 
-    @include mappy-query(b-big) {
+    @include mappy-query(b-medium) {
       display: inline;
     }
-  }
-}
-
-.site-navigation{
-  // left: 0;
-  // right: 0;
-  // top: 60px;
-  // background: yellow;
-  // position: absolute;
-
-  @include mappy-query(b-medium) {
-    padding-left: 2em;
-    padding-right: 2em;
-    position: relative;
-  }
-
-  .nav-toggle{
-    // position: absolute;
-    // right: 0;
-    // top: 0;
   }
 }
 
@@ -69,6 +56,8 @@
   flex-shrink: 1;
   margin-right: auto;
   max-width: rem(140);
+  position: relative;
+  z-index: 101;
 
   @include mappy-query(b-medium) {
     align-self: center;
@@ -82,29 +71,51 @@
 }
 
 .main-menu{
+  display: flex;
   list-style: none;
   margin-bottom: 0;
   padding-left: 0;
-  position: absolute;
-  left: rem(20);
-  right: rem(20);
+
+  @include mappy-bp(max-width 768px) {
+    background: rgba($white, .95);
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+  }
 
   @include mappy-query(b-medium) {
-    display: flex;
     align-items: flex-start;
     position: relative;
+    left: auto;
+    right: auto;
+  }
+}
+
+.main-menu-item{
+  @include mappy-bp(max-width 768px) {
+    margin-bottom: rhythm(2);
   }
 }
 
 .main-menu-link{
   color: $primary-text-color;
-  font-size: rem(16);
   font-weight: 500;
   text-decoration: none;
   text-align: center;
 
+  @include mappy-bp(max-width 768px) {
+    font-size: $font-size-xxl;
+  }
+
   @include mappy-query(b-medium) {
     display: block;
+    font-size: rem(16);
     padding-left: .75em;
     padding-right: .75em;
 

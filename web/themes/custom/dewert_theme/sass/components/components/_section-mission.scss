@@ -4,22 +4,47 @@
 // .section-mission{}
 
 .section-mission__images{
-  @include mappy-query(b-medium) {
+  position: relative;
+
+  @include mappy-query(b-small) {
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    margin-left: -.5rem;
+    margin-right: -.5rem;
+  }
+
+  @include mappy-query(b-medium) {
     margin-left: -1rem;
     margin-right: -1rem;
   }
 
-  img{
+  div{
+    &:not(:first-child){
+      position: absolute;
+      top: 1rem;
+      right: 5rem;
+    }
+
+    &:nth-child(2n){
+      top: .5rem;
+      right: .5rem;
+    }
+
+    @include mappy-query(b-small) {
+      padding-left: .5rem;
+      padding-right: .5rem;
+
+      &:not(:first-child){
+        position: initial;
+        top: auto;
+        right: auto;
+      }
+    }
+
     @include mappy-query(b-medium) {
-      box-sizing: border-box;
       padding-left: 1rem;
       padding-right: 1rem;
-      // flex: 1 0 25%;
-      // height: auto;
-      // max-width: 100%;
     }
 
     &:first-child{
