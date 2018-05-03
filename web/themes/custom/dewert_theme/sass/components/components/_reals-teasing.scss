@@ -50,6 +50,7 @@
 
 .reals-teasing__title{
   @include mappy-query(b-big) {
+    margin-top: 0;
     font-size: $font-size-xxl;
   }
 }

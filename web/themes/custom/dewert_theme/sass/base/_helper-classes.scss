@@ -60,6 +60,14 @@
   }
 }
 
+// Backgrounds
+
+.bg-gray{
+  background-color: $brand-tertiary;
+  margin: 0 rem(20) rem(20);
+  padding: rhythm(1) 0;
+}
+
 // Spaced content
 .spaced{
   margin-bottom: rhythm(3);
@@ -69,14 +77,6 @@
 .spaced-lg{
   margin-bottom: rhythm(5);
   margin-top: rhythm(5);
-}
-
-// Backgrounds
-
-.bg-gray{
-  background-color: $brand-tertiary;
-  margin: 0 rem(20) rem(20);
-  padding: rhythm(1) 0;
 }
 
 // Page title

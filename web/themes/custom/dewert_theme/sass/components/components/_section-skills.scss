@@ -15,29 +15,36 @@
 
 .section-skills__figure{
   display: inline-block;
+  margin: 0;
 
   @include mappy-query(b-medium) {
-    margin: 0 - rem(20) 0 0;
+    margin: rhythm(2) - rem(20) 0 0;
     float: right;
     width: (5/12) * 100%;
   }
+}
 
-  legend{
-    position: relative;
-    text-align: right;
-    z-index: 1;
+.section-skills__copyright{
+  background-color: $brand-tertiary;
+  color: $primary-text-color;
+  display: inline-block;
+  float: right;
+  font-size: $font-size-sm;
+  margin-top: - rhythm(2/3);
+  padding: rem(8) rem(12);
+  position: relative;
+  text-align: right;
+  z-index: 1;
 
-    a{
-      background-color: $brand-tertiary;
-      color: $primary-text-color;
-      display: inline-block;
-      font-size: $font-size-md;
-      margin-top: -20px;
-      text-decoration: none;
+  a{
+    border-bottom: 1px solid $primary-text-color;
+    color: $primary-text-color;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover{
+      color: $link-color;
+      border-color: $link-color;
     }
-  }
-
-  @include mappy-query(b-medium) {
-
   }
 }

@@ -4,7 +4,13 @@
 
 .work--teaser{
   .work__title{
-    font-size: $font-size-xl;
+    font-size: $font-size-lg;
+    margin: rhythm(1) 0;
+
+    &:after{
+      @include title-border();
+      margin-left: 0;
+    }
 
     a{
       color: $primary-text-color;

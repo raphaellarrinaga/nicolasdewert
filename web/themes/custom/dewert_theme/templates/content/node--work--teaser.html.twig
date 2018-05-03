@@ -43,8 +43,8 @@
         <h1{{ title_attributes.addClass(title_classes) }}><a href="{{ url }}" rel="bookmark">{{ label }}</a></h1>
       {% endif %}
       {{ title_suffix }}
-
-      {{ content|without('field_media_image') }}
+      {{ content.body|render|striptags|trim|raw }}
+      {{ content|without('field_media_image', 'body') }}
     </div>
   {% endblock %}
 </article>
