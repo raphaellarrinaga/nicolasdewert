@@ -1,6 +1,9 @@
 // Materials
 
 .section-materials{
+  // Avoid overflowing image to create a scroll on mobile
+  overflow: hidden;
+
   > h2{
     text-align: center;
   }
@@ -245,7 +248,9 @@
   // For images in body texts
 
   .align-right{
+    display: block;
     float: none;
+    margin-bottom: rhythm(1);
 
     @include mappy-query(b-small) {
       float: right;
@@ -254,7 +259,9 @@
   }
 
   .align-left{
+    display: block;
     float: none;
+    margin-bottom: rhythm(1);
 
     @include mappy-query(b-small) {
       float: left;

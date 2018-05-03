@@ -127,20 +127,9 @@
 }
 
 .team-member__head{
-  .is-active &{
-    display: flex;
-  }
-}
-
-.team-member__head{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-
   .button{
-    margin-left: auto;
-    vertical-align: text-bottom;
+    margin-left: 1rem;
+    vertical-align: baseline;
   }
 }
 

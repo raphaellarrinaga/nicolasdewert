@@ -9,11 +9,10 @@
   set classes = [
     'section-bois',
     'spaced',
-    'bg-gray',
   ]
 %}
 <section{{ attributes.addClass(classes)|without('id') }}>
-  <div class="section-bois__content l-constrain">
+  <div class="section-bois__content">
   {{ title_prefix }}
   {% if label %}
     <h1 {{ title_attributes.addClass('section-bois__title') }}>{{ label }}</h1>

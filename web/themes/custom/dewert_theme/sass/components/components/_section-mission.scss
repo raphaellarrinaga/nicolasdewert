@@ -32,11 +32,12 @@
     }
 
     @include mappy-query(b-small) {
+      flex: 0 1 100%; // Bug on IE
       padding-left: .5rem;
       padding-right: .5rem;
 
       &:not(:first-child){
-        position: initial;
+        position: relative;
         top: auto;
         right: auto;
       }
