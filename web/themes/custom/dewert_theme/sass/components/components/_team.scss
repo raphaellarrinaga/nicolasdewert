@@ -41,7 +41,6 @@
   position: relative;
   flex: 0 1 48%;
 
-
   &:before{
     @include css-content(block, 100%, 100%);
     background: $brand-tertiary;
@@ -54,9 +53,11 @@
   }
 
   @include mappy-query(b-medium) {
+    margin: 0 0 0 rem(50);
     float: right;
   }
 
+  transform: rotate(-1deg);
   &:hover{
     cursor: pointer;
     transform: rotate(1deg);
@@ -65,6 +66,7 @@
   &:first-child{
     @include mappy-query(b-medium) {
       margin-right: rem(50);
+      margin-left: auto;
     }
   }
 
@@ -74,7 +76,7 @@
     }
 
     @include mappy-query(b-medium) {
-      margin-top: - rem(20);
+      margin-top: -.5rem;
     }
   }
 
@@ -87,7 +89,7 @@
   position: relative;
   z-index: 2;
   &.is-active{
-    transform: none;
+    transform: rotate(1deg);
     z-index: 1;
 
     img{

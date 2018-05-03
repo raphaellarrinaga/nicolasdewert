@@ -53,3 +53,9 @@ materials:
   version: 1.x
   js:
     js/materials.js: {}
+
+nd_centered:
+  version: 1.x
+  css:
+    theme:
+      css/layout/nd-centered.css: {}

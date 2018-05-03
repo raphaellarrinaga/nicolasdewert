@@ -1,0 +1,47 @@
+/**
+ * @file
+ * Styling for the nd-centered layout template.
+ */
+
+// Import abstracts
+@import '../abstracts/abstracts';
+
+.layout--centered{
+  @include mappy-query(b-medium) {
+    width: (8/12)*100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.layout__region--second{
+  // text-align: center;
+
+  @include mappy-query(b-medium) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -8px;
+  }
+
+  img{
+    @include mappy-query(b-medium) {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 1 50%;
+      max-height: 730px;
+      padding: 8px;
+    }
+  }
+}
+
+// Realistation detail page title
+// @todo ! remove that hard coded stuff
+// use a global class
+.block-views-blockworks-block-2__title{
+  text-align: center;
+
+  &:after{
+    @include title-border;
+  }
+}

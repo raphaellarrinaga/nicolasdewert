@@ -1,0 +1,11 @@
+nd_centered:
+  label: Centered layout - 10/12
+  category: Dewert theme
+  type: partial
+  template: templates/layout/nd-centered
+  library: dewert_theme/nd_centered
+  regions:
+    first:
+      label: First
+    second:
+      label: Second

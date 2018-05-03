@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * ETUC theme 2 column template.
+ *
+ * Available variables:
+ * - fist
+ * - second
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'layout',
+    'layout--centered',
+  ]
+%}
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    {% if content.first %}
+    <div class="layout__region layout__region--first">
+      {{ content.first }}
+    </div>
+    {% endif %}
+    {% if content.second %}
+    <div class="layout__region layout__region--second">
+      {{ content.second }}
+    </div>
+    {% endif %}
+  </div>
+{% endif %}
