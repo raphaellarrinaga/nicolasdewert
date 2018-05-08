@@ -61,6 +61,10 @@
   &:hover{
     cursor: pointer;
     transform: rotate(1deg);
+
+    img{
+      opacity: .6;
+    }
   }
 
   &:first-child{

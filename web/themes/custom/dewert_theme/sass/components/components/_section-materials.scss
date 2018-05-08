@@ -75,10 +75,6 @@
       }
     }
   }
-
-  // &:nth-child(4){
-  //   margin-left: 0;
-  // }
 }
 
 .materials-summary__link{
@@ -92,7 +88,9 @@
     }
 
     .materials-summary__title{
-      color: $brand-primary;
+      // color: $brand-primary;
+      display: inline-block;
+      transform: translateY(-4px);
     }
   }
 

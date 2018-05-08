@@ -34,6 +34,14 @@
   font-size: rem(13);
   z-index: 101;
 
+  &:hover{
+    transform: translateY(2px);
+
+    i{
+      transform: translateY(1px);
+    }
+  }
+
   @include mappy-query(b-small) {
     padding: 1em 2em;
   }
@@ -253,7 +261,32 @@
 
   a{
     color: $white;
+    display: inline-block;
+    position: relative;
     text-decoration: none;
+
+    &:after{
+      @include css-content(block, 0, 2px);
+      background: $white;
+      border-radius: 2px;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      position: absolute;
+      opacity: 0;
+      margin: 0 auto;
+      transition: all .150s cubic-bezier(.15,0,.3,.8);
+      width: 30%;
+    }
+
+    &:hover{
+      transform: translateY(-3px);
+
+      &:after{
+        width: 100%;
+        opacity: 1;
+      }
+    }
   }
 }
 

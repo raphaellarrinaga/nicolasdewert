@@ -162,7 +162,7 @@ $text-color-default: $primary-text-color;
     }
 
     &[aria-hidden="false"] {
-      max-height: 100vh;
+      max-height: rem(700);
       overflow: auto;
       // padding: 1.25em;
       padding: 1.25em 0;
