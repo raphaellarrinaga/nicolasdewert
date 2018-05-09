@@ -2,7 +2,10 @@
 
 .section-materials{
   // Avoid overflowing image to create a scroll on mobile
-  overflow: hidden;
+
+  @include mappy-bp(max-width 768px) {
+    overflow: hidden;
+  }
 
   > h2{
     text-align: center;
@@ -21,13 +24,7 @@
   transition: all 1600ms linear;
 }
 
-.materials__tabs{
-  // display: none;
-
-  // &.is-visible{
-  //   display: block;
-  // }
-}
+// .materials__tabs{}
 
 .materials-summary{
   display: flex;

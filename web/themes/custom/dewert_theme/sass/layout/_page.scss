@@ -70,11 +70,12 @@
   @include mappy-query(b-medium) {
     align-self: center;
     margin-right: initial;
-  }
-
-  @include mappy-query(b-big) {
     max-width: none;
   }
+
+  // @include mappy-query(b-big) {
+  //   max-width: none;
+  // }
 }
 
 .site-navigation{
@@ -272,19 +273,20 @@
       bottom: 0;
       right: 0;
       left: 0;
+      margin: auto;
       position: absolute;
-      opacity: 0;
-      margin: 0 auto;
-      transition: all .150s cubic-bezier(.15,0,.3,.8);
       width: 30%;
+      opacity: 0;
+      transition: all .200s cubic-bezier(.15,0,.3,.8);
     }
 
     &:hover{
-      transform: translateY(-3px);
+      transform: translateY(-2px);
 
       &:after{
-        width: 100%;
         opacity: 1;
+        width: 70%;
+        transform: translateY(2px);
       }
     }
   }

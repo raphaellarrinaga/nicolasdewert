@@ -59,3 +59,8 @@ nd_centered:
   css:
     theme:
       css/layout/nd-centered.css: {}
+
+hero_fp:
+  version: 1.x
+  js:
+    js/hero_fp.js: {}

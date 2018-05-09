@@ -1,24 +1,73 @@
 // Hero
 
 .site-hero{
+  background-color: $brand-tertiary;
   position: relative;
-  padding-left: rem(20);
-  padding-right: rem(20);
+  margin-left: rem(20);
+  margin-right: rem(20);
+
+  @include mappy-query(b-medium) {
+    overflow: hidden;
+  }
 
   @include mappy-query(b-big) {
     display: flex;
     align-items: flex-end;
     max-height: 90vh;
-    overflow: hidden;
+  }
+
+  &.js-imageloaded{
+    img{
+      transform: none;
+      opacity: 1;
+    }
   }
 
   img{
     // @todo set picture tag
+    display: block;
+    transform-origin: center bottom;
+    transform: scale(1.01) translateY(18px);
+    transition-property: transform;
+    transition-duration: 300ms;
+    opacity: 0;
     width: 100%;
   }
 }
 
 .site-hero__slogan{
+  margin-top: 0;
+  padding-top: rhythm(1);
+
+  > span{
+    display: block;
+    overflow: hidden;
+
+    &+span{
+      span{
+        transition-delay: .5s;
+      }
+
+      &+span{
+        span{
+          transition-delay: .6s;
+        }
+      }
+    }
+
+    span{
+      position: relative;
+      opacity: 0;
+      top: 15vh;
+      transition: all .340s .4s cubic-bezier(.15,0,.3,.8);
+
+      .js-imageloaded &{
+        opacity: 1;
+        top: 0;
+      }
+    }
+  }
+
   @include mappy-query(b-medium) {
     // background: pink;
     bottom: rem(100);
