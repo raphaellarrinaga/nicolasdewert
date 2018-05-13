@@ -6,18 +6,30 @@
   margin-right: rem(20);
   padding-bottom: rhythm(3);
   padding-top: rhythm(3);
-  padding-left: rem(20);
-  padding-right: rem(20);
+
+  @include mappy-query(b-medium) {
+    padding-left: rem(20);
+    padding-right: rem(20);
+  }
 }
 
 .section-ossature__title{
-  font-size: modular-scale(3);
-  text-align: center;
+  font-size: modular-scale(2);
   margin: 0 auto rhythm(1);
   max-width: $l-big;
 
+  @include mappy-query(b-medium) {
+    font-size: modular-scale(3);
+    text-align: center;
+  }
+
   &:after{
     @include title-border;
+    margin-left: 0;
+
+    @include mappy-query(b-medium) {
+      margin-left: auto;
+    }
   }
 }
 
@@ -25,7 +37,10 @@
   font-weight: bold;
   margin: 0 auto rhythm(2);
   max-width: rem(640);
-  text-align: center;
+
+  @include mappy-query(b-medium) {
+    text-align: center;
+  }
 }
 
 .section-ossature__list{

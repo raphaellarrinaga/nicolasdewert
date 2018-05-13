@@ -82,11 +82,14 @@
   &:hover{
     .materials-summary__image{
       box-shadow: $body-color 0 0 0 3px, $brand-primary 0 0 0 6px;
+
+      img{
+        transform: scale(1.06);
+        transform-origin: center;
+      }
     }
 
     .materials-summary__title{
-      // color: $brand-primary;
-      display: inline-block;
       transform: translateY(-4px);
     }
   }
@@ -123,6 +126,7 @@
   border-radius: 50%;
   display: block;
   max-width: rem(150);
+  margin: auto;
   line-height: 0;
   overflow: hidden;
   text-decoration: none;
@@ -131,6 +135,7 @@
 
 .materials-summary__title{
   color: $primary-text-color;
+  display: inline-block;
   font-family: $header-font-family;
   font-size: rem(16);
   margin-top: rhythm(1/2);

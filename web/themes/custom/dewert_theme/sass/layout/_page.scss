@@ -213,7 +213,7 @@
 // Footer c2a
 
 .footer-c2a{
-  margin-bottom: rhythm(2);
+  margin-bottom: rhythm(1);
 
   @include mappy-query(b-medium) {
     display: flex;
@@ -312,6 +312,7 @@
 .site-footer__copyright{
   color: $white;
   font-size: $font-size-md;
+  margin-bottom: rhythm(1);
 }
 
 // Wave

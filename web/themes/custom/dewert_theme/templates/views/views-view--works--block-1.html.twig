@@ -45,9 +45,6 @@
   {{ exposed }}
   {{ attachment_before }}
 
-  <div class="left">
-    {{ rows }}
-  </div>
   <div class="right">
     {% if header %}
       <h1 class="reals-teasing__title">{{ header|render|striptags }}</h1>
@@ -56,6 +53,9 @@
       text: more['#title'],
       url: more['#url']})
     }}
+  </div>
+  <div class="left">
+    {{ rows }}
   </div>
 
   {{ empty }}

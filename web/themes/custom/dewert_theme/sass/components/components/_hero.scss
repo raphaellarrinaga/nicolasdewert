@@ -8,6 +8,7 @@
 
   @include mappy-query(b-medium) {
     overflow: hidden;
+    min-height: 50vh;
   }
 
   @include mappy-query(b-big) {
@@ -27,9 +28,9 @@
     // @todo set picture tag
     display: block;
     transform-origin: center bottom;
-    transform: scale(1.01) translateY(18px);
-    transition-property: transform;
-    transition-duration: 300ms;
+    transform: scale(1.01) translateY(48px);
+    transition-property: all;
+    transition-duration: 350ms;
     opacity: 0;
     width: 100%;
   }
@@ -37,7 +38,7 @@
 
 .site-hero__slogan{
   margin-top: 0;
-  padding-top: rhythm(1);
+  padding: rhythm(1) 1rem 0;
 
   > span{
     display: block;
@@ -69,16 +70,14 @@
   }
 
   @include mappy-query(b-medium) {
-    // background: pink;
     bottom: rem(100);
     color: $white;
     font-size: modular-scale(4);
     left: rem(20);
     left: calc((100% - #{$l-medium})/2);
-    // right: 0;
     margin: auto;
-    // max-width: rem(832);
     max-width: rem(756);
+    padding: 0;
     position: absolute;
     z-index: 1;
   }
