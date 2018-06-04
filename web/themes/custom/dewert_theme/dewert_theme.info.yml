@@ -36,7 +36,8 @@ regions:
   content: 'Content'
   content_aside: 'Content aside'
   content_bottom: 'Content bottom'
-  footer: 'Footer'
+  footer_col_1: 'Footer column 1'
+  footer_col_2: 'Footer column 2'
 
 # Define custom namespaces with component libraries module
 # for cleaner inclusions in templates

@@ -96,9 +96,15 @@ function dewert_theme_preprocess_block(&$variables) {
   //     break;
   // }
 
+  // @see dewert_theme_theme_suggestions_menu_alter
+  if (isset($elements['#id'])) {
+    // Provide that value for menu.inc
+    $variables['content']['#attributes']['block'] = $elements['#id'];
+  }
+
   // Block class for custom block bundles.
   // @see https://www.drupal.org/node/2724333
-  if (isset($variables['elements']['content']['#block_content'])) {
+  if (isset($elements['content']['#block_content'])) {
     $variables['attributes']['class'][] = 'block--'. $variables['elements']['content']['#block_content']->bundle();
   }
 }
