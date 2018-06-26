@@ -74,7 +74,7 @@
 
   {% if page.footer_col_1 or page.footer_col_2 %}
     {% include "@organisms/site-footer/site-footer.twig" ignore missing with {
-      image_url: directory ~ "/images/logo-dark.svg",
+      image_url: "/" ~ directory ~ "/images/logo-dark.svg",
       col_1: page.footer_col_1,
       col_2: page.footer_col_2,
       copyright: "now"|date("Y") ~ " © n.dewert sprl" ,
