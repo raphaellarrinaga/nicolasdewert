@@ -5,11 +5,11 @@ ndewert.front_controller_index:
   requirements:
     _permission: 'access content'
 
-ndewert.expertise_controller_index:
-  path: '/expertise'
+ndewert.about_controller_index:
+  path: '/a-propos'
   defaults:
-    _controller: '\Drupal\ndewert\Controller\ExpertiseController::index'
-    _title: 'Expertise'
+    _controller: '\Drupal\ndewert\Controller\AboutController::index'
+    _title: 'A propos'
   requirements:
     _permission: 'access content'
 

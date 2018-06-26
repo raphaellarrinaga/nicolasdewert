@@ -1,4 +1,6 @@
-<header class="site-header l-constrain" role="banner">
-  {{ content }}
-  <a href="{{ button_url }}" class="button button--primary button--header"><i class="fa fa-arrow-down"></i> {{ button_text|raw }}</a>
+<header class="site-header" role="banner">
+  <div class="site-header__inner l-constrain">
+     {{ content }}
+     <a href="{{ button_url }}" class="button button--primary button--header"><i class="fa fa-arrow-down"></i> {{ button_text|raw }}</a>
+  </div>
 </header>

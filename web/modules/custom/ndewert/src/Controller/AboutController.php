@@ -5,15 +5,15 @@ namespace Drupal\ndewert\Controller;
 use Drupal\Core\Controller\ControllerBase;
 
 /**
- * Class ExpertiseController.
+ * Class AboutController.
  */
-class ExpertiseController extends ControllerBase {
+class AboutController extends ControllerBase {
 
   /**
    * Index.
    *
    * @return string
-   *   Return empty markup for Expertise page that is only composed of blocks.
+   *   Return empty markup for About page that is only composed of blocks.
    */
   public function index() {
     return [

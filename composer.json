@@ -59,7 +59,7 @@
         "drupal/obfuscate": "1.x-dev",
         "drupal/paragraphs": "^1.2",
         "drupal/pathauto": "^1.0",
-        "drupal/recaptcha": "^2.2",
+        "drupal/recaptcha": "^2.3",
         "drupal/shield": "^1.2",
         "drupal/styleguide": "^1.0@alpha",
         "drupal/twig_field_value": "^1.1",
