@@ -5,10 +5,12 @@
   margin-top: rhythm(1);
 
   .section-text__title{
+    font-size: $font-size-xxl;
+    margin-bottom: rhythm(3/2);
     margin-top: rhythm(1);
 
     &:after{
-      @include title-border(small);
+      @include title-border();
       margin-left: 0;
     }
   }

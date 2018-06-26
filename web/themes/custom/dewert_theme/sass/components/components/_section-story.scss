@@ -5,6 +5,14 @@
 
 .section-story__title{
   text-align: center;
+  font-size: $font-size-xxl;
+  margin-bottom: rhythm(3/2);
+  margin-top: rhythm(1);
+
+  &:after{
+    @include title-border();
+    margin-left: 0;
+  }
 
   @include mappy-query(b-medium) {
     text-align: left;
