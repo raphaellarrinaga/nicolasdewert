@@ -29,6 +29,11 @@ libraries-override:
       component:
         /core/themes/stable/css/user/user.module.css: false
 
+  eu_cookie_compliance/eu_cookie_compliance:
+      css:
+        state:
+          css/eu_cookie_compliance.css: css/overrides/eu_cookie_compliance.css
+
 regions:
   header: 'Site Header'
   title: 'Title'
