@@ -66,6 +66,7 @@
         "drupal/styleguide": "^1.0@alpha",
         "drupal/twig_field_value": "^1.1",
         "drupal/ui_patterns": "^1.0@RC",
+        "drupal/views_infinite_scroll": "^1.5",
         "drush/drush": "^9.0.0",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"

@@ -18,8 +18,7 @@
  */
 #}
 
-<div class="materials">
-  <div class="materials-summary">
+{#   <div class="materials-summary">
     {% for row in rows %}
       <div class="materials-summary__item">
         <a class="materials-summary__link is-visible" href="#section-{{ loop.index }}" data-title="{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ title }}']|render|striptags|trim|raw }}">
@@ -28,24 +27,26 @@
         </a>
       </div>
     {% endfor %}
-  </div>
+  </div> #}
 
-  <div class="materials__tabs">
-    <ul class="tab-list">
+  <div class="left">
+    <ul class="materials-nav">
       {% for row in rows %}
-        <li class="tab-item">
-          <a class="tab-link" href="#section-{{ loop.index }}" data-title="{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ title }}']|render|striptags|trim|raw }}">
+        <li>
+          <a href="#section-{{ loop.index }}"{% if loop.first %} class="is-active"{% endif %}>
+            {{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_image }}'] }}
+            <span>{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ title }}']|render|striptags|trim|raw }}</span>
           </a>
-          {{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_image }}'] }}
         </li>
       {% endfor %}
     </ul>
-    <h3 class="tab-title"></h3>
+  </div>
 
+  <div class="right">
     {% for row in rows %}
-    <div id="section-{{ loop.index }}" class="tab-panel">
-      {{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ body }}'] }}
-    </div>
+      <div id="section-{{ loop.index }}" class="material-section">
+        <h3>{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ title }}']|render|striptags|trim|raw }}</h3>
+        {{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ body }}'] }}
+      </div>
     {% endfor %}
   </div>
-</div>
