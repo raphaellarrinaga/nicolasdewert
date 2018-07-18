@@ -24,7 +24,7 @@
           var refElementTop = refElement.position().top;
           var refElementHeight = refElement.height();
 
-          if (refElementTop <= scrollPos + 120 && refElementTop + refElementHeight > scrollPos - 24) {
+          if (refElementTop <= scrollPos + 112 && refElementTop + refElementHeight > scrollPos) {
             $('.materials-nav a').removeClass("is-active");
             currLink.addClass("is-active");
           }

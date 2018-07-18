@@ -11,7 +11,10 @@
 
   &:after{
     @include title-border();
-    margin-left: 0;
+
+    @include mappy-query(b-medium) {
+      margin-left: 0;
+    }
   }
 
   @include mappy-query(b-medium) {
@@ -34,7 +37,6 @@
   @include mappy-query(b-medium) {
     position: absolute;
     right: (7/12)*100%;
-    // right: calc((7/12)*100% + 1.5rem);
     top: rhythm(2);
     width: (5/12)*100%;
   }
@@ -42,16 +44,6 @@
   img{
     box-sizing: border-box;
     display: inline-block;
-    max-width: 30%;
-    padding: 0 rem(8);
-    vertical-align: text-top;
-
-    &:nth-child(2n){
-      margin-top: 4rem;
-    }
-    &:first-child{
-      margin-top: 2rem;
-    }
 
     @include mappy-query(b-medium) {
       display: block;
