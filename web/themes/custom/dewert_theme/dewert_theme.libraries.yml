@@ -11,7 +11,7 @@ base:
     - dewert_theme/fonts
   css:
     base:
-      https://fonts.googleapis.com/css?family=Nunito:400,400i,700,700i|Playfair+Display: {type: external}
+      https://fonts.googleapis.com/css?family=Nunito:400,400i,700,700i|Playfair+Display:400,700: {type: external}
       https://use.fontawesome.com/releases/v5.0.8/css/all.css: {
         type: external,
         attributes: {

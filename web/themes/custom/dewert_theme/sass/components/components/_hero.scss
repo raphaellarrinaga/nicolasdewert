@@ -1,20 +1,48 @@
 // Hero
 
+.block--hero{
+  position: relative;
+  min-height: 90vh;
+}
+
 .site-hero{
   background-color: $brand-tertiary;
   position: relative;
-  margin-left: rem(20);
-  margin-right: rem(20);
+  // margin-left: rem(20);
+  // margin-right: rem(20);
+
+  // padding-bottom: rem(20);
+  // margin-bottom: rhythm(4);
+  position: absolute;
+  left: rem(20);
+  right: rem(20);
+  bottom: rem(20);
+  top: 0;
+
+  &:after{
+    // @include css-content(block, 100%, 100%);
+    background: rgba($brand-primary-dark, .3);
+    // background: rgba($white, .2);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 
   @include mappy-query(b-medium) {
     overflow: hidden;
     min-height: 50vh;
+
+    // max-height: 70vh;
   }
 
   @include mappy-query(b-big) {
-    display: flex;
-    align-items: flex-end;
-    max-height: 90vh;
+    // display: flex;
+    // align-items: flex-end;
+    // max-height: 90vh;
+
+    // max-height: 70vh;
   }
 
   &.js-imageloaded{
@@ -33,12 +61,88 @@
     transition-duration: 350ms;
     opacity: 0;
     width: 100%;
+
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    // display: none;
+    // margin-left: auto;
+    // margin-top: - rhythm(3);
+    // width: 92%;
   }
+
+  // &:after{
+  //   @include css-content(block, 100%, 100%);
+  //   background: rgba($status-color-dark, .3);
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   top: 0;
+  // }
 }
 
 .site-hero__slogan{
   margin-top: 0;
-  padding: rhythm(1) 1rem 0;
+  // padding: rhythm(1) 1rem 0;
+
+    position: relative;
+    z-index: 2;
+
+  @include mappy-query(b-medium) {
+    // bottom: rem(100);
+    color: $white;
+    font-size: modular-scale(4);
+    // left: rem(20);
+    // left: calc((100% - #{$l-medium})/2);
+    // margin: auto;
+    // max-width: rem(756);
+    // padding: 0;
+    // position: absolute;
+
+
+    // background-color: $white;
+    color: $brand-primary-dark;
+    padding: rhythm(4) rhythm(4);
+    font-size: modular-scale(5);
+
+    display: inline-block;
+    // padding-left: 30px;
+    // padding-right: 30px;
+    left: 30px;
+
+
+    // display: block;
+    // max-width: 700px;
+    // margin-left: auto;
+    // margin-right: auto;
+    // text-align: center;
+    // left: auto;
+    // right: auto;
+    // margin: auto;
+    // padding-top: rhythm(4);
+
+  }
+
+  @include mappy-query(b-big) {
+    // bottom: rem(120);
+    // left: rem(60);
+    // left: calc((100% - #{$l-big})/2);
+    // font-size: modular-scale(5);
+    // max-width: rem(1008);
+  }
+
+  @include mappy-query(b-wide) {
+    // left: rem(60);
+    // left: calc((100% - #{$l-big})/2);
+  }
+
+  @include mappy-bp(1600px) {
+    // font-size: modular-scale(6);
+    // max-width: $l-big;
+  }
 
   > span{
     display: block;
@@ -67,37 +171,6 @@
         top: 0;
       }
     }
-  }
-
-  @include mappy-query(b-medium) {
-    bottom: rem(100);
-    color: $white;
-    font-size: modular-scale(4);
-    left: rem(20);
-    left: calc((100% - #{$l-medium})/2);
-    margin: auto;
-    max-width: rem(756);
-    padding: 0;
-    position: absolute;
-    z-index: 1;
-  }
-
-  @include mappy-query(b-big) {
-    bottom: rem(120);
-    left: rem(60);
-    left: calc((100% - #{$l-big})/2);
-    font-size: modular-scale(5);
-    max-width: rem(1008);
-  }
-
-  @include mappy-query(b-wide) {
-    left: rem(60);
-    left: calc((100% - #{$l-big})/2);
-  }
-
-  @include mappy-bp(1600px) {
-    font-size: modular-scale(6);
-    max-width: $l-big;
   }
 
   strong{

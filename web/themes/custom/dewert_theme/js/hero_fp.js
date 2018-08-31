@@ -5,11 +5,12 @@
 
   'use strict';
 
-  var imgWrapper = document.querySelector('.site-hero')
-  var img = imgWrapper.getElementsByTagName('img')[0]
+  // Set hero image transition
+  var hero = document.querySelector('.site-hero')
+  var img = hero.getElementsByTagName('img')[0]
 
   function loaded() {
-    imgWrapper.className += " js-imageloaded";
+    hero.className += " js-imageloaded";
   }
 
   if (img.complete) {
@@ -17,5 +18,13 @@
   } else {
     img.addEventListener('load', loaded)
   }
+
+  // Set hero section available height
+  var heroWrapper = document.querySelector('.block--hero')
+  var header = document.querySelector('.site-header')
+  var headerHeight = header.clientHeight
+  var windowHeight = window.innerHeight
+  var heroHeight = windowHeight - headerHeight
+  heroWrapper.setAttribute("style","min-height:"+ heroHeight +"px;height:"+ heroHeight +"px");
 
 })(window);

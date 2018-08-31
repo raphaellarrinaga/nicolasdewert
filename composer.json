@@ -47,7 +47,7 @@
         "drupal/components": "^1.0",
         "drupal/console": "^1.0.2",
         "drupal/context": "^4.0@beta",
-        "drupal/core": "~8.4",
+        "drupal/core": "~8.5",
         "drupal/dropzonejs": "^2.0@alpha",
         "drupal/ds": "^3.1",
         "drupal/eu_cookie_compliance": "^1.0",
