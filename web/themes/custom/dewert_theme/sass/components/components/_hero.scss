@@ -105,13 +105,16 @@
 
     // background-color: $white;
     color: $brand-primary-dark;
-    padding: rhythm(4) rhythm(4);
-    font-size: modular-scale(5);
+    // padding: rhythm(4) rhythm(4);
+    padding: 0;
+    margin-bottom: 0;
 
     display: inline-block;
     // padding-left: 30px;
     // padding-right: 30px;
-    left: 30px;
+    // left: 30px;
+    left: 10%;
+    top: 14%;
 
 
     // display: block;
@@ -127,6 +130,7 @@
   }
 
   @include mappy-query(b-big) {
+    font-size: rem(48);
     // bottom: rem(120);
     // left: rem(60);
     // left: calc((100% - #{$l-big})/2);

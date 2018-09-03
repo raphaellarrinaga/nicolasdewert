@@ -20,11 +20,18 @@
   }
 
   // Set hero section available height
-  var heroWrapper = document.querySelector('.block--hero')
-  var header = document.querySelector('.site-header')
-  var headerHeight = header.clientHeight
-  var windowHeight = window.innerHeight
-  var heroHeight = windowHeight - headerHeight
-  heroWrapper.setAttribute("style","min-height:"+ heroHeight +"px;height:"+ heroHeight +"px");
+
+  window.addEventListener('resize', function(){
+    var heroWrapper = document.querySelector('.block--hero')
+    var header = document.querySelector('.site-header')
+    var headerHeight = header.clientHeight
+    var windowHeight = window.innerHeight
+    var imageHeight = img.clientHeight;
+    var heroHeight = (windowHeight - headerHeight) > imageHeight ? imageHeight : (windowHeight - headerHeight);
+
+    console.log(windowHeight);
+    heroWrapper.setAttribute("style","min-height:"+ heroHeight +"px;height:"+ heroHeight +"px");
+
+  }, true);
 
 })(window);
