@@ -21,7 +21,7 @@
 
   // Set hero section available height
 
-  window.addEventListener('resize', function(){
+  function setHeroHeight() {
     var heroWrapper = document.querySelector('.block--hero')
     var header = document.querySelector('.site-header')
     var headerHeight = header.clientHeight
@@ -29,9 +29,18 @@
     var imageHeight = img.clientHeight;
     var heroHeight = (windowHeight - headerHeight) > imageHeight ? imageHeight : (windowHeight - headerHeight);
 
-    console.log(windowHeight);
-    heroWrapper.setAttribute("style","min-height:"+ heroHeight +"px;height:"+ heroHeight +"px");
+    if (window.matchMedia("(min-width: 520px)").matches) {
+      heroWrapper.setAttribute("style","min-height:"+ heroHeight +"px;height:"+ heroHeight +"px");
+    } else {
+      heroWrapper.style = null;
+    }
 
+  }
+
+  window.addEventListener('resize', function(){
+    setHeroHeight();
   }, true);
+
+  setHeroHeight();
 
 })(window);

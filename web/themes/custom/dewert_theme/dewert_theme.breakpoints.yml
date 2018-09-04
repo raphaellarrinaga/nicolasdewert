@@ -27,32 +27,17 @@ dewert_theme.layout.wide:
     - 1x
   group: dewert_theme.layout
 
-dewert_theme.image.small:
-  label: small
-  mediaQuery: 'all and (min-width: 480px)'
-  mediaQuery: ''
-  weight: 0
-  multipliers:
-    - 1x
-  group: dewert_theme.image
-dewert_theme.image.medium:
+dewert_theme.hero.medium:
   label: medium
-  mediaQuery: 'all and (min-width: 769px)'
+  mediaQuery: 'all and (min-width: 521px)'
   weight: 1
   multipliers:
     - 1x
-  group: dewert_theme.image
-dewert_theme.image.big:
+  group: dewert_theme.hero
+dewert_theme.hero.big:
   label: big
-  mediaQuery: 'all and (min-width: 1220px)'
+  mediaQuery: 'all and (min-width: 769px)'
   weight: 2
   multipliers:
     - 1x
-  group: dewert_theme.image
-dewert_theme.image.wide:
-  label: wide
-  mediaQuery: 'all and (min-width: 1440px)'
-  weight: 3
-  multipliers:
-    - 1x
-  group: dewert_theme.image
+  group: dewert_theme.hero
