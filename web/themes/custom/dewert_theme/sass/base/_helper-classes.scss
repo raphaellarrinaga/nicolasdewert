@@ -70,13 +70,23 @@
 
 // Spaced content
 .spaced{
-  margin-bottom: rhythm(3);
-  margin-top: rhythm(3);
+  margin-bottom: rhythm(1);
+  margin-top: rhythm(1);
+
+  @include mappy-query(b-small) {
+    margin-bottom: rhythm(3);
+    margin-top: rhythm(3);
+  }
 }
 
 .spaced-lg{
-  margin-bottom: rhythm(5);
-  margin-top: rhythm(5);
+  margin-bottom: rhythm(2);
+  margin-top: rhythm(2);
+
+  @include mappy-query(b-small) {
+    margin-bottom: rhythm(5);
+    margin-top: rhythm(5);
+  }
 }
 
 // Page title

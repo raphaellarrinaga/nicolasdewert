@@ -29,7 +29,7 @@
     var imageHeight = img.clientHeight;
     var heroHeight = (windowHeight - headerHeight) > imageHeight ? imageHeight : (windowHeight - headerHeight);
 
-    if (window.matchMedia("(min-width: 520px)").matches) {
+    if (window.matchMedia("(min-width: 769px)").matches) {
       heroWrapper.setAttribute("style","min-height:"+ heroHeight +"px;height:"+ heroHeight +"px");
     } else {
       heroWrapper.style = null;

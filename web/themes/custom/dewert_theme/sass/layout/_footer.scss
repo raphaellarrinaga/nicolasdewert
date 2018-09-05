@@ -49,11 +49,13 @@
 
   .col-2{
     @include mappy-bp(690px) {
+      flex: 0 0 55%;
       flex: 1;
     }
 
     @include mappy-bp(980px) {
-      flex: auto;
+      flex: 0 0 55%;
+      flex: 0 0 calc((7/12)*100%);
     }
   }
 
@@ -63,6 +65,7 @@
     @include mappy-query(b-big) {
       display: flex;
       flex: 1 0 30%;
+      // flex: 1 0 calc((3/12)*100%);
       flex: 1 0 calc((3/12)*100%);
     }
   }
@@ -147,7 +150,7 @@
 
   .left{
     @include mappy-query(b-big) {
-      flex: 0 1 55%;
+      flex: 0 0 55%;
       margin-right: rhythm(2);
       max-width: rem(720);
     }
