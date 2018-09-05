@@ -64,3 +64,12 @@ hero_fp:
   version: 1.x
   js:
     js/hero_fp.js: {}
+
+justified_gallery:
+  version: 1.x
+  js:
+    js/lib/justifiedGallery/jquery.justifiedGallery.min.js: {}
+    js/worksGallery.js: {}
+  css:
+    theme:
+      js/lib/justifiedGallery/justifiedGallery.min.css: {}

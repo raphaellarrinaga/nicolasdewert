@@ -17,36 +17,26 @@
  * @ingroup themeable
  */
 #}
-
-{#   <div class="materials-summary">
+<div class="left">
+  <ul class="materials-nav">
     {% for row in rows %}
-      <div class="materials-summary__item">
-        <a class="materials-summary__link is-visible" href="#section-{{ loop.index }}" data-title="{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ title }}']|render|striptags|trim|raw }}">
-        <span class="materials-summary__image">{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_image }}'] }}</span>
-        <span class="materials-summary__title">{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ title }}']|render|striptags|trim|raw }}</span>
+      <li>
+        <a href="#section-{{ loop.index }}"{% if loop.first %} class="is-active"{% endif %}>
+          <figure class="materials-nav__image">
+          {{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_image }}'] }}
+          </figure>
+          <span>{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ title }}']|render|striptags|trim|raw }}</span>
         </a>
-      </div>
+      </li>
     {% endfor %}
-  </div> #}
+  </ul>
+</div>
 
-  <div class="left">
-    <ul class="materials-nav">
-      {% for row in rows %}
-        <li>
-          <a href="#section-{{ loop.index }}"{% if loop.first %} class="is-active"{% endif %}>
-            {{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ field_image }}'] }}
-            <span>{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ title }}']|render|striptags|trim|raw }}</span>
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-
-  <div class="right">
-    {% for row in rows %}
-      <div id="section-{{ loop.index }}" class="material-section">
-        <h3>{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ title }}']|render|striptags|trim|raw }}</h3>
-        {{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ body }}'] }}
-      </div>
-    {% endfor %}
-  </div>
+<div class="right">
+  {% for row in rows %}
+    <div id="section-{{ loop.index }}" class="material-section">
+      <h3>{{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ title }}']|render|striptags|trim|raw }}</h3>
+      {{ row.content['#view'].style_plugin.render_tokens[ loop.index0 ]['{{ body }}'] }}
+    </div>
+  {% endfor %}
+</div>
