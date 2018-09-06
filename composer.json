@@ -65,6 +65,7 @@
         "drupal/pathauto": "^1.0",
         "drupal/production_checklist": "^1.0@alpha",
         "drupal/recaptcha": "^2.3",
+        "drupal/redirect": "^1.2",
         "drupal/shield": "^1.2",
         "drupal/styleguide": "^1.0@alpha",
         "drupal/twig_field_value": "^1.1",
