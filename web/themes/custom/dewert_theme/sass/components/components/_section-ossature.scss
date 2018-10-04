@@ -8,7 +8,7 @@
   padding-top: rhythm(3/2);
 
   @include mappy-query(b-medium) {
-    padding-bottom: rhythm(3) rem(20);
+    padding: rhythm(3) rem(20);
   }
 }
 
