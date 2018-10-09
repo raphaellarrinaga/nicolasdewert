@@ -15,6 +15,7 @@
 
   if (img.complete) {
     loaded()
+    setHeroHeight()
   } else {
     img.addEventListener('load', loaded)
   }
@@ -34,13 +35,10 @@
     } else {
       heroWrapper.style = null;
     }
-
   }
 
   window.addEventListener('resize', function(){
     setHeroHeight();
   }, true);
-
-  setHeroHeight();
 
 })(window);
