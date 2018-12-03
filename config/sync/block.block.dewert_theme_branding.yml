@@ -1,0 +1,25 @@
+uuid: fada236d-8bdd-4b66-b9cd-5507c413efd4
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dewert_theme
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: dewert_theme_branding
+theme: dewert_theme
+region: header
+weight: -4
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Marque du site'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

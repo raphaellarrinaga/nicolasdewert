@@ -1,0 +1,62 @@
+uuid: 04b1a07a-16ff-4beb-af90-32abc2ed5de1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.teaser
+    - field.field.taxonomy_term.work_type.field_media_image
+    - taxonomy.vocabulary.work_type
+  module:
+    - ds
+    - media
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_taxonomy_teaser
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      title:
+        - taxonomy_term_title
+      image:
+        - field_media_image
+    fields:
+      taxonomy_term_title:
+        plugin_id: taxonomy_term_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: span
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: taxonomy_term.work_type.teaser
+targetEntityType: taxonomy_term
+bundle: work_type
+mode: teaser
+content:
+  field_media_image:
+    type: media_thumbnail
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    region: image
+hidden:
+  description: true
+  langcode: true

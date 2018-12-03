@@ -1,0 +1,44 @@
+uuid: b23fbe5d-766f-4fc3-b859-21381a84b05b
+langcode: fr
+status: true
+dependencies:
+  module:
+    - ctools
+name: realisations
+label: Réalisations
+group: Page
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      work: work
+    negate: 0
+    uuid: abd6b23d-4eb0-4ddf-92fa-4fee933f8e75
+    context_mapping:
+      node: '@node.node_route_context:node'
+reactions:
+  blocks:
+    blocks:
+      5c2c0366-d9fa-4823-9ea9-5920f610a135:
+        id: 'views_block:works-block_2'
+        label: ''
+        provider: views
+        label_display: visible
+        views_label: ''
+        items_per_page: none
+        region: content_aside
+        weight: '0'
+        context_mapping: {  }
+        theme: dewert_theme
+        css_class: ''
+        unique: 0
+        context_id: realisations
+        uuid: 5c2c0366-d9fa-4823-9ea9-5920f610a135
+    id: blocks
+    saved: false
+    uuid: eeebb5c2-669d-4045-9d83-e14ce940389b
+    include_default_blocks: 1
+weight: 0

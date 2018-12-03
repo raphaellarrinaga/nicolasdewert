@@ -1,0 +1,10 @@
+uuid: 00a9189b-c131-4079-aa31-7b9c07348268
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media
+id: media.preview
+label: Preview
+targetEntityType: media
+cache: true

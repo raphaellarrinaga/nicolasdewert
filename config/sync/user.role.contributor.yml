@@ -1,0 +1,50 @@
+uuid: 7cc843d0-34d9-483e-9942-48aa21bcc2ff
+langcode: fr
+status: true
+dependencies: {  }
+id: contributor
+label: Contributeur
+weight: 3
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access media_entity_browser entity browser pages'
+  - 'access site in maintenance mode'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer blocks'
+  - 'create image media'
+  - 'create material content'
+  - 'create media'
+  - 'create work content'
+  - 'customize shortcut links'
+  - 'delete media'
+  - 'delete own image media'
+  - 'dropzone upload files'
+  - 'edit any article content'
+  - 'edit any image media'
+  - 'edit any material content'
+  - 'edit any page content'
+  - 'edit any work content'
+  - 'edit own article content'
+  - 'edit own image media'
+  - 'edit own material content'
+  - 'edit own page content'
+  - 'edit own work content'
+  - 'revert article revisions'
+  - 'revert material revisions'
+  - 'revert page revisions'
+  - 'switch shortcut sets'
+  - 'update any media'
+  - 'update media'
+  - 'view all revisions'
+  - 'view article revisions'
+  - 'view material revisions'
+  - 'view own unpublished content'
+  - 'view page revisions'
+  - 'view the administration theme'
+  - 'view work revisions'

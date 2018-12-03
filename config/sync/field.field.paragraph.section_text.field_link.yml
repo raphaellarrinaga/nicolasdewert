@@ -1,0 +1,23 @@
+uuid: 5548b210-69df-4c0b-a8b4-fd0bc9b72350
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.section_text
+  module:
+    - link
+id: paragraph.section_text.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: section_text
+label: Lien
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

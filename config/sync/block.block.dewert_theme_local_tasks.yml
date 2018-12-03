@@ -1,0 +1,22 @@
+uuid: 71bdba58-7370-4926-a1b5-0e62cb6deb68
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - dewert_theme
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: dewert_theme_local_tasks
+theme: dewert_theme
+region: content_top
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Onglets
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

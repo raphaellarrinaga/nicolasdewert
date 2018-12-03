@@ -1,0 +1,16 @@
+uuid: edfb0949-343d-4914-b80f-1e2cfb80e229
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sL588ui1E_8-2c_UupwyYxcqX2OVyMFp3HTLbbFqvPc
+id: global
+label: Global
+tags:
+  title: '[current-page:title] | [site:name]'
+  canonical_url: '[current-page:url]'
+  og_description: '[site:slogan]'
+  og_title: '[current-page:title]'
+  og_image: /sites/default/files/facebook_cover.jpg
+  og_url: '[current-page:url]'
+  og_site_name: '[site:name]'

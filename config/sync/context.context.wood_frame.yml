@@ -1,0 +1,105 @@
+uuid: 08d0b2e3-565a-4729-8fa8-a346edf71589
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+name: wood_frame
+label: 'Ossature bois'
+group: Page
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: /ossature-bois
+    negate: 0
+    uuid: b1e75e2d-b8c6-44f8-9f38-54bea854652b
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      bf324d69-8cc9-40df-b7ea-49109c570568:
+        id: 'views_block:materials-block_1'
+        label: 'Les matériaux'
+        provider: views
+        label_display: visible
+        views_label: 'Les matériaux'
+        items_per_page: none
+        region: content_bottom
+        weight: '0'
+        context_mapping: {  }
+        theme: dewert_theme
+        css_class: 'section-materials l-constrain spaced-lg'
+        unique: 0
+        context_id: wood_frame
+        uuid: bf324d69-8cc9-40df-b7ea-49109c570568
+      c3920455-56d0-4d94-843d-ffebc716a34e:
+        id: 'block_content:10808380-e0b0-4f4e-86dc-0168461221bf'
+        label: 'Le prix'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content_bottom
+        weight: '1'
+        context_mapping: {  }
+        theme: dewert_theme
+        css_class: spaced-lg
+        unique: 0
+        context_id: wood_frame
+        uuid: c3920455-56d0-4d94-843d-ffebc716a34e
+      aca92016-22a7-404b-88ac-e553af87f3f6:
+        id: 'block_content:53e402f2-e097-4b0b-b0bb-19f5a7c88e75'
+        label: 'Ossature bois title'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content_top
+        weight: '-10'
+        context_mapping: {  }
+        theme: dewert_theme
+        css_class: spaced
+        unique: 0
+        context_id: wood_frame
+        uuid: aca92016-22a7-404b-88ac-e553af87f3f6
+      8ce73e99-d425-4680-b98d-d4380561466a:
+        id: 'block_content:52f7617d-be30-4e88-a062-c91be8b3b884'
+        label: 'Le bois'
+        provider: block_content
+        label_display: 0
+        status: true
+        info: ''
+        view_mode: full
+        region: content
+        weight: '-1'
+        context_mapping: {  }
+        theme: dewert_theme
+        css_class: ''
+        unique: 0
+        context_id: wood_frame
+        uuid: 8ce73e99-d425-4680-b98d-d4380561466a
+    id: blocks
+    saved: false
+    uuid: 9cbfb858-60bf-40dd-9d09-63212b8738ed
+    include_default_blocks: 1
+  page_template_suggestions:
+    id: page_template_suggestions
+    suggestions: page__twocols
+    saved: false
+  regions:
+    id: regions
+    regions:
+      bartik: {  }
+      classy: {  }
+      seven: {  }
+      stable: {  }
+      dewert_theme:
+        - title
+    saved: false
+    uuid: ae0e7489-464d-416a-88df-7cf452df1741
+weight: 0

@@ -1,0 +1,75 @@
+uuid: 7ed1c685-875f-4db4-b9e6-aa96306ffdd6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.page_title
+    - field.field.block_content.page_title.body
+    - field.field.block_content.page_title.field_media_image
+    - field.field.block_content.page_title.field_title
+  module:
+    - ds
+    - media
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_page_intro
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      title:
+        - field_title
+      text:
+        - body
+      image:
+        - field_media_image
+id: block_content.page_title.default
+targetEntityType: block_content
+bundle: page_title
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    region: text
+  field_media_image:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: media_thumbnail
+    region: image
+  field_title:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: text_default
+    region: title
+hidden:
+  langcode: true

@@ -1,0 +1,21 @@
+uuid: 3acb480a-f188-42f8-8d95-d02a76cdb2ed
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.footer
+    - field.storage.block_content.field_phone
+  module:
+    - telephone
+id: block_content.footer.field_phone
+field_name: field_phone
+entity_type: block_content
+bundle: footer
+label: Téléphone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

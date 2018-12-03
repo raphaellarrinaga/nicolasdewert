@@ -1,0 +1,23 @@
+uuid: 69c7873a-8b0e-4131-a656-b0ddc2ea323d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.site_section
+    - field.storage.block_content.field_link
+  module:
+    - link
+id: block_content.site_section.field_link
+field_name: field_link
+entity_type: block_content
+bundle: site_section
+label: Lien
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

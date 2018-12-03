@@ -1,0 +1,117 @@
+uuid: e0327491-e75c-4e20-91a9-f559d69e94e2
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+name: expertise
+label: 'A propos'
+group: Page
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: /a-propos
+    negate: 0
+    uuid: 575ad327-fb52-474c-9bc3-cc0b78aa4807
+    context_mapping: {  }
+reactions:
+  blocks:
+    blocks:
+      5257465b-aab5-45c5-86f8-69f5b050787d:
+        id: 'views_block:user_admin_people-block_1'
+        label: ''
+        provider: views
+        label_display: 0
+        views_label: ''
+        items_per_page: none
+        region: content_bottom
+        weight: '-1'
+        context_mapping: {  }
+        theme: dewert_theme
+        css_class: bg-gray
+        unique: 0
+        context_id: expertise
+        uuid: 5257465b-aab5-45c5-86f8-69f5b050787d
+      a5e117a7-5e83-4584-a8e3-805c2dd15228:
+        id: 'block_content:ab2c9c21-f62c-4277-9331-72736db7ad07'
+        label: 'Nous sommes exigeants, construire avec nous c’est aussi'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content_bottom
+        weight: '2'
+        context_mapping: {  }
+        theme: dewert_theme
+        css_class: ''
+        unique: 0
+        context_id: expertise
+        uuid: a5e117a7-5e83-4584-a8e3-805c2dd15228
+      bbfb4aa0-b233-4f9c-b443-264ed05a82ae:
+        id: 'block_content:6d549b21-3293-4e79-86ce-8e1e54a0adfe'
+        label: 'Nos compétences'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content_bottom
+        weight: '1'
+        context_mapping: {  }
+        theme: dewert_theme
+        css_class: ''
+        unique: 0
+        context_id: expertise
+        uuid: bbfb4aa0-b233-4f9c-b443-264ed05a82ae
+      9e389eef-cc09-4ddd-8ad6-1a4d3b1707de:
+        id: 'block_content:af3f2559-e9a3-4f80-96a6-76ba1534fd86'
+        label: 'Notre mission & notre philosophie'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content_bottom
+        weight: '0'
+        context_mapping: {  }
+        theme: dewert_theme
+        css_class: ''
+        unique: 0
+        context_id: expertise
+        uuid: 9e389eef-cc09-4ddd-8ad6-1a4d3b1707de
+      5c5bc920-d9ca-40ab-90d2-5e70fdd086d1:
+        id: 'block_content:0bcfde6f-9475-42e4-98ac-cbdf1d92d064'
+        label: 'Une histoire de famille'
+        provider: block_content
+        label_display: visible
+        status: true
+        info: ''
+        view_mode: full
+        region: content
+        weight: '0'
+        context_mapping: {  }
+        theme: dewert_theme
+        css_class: ''
+        unique: 0
+        context_id: expertise
+        uuid: 5c5bc920-d9ca-40ab-90d2-5e70fdd086d1
+    id: blocks
+    saved: false
+    uuid: 17bbaed7-95e4-4eab-b1cb-6f105a5d8c7f
+    include_default_blocks: 1
+  regions:
+    id: regions
+    regions:
+      bartik: {  }
+      classy: {  }
+      seven: {  }
+      stable: {  }
+      dewert_theme:
+        - title
+    saved: false
+    uuid: e16c05c2-fc63-4946-b204-74699c0c82fd
+weight: -1

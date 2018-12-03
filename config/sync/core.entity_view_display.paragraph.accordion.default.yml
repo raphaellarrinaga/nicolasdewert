@@ -1,0 +1,56 @@
+uuid: ad254f85-9384-49be-8551-2135c7f5e558
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.accordion.field_heading
+    - field.field.paragraph.accordion.field_panel
+    - paragraphs.paragraphs_type.accordion
+  module:
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_accordion
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: only_content
+    regions:
+      heading:
+        - field_heading
+      panel:
+        - field_panel
+id: paragraph.accordion.default
+targetEntityType: paragraph
+bundle: accordion
+mode: default
+content:
+  field_heading:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: basic_string
+    region: heading
+  field_panel:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: text_default
+    region: panel
+hidden: {  }

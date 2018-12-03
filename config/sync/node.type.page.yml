@@ -1,0 +1,19 @@
+uuid: 3e4c3912-76cc-4c6c-b7b5-89104b80f090
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: KuyA4NHPXcmKAjRtwa0vQc2ZcyrUJy6IlS2TAyMNRbc
+name: 'Page de base'
+type: page
+description: 'Utilisez les <em>pages de base</em> pour votre contenu statique, tel que la page ''Qui sommes-nous''.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

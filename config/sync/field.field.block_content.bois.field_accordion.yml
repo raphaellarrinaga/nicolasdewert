@@ -1,0 +1,34 @@
+uuid: 740d9d2e-ffd3-421e-8ffb-825358e36923
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.bois
+    - field.storage.block_content.field_accordion
+    - paragraphs.paragraphs_type.accordion
+  module:
+    - entity_reference_revisions
+id: block_content.bois.field_accordion
+field_name: field_accordion
+entity_type: block_content
+bundle: bois
+label: Accordion
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      accordion: accordion
+    target_bundles_drag_drop:
+      section_text:
+        weight: 2
+        enabled: false
+      accordion:
+        enabled: true
+        weight: 3
+field_type: entity_reference_revisions

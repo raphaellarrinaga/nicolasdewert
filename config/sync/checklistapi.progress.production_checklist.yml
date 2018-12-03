@@ -1,0 +1,86 @@
+progress:
+  '#changed': 1536235957
+  '#changed_by': '1'
+  '#completed_items': 27
+  '#items':
+    status_report:
+      '#completed': 1536234695
+      '#uid': '1'
+    site_information:
+      '#completed': 1536230365
+      '#uid': '1'
+    error_display:
+      '#completed': 1536230365
+      '#uid': '1'
+    core_search:
+      '#completed': 1536230365
+      '#uid': '1'
+    development_modules:
+      '#completed': 1536234695
+      '#uid': '1'
+    unused_themes:
+      '#completed': 1536234695
+      '#uid': '1'
+    custom_libraries:
+      '#completed': 1536234695
+      '#uid': '1'
+    node_modules:
+      '#completed': 1536234695
+      '#uid': '1'
+    user_registration:
+      '#completed': 1536230365
+      '#uid': '1'
+    content_permissions:
+      '#completed': 1536234565
+      '#uid': '1'
+    comment_permissions:
+      '#completed': 1536230365
+      '#uid': '1'
+    forms:
+      '#completed': 1536234565
+      '#uid': '1'
+    antispam:
+      '#completed': 1536234565
+      '#uid': '1'
+    security_update:
+      '#completed': 1536234565
+      '#uid': '1'
+    permission:
+      '#completed': 1536234565
+      '#uid': '1'
+    input_format:
+      '#completed': 1536234565
+      '#uid': '1'
+    admin_username:
+      '#completed': 1536234565
+      '#uid': '1'
+    password:
+      '#completed': 1536234565
+      '#uid': '1'
+    staging_local:
+      '#completed': 1536234565
+      '#uid': '1'
+    content_model:
+      '#completed': 1536234565
+      '#uid': '1'
+    dummy_content:
+      '#completed': 1536234695
+      '#uid': '1'
+    forms_test:
+      '#completed': 1536234565
+      '#uid': '1'
+    favicon:
+      '#completed': 1536234695
+      '#uid': '1'
+    caching:
+      '#completed': 1536234565
+      '#uid': '1'
+    big_pipe:
+      '#completed': 1536234565
+      '#uid': '1'
+    views:
+      '#completed': 1536234565
+      '#uid': '1'
+    custom_code:
+      '#completed': 1536234565
+      '#uid': '1'

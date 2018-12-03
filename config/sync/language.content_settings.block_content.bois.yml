@@ -1,0 +1,11 @@
+uuid: 3aa6f64e-f58d-4f6c-ae83-914b0d3f48e4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.bois
+id: block_content.bois
+target_entity_type_id: block_content
+target_bundle: bois
+default_langcode: site_default
+language_alterable: false

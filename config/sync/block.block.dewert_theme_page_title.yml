@@ -1,0 +1,20 @@
+uuid: c4a7d37a-c109-47b6-acc3-57c82929d223
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - dewert_theme
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: dewert_theme_page_title
+theme: dewert_theme
+region: title
+weight: -3
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Titre de page'
+  provider: core
+  label_display: '0'
+visibility: {  }

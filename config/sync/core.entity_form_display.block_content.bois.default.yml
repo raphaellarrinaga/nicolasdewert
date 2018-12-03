@@ -1,0 +1,70 @@
+uuid: 29c87615-e761-49dd-9dac-361bcc3dec5f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.bois
+    - field.field.block_content.bois.field_accordion
+    - field.field.block_content.bois.field_media_image
+    - field.field.block_content.bois.field_paragraph_section
+  module:
+    - inline_entity_form
+    - paragraphs
+id: block_content.bois.default
+targetEntityType: block_content
+bundle: bois
+mode: default
+content:
+  field_accordion:
+    type: entity_reference_paragraphs
+    weight: 4
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_media_image:
+    weight: 26
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      override_labels: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_paragraph_section:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }
