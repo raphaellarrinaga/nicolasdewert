@@ -1,0 +1,20 @@
+uuid: a964feb0-3753-40cf-aff8-25db374e16f6
+langcode: fr
+status: true
+dependencies:
+  module:
+    - ctools
+name: articles
+label: Articles
+group: Page
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles: {  }
+    negate: false
+    uuid: 79fd1be5-44cd-43ed-9e7c-4f7b1ecd1c64
+reactions: {  }
+weight: 0
