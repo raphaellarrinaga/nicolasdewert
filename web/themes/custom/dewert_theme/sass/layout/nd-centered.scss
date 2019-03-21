@@ -8,9 +8,18 @@
 
 .layout--centered{
   @include mappy-query(b-medium) {
-    width: (8/12)*100%;
+    // width: (8/12)*100%;
     margin-left: auto;
     margin-right: auto;
+    width: (10/12)*100%;
+  }
+
+  .page__title {
+    @include mappy-query(b-medium) {
+      margin-left: auto;
+      margin-right: auto;
+      width: (8/10)*100%;
+    }
   }
 }
 

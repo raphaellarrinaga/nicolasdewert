@@ -1,0 +1,22 @@
+<section class="content-section">
+  {% set position = content.field_image_position.0|render|striptags|raw|lower %}
+  {% if position == "before" %}
+    <div class="content-section__image-before">
+      {{ content.field_media_image }}
+    </div>
+  {% endif %}
+  {# {{ content.field_media_image.0 }} #}
+  <div class="content-section__text">
+    {% if position == "left" %}
+      <div class="content-section__image-left">
+        {{ content.field_media_image }}
+      </div>
+    {% endif %}
+    {{ content.field_text_default }}
+  </div>
+  {% if position == "after" %}
+    <div class="content-section__image-after">
+      {{ content.field_media_image }}
+    </div>
+  {% endif %}
+</section>
