@@ -25,6 +25,8 @@
 }
 
 .content-section__image-left {
+  margin-bottom: rhythm(2);
+
   @include mappy-query(b-medium) {
     float: left;
     margin-bottom: rhythm(1);
@@ -36,6 +38,7 @@
 
 %content-image {
   display: block;
+  text-align: center;
 }
 
 .content-section__image-before {
