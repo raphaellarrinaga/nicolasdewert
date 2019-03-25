@@ -6,6 +6,10 @@
   margin: rhythm(3) 0;
 }
 
+// .field--type-text-with-summary
+// Constrain Realisations body and Articles body inside a
+// 8/12 grid for readability.
+.work__body,
 .content-section__text {
   h1 {
     font-size: $font-size-lg;

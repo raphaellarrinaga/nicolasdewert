@@ -24,17 +24,26 @@
     </div>
     {% endif %}
     {% if content.second %}
-    <div class="layout__region layout__region--second">
-      {{ attach_library('dewert_theme/justified_gallery') }}
-      <div id="worksGallery">
-      {% if content.second.field_media_image %}
-      {% for key, child in content.second.field_media_image if key|first != '#' %}
-        <div>{{ child }}</div>
-      {% endfor %}
+      {% set images = content.second.field_media_image %}
+
+      <div class="layout__region layout__region--second">
+        {# Load the lib if there is more that 1 image. #}
+        {% if images.1 is not null %}
+          {{ attach_library('dewert_theme/justified_gallery') }}
+          <div id="worksGallery">
+          {% if content.second.field_media_image %}
+            {% for key, child in images if key|first != '#' %}
+            <div>{{ child }}</div>
+          {% endfor %}
+          </div>
+          {% endif %}
+        {% elseif images.0 is not null %}
+          <figure class="gallery-image-self">
+            {{ content.second.field_media_image }}
+          </figure>
+        {% endif %}
+        {{ content.second|without('field_media_image') }}
       </div>
-      {% endif %}
-      {{ content.second|without('field_media_image') }}
-    </div>
     {% endif %}
   </div>
 {% endif %}
