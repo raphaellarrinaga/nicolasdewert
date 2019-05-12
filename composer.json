@@ -47,7 +47,7 @@
         "drupal/components": "^1.0",
         "drupal/console": "^1.0.2",
         "drupal/context": "^4.0@beta",
-        "drupal/core": "~8.5",
+        "drupal/core": "^8.7.1",
         "drupal/dropzonejs": "^2.0@alpha",
         "drupal/ds": "^3.1",
         "drupal/eu_cookie_compliance": "^1.0",
@@ -73,7 +73,6 @@
         "drupal/ui_patterns": "^1.0@RC",
         "drupal/views_infinite_scroll": "^1.5",
         "drush/drush": "^9.0.0",
-        "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"
     },
     "require-dev": {
@@ -87,12 +86,11 @@
         "drupal/phingdrushtask": "dev-7.x-2.x",
         "jcalderonzumba/gastonjs": "^1.1@dev",
         "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
-        "mikey179/vfsStream": "~1.2",
+        "mikey179/vfsstream": "~1.2",
         "pfrenssen/phpcs-pre-push": "1.0",
         "phing/phing": "~2.10",
         "phpunit/phpunit": ">=4.8.28 <5",
-        "symfony/css-selector": "~2.8|~3.0|~4.0",
-        "webflo/drupal-core-require-dev": "~8.4"
+        "symfony/css-selector": "~2.8|~3.0|~4.0"
     },
     "conflict": {
         "drupal/drupal": "*"
