@@ -1,7 +1,6 @@
 /**
  * @file
  * Team members.
- *
  */
 
 (function ($, Drupal) {

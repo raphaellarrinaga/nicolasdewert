@@ -1,0 +1,36 @@
+.articles-list {
+  list-style: none;
+  padding: 0;
+}
+
+.articles-list__item {
+  margin: 0 auto;
+  text-align: center;
+
+  @include mappy-query(b-medium) {
+    max-width: (8/12) * 100%;
+  }
+
+  + .articles-list__item {
+    &:before {
+      @include css-content(block, 6px, 6px);
+      background: $secondary-text-color;
+      border-radius: 50%;
+      margin: 0 auto rhythm(2/3);
+    }
+  }
+}
+
+.articles-list__item-title {
+  flex: 1;
+  font-size: $font-size-lg;
+
+  a {
+    color: $primary-text-color;
+    text-decoration: none;
+  }
+}
+
+.articles-list__item-image {
+  margin: 0 2em 0 0;
+}

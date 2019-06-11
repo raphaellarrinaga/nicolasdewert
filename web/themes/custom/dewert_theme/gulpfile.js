@@ -1,189 +1,195 @@
-'use strict';
-
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const bourbon = require('bourbon');
-const neat = require("node-neat").includePaths;
-const livereload = require('gulp-livereload');
-const postcss = require('gulp-postcss');
-const autoprefixer = require('autoprefixer');
-const combineMq = require('gulp-combine-mq');
-const imagemin = require('gulp-imagemin');
-const sassGlob = require('gulp-sass-glob');
-const concat = require("gulp-concat");
-const notify = require("gulp-notify");
-const path = require('path');
-
-var paths = {
-    sass: './sass/**/*.scss',
-    templates: './templates/**/*.twig',
-    js: './js/**/*.js',
-    styleguide: 'styleguide'
-};
-
-// Error notifications with notify
-// Shows a banner on macOs
-var reportError = function(error) {
-  notify({
-    title: 'Gulp Task Error',
-    message: 'Check the console.'
-  }).write(error);
-  console.log(error.toString());
-  this.emit('end');
-};
-
-/*
- * Configure a Fractal instance.
- *
- * This configuration could also be done in a separate file, provided that this file
- * then imported the configured fractal instance from it to work with in your Gulp tasks.
- * i.e. const fractal = require('./my-fractal-config-file');
+/**
+ * @file
  */
 
-const fractal = require('@frctl/fractal').create();
-const mandelbrot = require('@frctl/mandelbrot');
-const twigAdapter = require('@frctl/twig');
+(function () {
+  // eslint-disable-next-line strict.
+  'use strict';
 
-var myCustomisedTheme = mandelbrot({
-    panels: ["notes", "html", "view", "context", "resources", "info"],
-    skin: "black",
+  var gulp = require("gulp"),
+    postcss = require('gulp-postcss'),
+    autoprefixer = require('autoprefixer'),
+    cssnano = require('cssnano'),
+    livereload = require('gulp-livereload'),
+    notify = require('gulp-notify'),
+    plumber = require('gulp-plumber'),
+    sassGlob = require('gulp-sass-glob'),
+    imagemin = require('gulp-imagemin'),
+    newer = require('gulp-newer'),
+    path = require('path'),
+    sourcemaps = require('gulp-sourcemaps'),
+    bourbon = require('bourbon'),
+    neat = require('node-neat').includePaths,
+    sass = require('gulp-sass');
+
+  // Put this after including our dependencies
+  var paths = {
+    styles: {
+      // By using styles/**/*.sass we're telling gulp to check all folders for any sass file
+      src: "sass/**/*.scss",
+      // Compiled files will end up in whichever folder it's found in (partials are not compiled)
+      dest: "css"
+    },
+    images: {
+      src: 'images/',
+      dest: 'images/'
+    },
+  };
+
+  // Error notifications with notify.
+  const reportError = error => {
+    notify.onError({
+      title: 'Gulp error in ' + error.plugin,
+      message: error.toString()
+    })(error);
+  };
+
+  // Define tasks after requiring dependencies
+  function style() {
+    return gulp
+      .src(paths.styles.src)
+      .pipe(plumber(reportError))
+      .pipe(sourcemaps.init())
+      .pipe(sassGlob())
+      .pipe(
+        sass({
+          precision: 2,
+          outputStyle: 'compressed',
+          // includePaths: [].concat('node_modules/mappy-breakpoints')
+          includePaths: [].concat(
+            bourbon.includePaths,
+            neat,
+            'node_modules/mappy-breakpoints'
+          )
+        })
+      )
+      .pipe(postcss([autoprefixer(), cssnano()]))
+      // .pipe(sourcemaps.write())
+      // .pipe(ext_replace('.min.css', '.css'))
+      .on('error', sass.logError)
+      .pipe(gulp.dest(paths.styles.dest))
+      .pipe(livereload());
+  }
+
+  exports.style = style;
+
+  // Optimize Images.
+  function images() {
+    return gulp
+      .src(paths.images.src)
+      .pipe(newer(paths.images.dest))
+      .pipe(
+        imagemin([
+          imagemin.gifsicle({ interlaced: true }),
+          imagemin.jpegtran({ progressive: true }),
+          imagemin.optipng({ optimizationLevel: 5 }),
+          imagemin.svgo({
+            plugins: [
+              {
+                removeViewBox: false,
+                collapseGroups: true
+              }
+            ]
+          })
+        ])
+      )
+      .pipe(gulp.dest(paths.images.dest));
+  }
+
+  exports.images = images;
+
+  const fractal = require('@frctl/fractal').create();
+  const mandelbrot = require('@frctl/mandelbrot');
+  const twigAdapter = require('@frctl/twig');
+
+  const myCustomisedTheme = mandelbrot({
+    panels: ['notes', 'html', 'view', 'context', 'resources', 'info'],
+    skin: 'black',
     static: {
-        "mount": "theme",
+      mount: 'theme'
     }
-});
+  });
 
-// Add an additional static assets path
-// @see https://github.com/frctl/fractal/issues/122
-const dir = path.join(__dirname, 'images');
-const staticImages = 'images';
-myCustomisedTheme.addStatic(dir, staticImages);
+  // Add an additional static assets path.
+  // @see https://github.com/frctl/fractal/issues/122
+  const imgDir = path.join(__dirname, '/images');
+  const staticImages = 'images';
+  myCustomisedTheme.addStatic(imgDir, staticImages);
 
-fractal.web.theme(myCustomisedTheme); // tell Fractal to use the configured theme by default
-fractal.set('project.title', 'Living Styleguide'); // title for the project
-fractal.web.set('builder.dest', 'styleguide'); // destination for the static export
-fractal.web.set('static.path', `${__dirname}/css`);
-fractal.web.set('server.sync', true); // browsersync
-fractal.docs.set('path', `${__dirname}/styleguide-src/docs`); // location of the documentation directory.
-// fractal.docs.set('ext', '.hbs');
-fractal.components.set('path', `${__dirname}/styleguide-src/components`); // location of the component directory.
-fractal.components.set('default.preview', '@preview'); // let Fractal know that this preview layout should be used as the default layout for our components
-fractal.components.set('default.status', 'wip'); // set default components status to work in progress. This has to be overridden in component.config.js files
+  // Tell Fractal to use the configured theme by default.
+  fractal.web.theme(myCustomisedTheme);
+  // Title for the project.
+  fractal.set('project.title', 'Living Styleguide');
+  fractal.docs.set('path', `${__dirname}/styleguide-src/docs`); // location of the documentation directory.
+  // Destination for the static export.
+  fractal.web.set('builder.dest', 'styleguide');
+  fractal.web.set('static.path', `${__dirname}/css`);
+  // Browsersync.
+  fractal.web.set('server.sync', true);
+  // Location of the component directory.
+  fractal.components.set('path', `${__dirname}/styleguide-src/components`);
+  // Let Fractal know that this preview layout should be used as the default layout for our components.
+  fractal.components.set('default.preview', '@preview');
+  // Set default components status to work in progress. This has to be overridden in component.config.js files.
+  fractal.components.set('default.status', 'wip');
 
-// any other configuration or customisation here
+  // Use Twig intead of handlebars.js.
+  fractal.components.engine(twigAdapter);
+  fractal.components.set('ext', '.twig');
 
-const logger = fractal.cli.console; // keep a reference to the fractal CLI console utility
+  /*
+   * Start the Fractal server.
+   *
+   * In this example we are passing the option 'sync: true' which means that it will
+   * use BrowserSync to watch for changes to the filesystem and refresh the browser automatically.
+   * Obviously this is completely optional!
+   *
+   * This task will also log any errors to the console.
+   */
 
-fractal.components.engine(twigAdapter);
-fractal.components.set('ext', '.twig');
-
-// Minify jpg, png, gif, svg
-gulp.task('images', () =>
-  gulp.src('images/**/*')
-    .pipe(imagemin())
-    .pipe(gulp.dest('images'))
-);
-
-// Sass compilation
-gulp.task('sass', function () {
-  gulp.src(paths.sass)
-    .pipe(sassGlob())
-    .pipe(sass({
-      errLogToConsole: false,
-      sourceComments: true,
-      outputStyle: 'expanded',
-      precision: 3,
-      includePaths: [].concat(
-        bourbon.includePaths,
-        neat,
-        'node_modules/mappy-breakpoints'
-      )
-    }))
-    .on('error', reportError)
-    .pipe(gulp.dest('./css'))
-    .pipe(livereload());
-});
-
-// Sass production build
-gulp.task('sass:build', function () {
-  var processors = [
-    autoprefixer({browsers: ['last 2 versions']}),
-  ];
-  return gulp.src(paths.sass)
-    .pipe(sassGlob())
-    .pipe(sass({
-      errLogToConsole: true,
-      outputStyle: 'compressed',
-      precision: 3,
-      includePaths: [].concat(
-        bourbon.includePaths,
-        neat,
-        'node_modules/mappy-breakpoints'
-      )
-    }))
-    .pipe(combineMq({
-      beautify: false // false will inline css
-    }))
-    .pipe(postcss(processors))
-    .on('error', reportError)
-    .pipe(gulp.dest('./css'))
-});
-
-/*
- * Start the Fractal server
- *
- * In this example we are passing the option 'sync: true' which means that it will
- * use BrowserSync to watch for changes to the filesystem and refresh the browser automatically.
- * Obviously this is completely optional!
- *
- * This task will also log any errors to the console.
- */
-
-gulp.task('fractal:start', function(){
+  function fractalWatch() {
     const server = fractal.web.server({
-        sync: true
+      sync: true
     });
     server.on('error', err => logger.error(err.message));
     return server.start().then(() => {
-        logger.success(`Fractal server is now running at ${server.url}`);
+      logger.success(`Fractal server is now running at ${server.url}`);
     });
-});
+  }
 
-/*
- * Run a static export of the project web UI.
- *
- * This task will report on progress using the 'progress' event emitted by the
- * builder instance, and log any errors to the terminal.
- *
- * The build destination will be the directory specified in the 'builder.dest'
- * configuration option set above.
- */
+  /*
+   * Run a static export of the project web UI.
+   *
+   * This task will report on progress using the 'progress' event emitted by the
+   * builder instance, and log any errors to the terminal.
+   *
+   * The build destination will be the directory specified in the 'builder.dest'
+   * configuration option set above.
+   */
 
-gulp.task('fractal:build', function(){
+  function fractalBuild() {
     const builder = fractal.web.builder();
     builder.on('progress', (completed, total) => logger.update(`Exported ${completed} of ${total} items`, 'info'));
     builder.on('error', err => logger.error(err.message));
     return builder.build().then(() => {
-        logger.success('Fractal build completed!');
+      logger.success('Fractal build completed!');
     });
-});
+  }
 
-/**
- * Build tasks
- */
+  // Keep a reference to the fractal CLI console utility.
+  const logger = fractal.cli.console;
 
-// Watch sass files and update css folder
-gulp.task('default', ['watch']);
+  function watchFiles() {
+    livereload.listen();
+    gulp.watch(paths.styles.src, style);
+    // gulp.watch(paths.scripts.src, handleThemeJs);
+  }
 
-// Watch sass files & generate styleguide
-// gulp.task('watch', ['sass'], function() {
-gulp.task('watch', ['sass','fractal:start'], function() {
-  // Start watching changes and update styleguide & theme css file whenever changes are detected
-  // Styleguide automatically detects existing server instance
-  livereload.listen();
-  // reload only .css when sass is changed
-  gulp.watch(paths.sass, ['sass']);
-  // reload full page when templates changes
-  gulp.watch(paths.templates, function (files){
-      livereload.changed(files)
-    });
-});
+  exports.watchFiles = watchFiles;
+
+  const watch = gulp.parallel(watchFiles, fractalWatch, images);
+  exports.watch = watch;
+  const build = gulp.series(style, images);
+  exports.build = build;
+
+}());
