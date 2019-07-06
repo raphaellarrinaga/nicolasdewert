@@ -19,6 +19,10 @@ proxy:
     - pma.drupal8.lndo.site
 
 services:
+  appserver:
+      build:
+        - /bin/sh -c "mkdir -p ~/.drush/site-aliases"
+        - /bin/sh -c "ln -sf /app/drush/nicolasdewert.aliases.drushrc.php ~/.drush/site-aliases/nicolasdewert.drushrc.php"
   ## MailHog
   # -----------
   mailhog:
