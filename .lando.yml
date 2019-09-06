@@ -13,10 +13,12 @@ config:
 
 # Provide nice url's
 proxy:
+  web:
+    - nico.lndo.site
   mailhog:
-    - mail.drupal8.lndo.site
+    - mail.nico.lndo.site
   pma:
-    - pma.drupal8.lndo.site
+    - pma.nico.lndo.site
 
 services:
   appserver:
