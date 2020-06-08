@@ -14,7 +14,11 @@ This project has been installed with [pfrenssen](https://github.com/pfrenssen)'s
 
 - run drush commands from lando `lando drush uli` or inside web/ directory `../vendor/bin/drush`
 
-## Todos
+## Installation
+
+- `.htaccess`: @todo review that rule that should be disabled `RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]` to allow local development.
+
+## Roadmap
 
 - Configure [drush aliases](https://docs.devwithlando.io/tutorials/drupal8.html#aliases)
 - Configure a CI process

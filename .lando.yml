@@ -3,17 +3,14 @@ recipe: drupal8
 
 config:
   php: '7.2'
+  via: apache
   webroot: web
-  xdebug: true
-  conf:
-    # Tell Lando to use additional PHP settings.
-    # The location of this file is arbitrary.
-    # We placed it inside .vscode/ folder simply because we find it convenient.
-    php: .vscode/php.ini
+  drush: ^9
+  xdebug: false
 
 # Provide nice url's
 proxy:
-  web:
+  appserver:
     - nico.lndo.site
   mailhog:
     - mail.nico.lndo.site
@@ -48,3 +45,9 @@ services:
     type: phpmyadmin
     hosts:
       - database
+
+tooling:
+  node:
+    service: cli
+  npm:
+    service: cli
