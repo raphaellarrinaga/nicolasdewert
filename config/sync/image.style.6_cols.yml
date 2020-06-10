@@ -1,0 +1,15 @@
+uuid: 38ec2db1-9fa4-4a7d-b5e3-3f27438e4e51
+langcode: fr
+status: true
+dependencies: {  }
+name: 6_cols
+label: '6 cols (630xauto)'
+effects:
+  fc37ea07-95db-41b4-956b-983925794f4d:
+    uuid: fc37ea07-95db-41b4-956b-983925794f4d
+    id: image_scale
+    weight: 1
+    data:
+      width: 630
+      height: null
+      upscale: false

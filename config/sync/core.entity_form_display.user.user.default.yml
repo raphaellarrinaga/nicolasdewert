@@ -32,6 +32,7 @@ third_party_settings:
         open: false
         required_fields: true
       label: Système
+      region: content
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
 id: user.user.default

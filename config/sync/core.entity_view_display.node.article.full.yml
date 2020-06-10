@@ -4,15 +4,16 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.full
-    - field.field.node.article.body
     - field.field.node.article.comment
-    - field.field.node.article.field_image
+    - field.field.node.article.field_content_section
+    - field.field.node.article.field_media_image
     - field.field.node.article.field_tags
+    - image.style.10_cols_banner
     - node.type.article
   module:
     - ds
-    - image
-    - text
+    - entity_reference_revisions
+    - media
     - user
 third_party_settings:
   ds:
@@ -24,9 +25,23 @@ third_party_settings:
       settings: {  }
     regions:
       first:
-        - body
-      second:
-        - field_image
+        - node_title
+        - field_media_image
+        - field_content_section
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: page__title
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
 _core:
   default_config_hash: ChmU3AVqDKU32A_fyChG0W9dTRKmVBR58B6OClCLvZI
 id: node.article.full
@@ -34,22 +49,36 @@ targetEntityType: node
 bundle: article
 mode: full
 content:
-  body:
-    type: text_default
-    weight: 0
+  field_content_section:
+    type: entity_reference_revisions_entity_view
+    weight: 2
     region: first
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
-  field_image:
-    type: image
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_media_image:
+    type: media_thumbnail
     weight: 1
-    region: second
+    region: first
     label: hidden
     settings:
-      image_style: ''
+      image_style: 10_cols_banner
       image_link: ''
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
 hidden:
   comment: true
   field_tags: true

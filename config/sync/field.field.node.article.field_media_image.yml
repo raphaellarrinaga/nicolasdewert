@@ -1,19 +1,19 @@
-uuid: 498bb970-2e65-44e1-88c3-dac1516cf495
+uuid: bd9a54d5-c462-4000-a327-b980bdd5c873
 langcode: fr
 status: true
 dependencies:
   config:
     - field.storage.node.field_media_image
     - media.type.image
-    - node.type.work
-id: node.work.field_media_image
+    - node.type.article
+id: node.article.field_media_image
 field_name: field_media_image
 entity_type: node
-bundle: work
-label: Photo
-description: "La première image sera utilisée comme vignette pour les teasers.\r\nToutes les images seront affichées en bas de page sur la page de détail."
+bundle: article
+label: Banner
+description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

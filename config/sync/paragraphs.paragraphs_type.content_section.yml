@@ -1,0 +1,9 @@
+uuid: d5a49005-a968-41a0-9df7-22bddb042c0d
+langcode: fr
+status: true
+dependencies: {  }
+id: content_section
+label: 'Content section'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

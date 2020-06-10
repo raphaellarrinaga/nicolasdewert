@@ -6,7 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.work.body
     - field.field.node.work.field_media_image
-    - image.style.large
+    - image.style.teaser
     - node.type.work
   module:
     - ds
@@ -39,11 +39,17 @@ content:
     region: content
     label: hidden
     settings:
-      image_style: large
+      image_style: teaser
       image_link: content
     third_party_settings:
       ds:
         ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
 hidden:
   langcode: true
   links: true

@@ -1,0 +1,70 @@
+uuid: 5ed47cbf-5d9c-4ee5-93e0-d05d32ed9b68
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_section.field_image_position
+    - field.field.paragraph.content_section.field_media_image
+    - field.field.paragraph.content_section.field_text_default
+    - image.style.6_cols
+    - paragraphs.paragraphs_type.content_section
+  module:
+    - ds
+    - media
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_content_section
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+    regions:
+      content:
+        - field_text_default
+        - field_media_image
+        - field_image_position
+id: paragraph.content_section.default
+targetEntityType: paragraph
+bundle: content_section
+mode: default
+content:
+  field_image_position:
+    weight: 2
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_label
+    region: content
+  field_media_image:
+    type: media_thumbnail
+    weight: 1
+    label: hidden
+    settings:
+      image_style: 6_cols
+      image_link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    region: content
+  field_text_default:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

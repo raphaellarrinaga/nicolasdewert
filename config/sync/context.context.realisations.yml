@@ -41,4 +41,14 @@ reactions:
     saved: false
     uuid: eeebb5c2-669d-4045-9d83-e14ce940389b
     include_default_blocks: 1
+  regions:
+    id: regions
+    regions:
+      classy: {  }
+      seven: {  }
+      stable: {  }
+      dewert_theme:
+        - title
+    saved: false
+    uuid: 22494743-615e-4572-a9a4-3a587832d24b
 weight: 0

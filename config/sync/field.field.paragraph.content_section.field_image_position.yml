@@ -1,0 +1,29 @@
+uuid: b7606f37-8250-4ae9-9ae2-2e51bf14f6b1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_position
+    - paragraphs.paragraphs_type.content_section
+    - taxonomy.vocabulary.content_section_image_position
+id: paragraph.content_section.field_image_position
+field_name: field_image_position
+entity_type: paragraph
+bundle: content_section
+label: 'Image position'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      content_section_image_position: content_section_image_position
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

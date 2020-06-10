@@ -11,6 +11,7 @@ tags:
   canonical_url: '[current-page:url]'
   og_description: '[site:slogan]'
   og_title: '[current-page:title]'
+  og_type: website
   og_image: /sites/default/files/facebook_cover.jpg
   og_url: '[current-page:url]'
   og_site_name: '[site:name]'

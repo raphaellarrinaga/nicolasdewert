@@ -13,8 +13,27 @@ disabled: false
 conditions:
   'entity_bundle:node':
     id: 'entity_bundle:node'
-    bundles: {  }
-    negate: false
+    bundles:
+      article: article
+    negate: 0
     uuid: 79fd1be5-44cd-43ed-9e7c-4f7b1ecd1c64
-reactions: {  }
+    context_mapping:
+      node: '@node.node_route_context:node'
+reactions:
+  regions:
+    id: regions
+    regions:
+      classy: {  }
+      seven: {  }
+      stable: {  }
+      dewert_theme:
+        - title
+    saved: false
+    uuid: c015f67b-0891-4f27-8a97-88d2ee28fdbd
+  blocks:
+    blocks: {  }
+    id: blocks
+    saved: false
+    uuid: 858f054d-d946-4c73-869f-09bd375e0791
+    include_default_blocks: 1
 weight: 0

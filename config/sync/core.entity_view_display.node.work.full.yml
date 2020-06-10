@@ -23,9 +23,24 @@ third_party_settings:
       settings: {  }
     regions:
       first:
+        - node_title
         - body
       second:
         - field_media_image
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: page__title
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
 id: node.work.full
 targetEntityType: node
 bundle: work
@@ -34,13 +49,13 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 0
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: first
   field_media_image:
     type: media_thumbnail
-    weight: 1
+    weight: 2
     region: second
     label: hidden
     settings:
