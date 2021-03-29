@@ -1,8 +1,0 @@
-uuid: 4b08581b-12dc-41e5-af42-9e7ce1cf5357
-langcode: und
-status: true
-dependencies: {  }
-name: 'Content section image position'
-vid: content_section_image_position
-description: ''
-weight: 0

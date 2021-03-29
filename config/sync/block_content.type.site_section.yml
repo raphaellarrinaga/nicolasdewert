@@ -1,8 +1,0 @@
-uuid: a0167b3f-762d-423a-9e1f-f16689f6728b
-langcode: fr
-status: true
-dependencies: {  }
-id: site_section
-label: 'Site section'
-revision: 0
-description: 'Une section du site avec différents blocs de texte paramétrables'

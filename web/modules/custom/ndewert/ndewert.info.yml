@@ -1,5 +1,0 @@
-name: 'ndewert'
-type: module
-description: 'Custom bits of code dedicated to Nicolas Dewert website'
-core: 8.x
-package: 'Custom'

@@ -1,8 +1,0 @@
-uuid: 66d358ff-a284-4379-99f0-f7652056be00
-langcode: fr
-status: true
-dependencies: {  }
-name: 'Type de projets'
-vid: work_type
-description: ''
-weight: 0

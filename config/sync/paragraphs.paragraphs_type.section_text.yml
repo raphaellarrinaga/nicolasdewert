@@ -1,9 +1,0 @@
-uuid: b2ec7847-0218-47eb-8d11-b797972316cc
-langcode: fr
-status: true
-dependencies: {  }
-id: section_text
-label: 'Section text'
-icon_uuid: null
-description: ''
-behavior_plugins: {  }

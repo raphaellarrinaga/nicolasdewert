@@ -1,9 +1,0 @@
-uuid: 44b3de9d-61c1-49da-ae80-d853ebd77359
-langcode: fr
-status: true
-dependencies: {  }
-label: Google
-id: google
-type_id: google_analytics
-type_settings:
-  id: '3228295313'

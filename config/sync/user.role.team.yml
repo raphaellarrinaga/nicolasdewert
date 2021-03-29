@@ -1,9 +1,0 @@
-uuid: db3cae75-7517-4d4d-8483-925b87cd9511
-langcode: fr
-status: true
-dependencies: {  }
-id: team
-label: Equipe
-weight: 4
-is_admin: null
-permissions: {  }
