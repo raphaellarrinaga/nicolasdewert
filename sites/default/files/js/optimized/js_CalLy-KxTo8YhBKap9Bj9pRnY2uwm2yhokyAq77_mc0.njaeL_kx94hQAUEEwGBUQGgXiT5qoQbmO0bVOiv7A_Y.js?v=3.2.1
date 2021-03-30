@@ -1,0 +1,6 @@
+/* Source and licensing information for the line(s) below can be found at http://nico.lndo.site/core/assets/vendor/jquery/jquery-extend-3.4.0.js. */
+(function(e){var n=e.fn.jquery.split('.'),t=parseInt(n[0]),r=parseInt(n[1]),i=parseInt(n[2]),f=(i.toString()!==n[2]);if((t>3)||(t===3&&r>4)||(t===3&&r===4&&i>0)||(t===3&&r===4&&i===0&&!f)){return};e.extend=e.fn.extend=function(){var u,i,f,t,s,a,n=arguments[0]||{},r=1,l=arguments.length,o=!1;if(typeof n==='boolean'){o=n;n=arguments[r]||{};r++};if(typeof n!=='object'&&!e.isFunction(n)){n={}};if(r===l){n=this;r--};for(;r<l;r++){if((u=arguments[r])!=null){for(i in u){t=u[i];if(i==='__proto__'||n===t){continue};if(o&&t&&(e.isPlainObject(t)||(s=Array.isArray(t)))){f=n[i];if(s&&!Array.isArray(f)){a=[]}
+else if(!s&&!e.isPlainObject(f)){a={}}
+else{a=f};s=!1;n[i]=e.extend(o,a,t)}
+else if(t!==undefined){n[i]=t}}}};return n}})(jQuery);
+/* Source and licensing information for the above line(s) can be found at http://nico.lndo.site/core/assets/vendor/jquery/jquery-extend-3.4.0.js. */

@@ -1,0 +1,5 @@
+/* Source and licensing information for the line(s) below can be found at http://nico.lndo.site/themes/custom/dewert_theme/js/hero_fp.js. */
+(function(e){'use strict';var i=document.querySelector('.site-hero'),t=i.getElementsByTagName('img')[0];function n(){i.className+=' js-imageloaded'};if(t.complete){n();c()}
+else{t.addEventListener('load',n)};function c(){var i=document.querySelector('.block--hero'),l=document.querySelector('.site-header'),n=l.clientHeight,c=e.innerHeight,o=t.clientHeight,r=(c-n)>o?o:(c-n);if(e.matchMedia('(min-width: 769px)').matches){i.setAttribute('style','min-height:'+r+'px;height:'+r+'px')}
+else{i.style=null}};e.addEventListener('resize',function(){c()},!0)})(window);
+/* Source and licensing information for the above line(s) can be found at http://nico.lndo.site/themes/custom/dewert_theme/js/hero_fp.js. */

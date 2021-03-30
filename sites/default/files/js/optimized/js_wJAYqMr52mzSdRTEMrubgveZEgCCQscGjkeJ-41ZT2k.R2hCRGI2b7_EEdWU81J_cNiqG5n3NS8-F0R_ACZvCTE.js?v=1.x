@@ -1,0 +1,4 @@
+/* Source and licensing information for the line(s) below can be found at http://nico.lndo.site/themes/custom/dewert_theme/js/materials.js. */
+(function(a,t){'use strict';t.behaviors.materials={attach:function(t,i){function e(t){var i=a(document).scrollTop();a('.materials-nav').find('a').each(function(){var o=a(window).height(),n=Math.round(o/3),t=a(this),e=a(t.attr('href')),s=e.position().top,r=e.height();if(s<=i+n&&s+r>i){a('.materials-nav a').removeClass('is-active');t.addClass('is-active')}
+else{t.removeClass('is-active')}})};a(document).on('scroll',e)}}})(jQuery,Drupal);
+/* Source and licensing information for the above line(s) can be found at http://nico.lndo.site/themes/custom/dewert_theme/js/materials.js. */

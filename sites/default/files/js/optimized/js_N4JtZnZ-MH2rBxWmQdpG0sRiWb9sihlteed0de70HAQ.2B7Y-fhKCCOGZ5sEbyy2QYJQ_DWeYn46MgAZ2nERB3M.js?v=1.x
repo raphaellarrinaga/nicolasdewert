@@ -1,0 +1,3 @@
+/* Source and licensing information for the line(s) below can be found at http://nico.lndo.site/themes/custom/dewert_theme/js/worksGallery.js. */
+(function(i){'use strict';Drupal.behaviors.gallery={attach:function(t){i(t).find('#worksGallery').once('gallery').each(function(){i(this).justifiedGallery({rowHeight:479,maxRowHeight:730,rel:'works-gallery',lastRow:'nojustify',captions:!1,margins:8})})}}})(jQuery);
+/* Source and licensing information for the above line(s) can be found at http://nico.lndo.site/themes/custom/dewert_theme/js/worksGallery.js. */

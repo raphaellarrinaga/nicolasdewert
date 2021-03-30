@@ -1,0 +1,3 @@
+/* Source and licensing information for the line(s) below can be found at http://nico.lndo.site/core/misc/drupal.init.js. */
+;if(window.jQuery){jQuery.noConflict()};document.documentElement.className+=' js';(function(n,e,o){n(function(){e.attachBehaviors(document,o)})})(domready,Drupal,window.drupalSettings);
+/* Source and licensing information for the above line(s) can be found at http://nico.lndo.site/core/misc/drupal.init.js. */
