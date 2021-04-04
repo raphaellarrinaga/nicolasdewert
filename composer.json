@@ -72,7 +72,8 @@
         "drush/drush": "^9.0.0",
         "webmozart/path-util": "^2.3",
         "drupal/pathauto": "1.6",
-        "drupal/hotjar": "1.5"
+        "drupal/hotjar": "1.5",
+        "drupal/analytics": "^1.0@alpha"
     },
     "require-dev": {
         "behat/mink": "~1.7",
@@ -121,6 +122,11 @@
         ]
     },
     "extra": {
+        "patches": {
+            "drupal/core": {
+                "Base table or view not found: 1146 Table 'drupal.path_alias' doesn't exist. Update to 8.8.0 fails (drupal/issues/3099084)": "https://www.drupal.org/files/issues/2020-12-22/drupal-system-3099084-160.patch"
+            }
+        },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": ["type:drupal-library"],
